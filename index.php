@@ -5,6 +5,14 @@
         <div id="main-slider" class="flexslider">
             <ul class="slides">
               <li>
+                <img src="img/slides/3.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Success Oriented</h3> 
+                    <p>The most important part of education is proper training...</p> 
+                    <a href="#" class="btn btn-theme">Read More</a>
+                </div>
+              </li>
+              <li>
                 <img src="img/slides/1.jpg" alt="" />
                 <div class="flex-caption container">
                     <h3>Success Oriented</h3> 
@@ -29,8 +37,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="aligncenter"><h1 class="aligncenter">WHAT WE OFFER?</h1></div>
-				
+				<div class="aligncenter"><h1 class="aligncenter">OUR OFFERs</h1></div>
+				<h2 class="text-center"><span style="color:rgb(99, 174, 222)"><i>INSTITUTE OF  </span><span style="color:rgb(233, 39, 39)">   PROFESSIONALS  IT </i></span>&nbsp; TRAININGS</h2>
 			</div>
 		</div>
 	</div>

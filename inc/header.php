@@ -38,10 +38,10 @@ margin-top: -26px;" /></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index-2.html">Home</a></li> 
+                        <li class="active"><a href="index.php">Home</a></li> 
 						<li><a href="#">About Us</a></li>
-						<!-- <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
+						 <li><a href="training_info.php">Training Info</a></li>
+                        <!--<li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="pricing.html">Pricing</a></li> -->
                         <li><a href="contact.php">Contact</a></li>
                     </ul>

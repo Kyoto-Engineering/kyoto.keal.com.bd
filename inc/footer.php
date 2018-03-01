@@ -9,7 +9,7 @@
 					House-64, Road-03, Block-B<br>
 					 Gulshan-1, Dhaka, Bangladesh</address>
 					<p>
-						<i class="icon-phone"></i> XXXX <br>
+						<i class="icon-phone"></i> 01844046621 <br>
 						<i class="icon-envelope-alt"></i> it@keal.com.bd
 					</p>
 				</div>
@@ -21,7 +21,7 @@
 						<li><a href="#">Latest Events</a></li>
 						<li><a href="#">Terms and conditions</a></li>
 						<li><a href="#">Privacy policy</a></li>
-						<li><a href="https://recruiment.keal.com.bd">Career</a></li>
+						<li><a href="https://recruitment.keal.com.bd">Career</a></li>
 						<li><a href="contact.php">Contact us</a></li>
 					</ul>
 				</div>
