@@ -101,7 +101,7 @@
 								<div class="course_fee">
 									<h3>Duration: 12 Day (24Hrs)</h3>
 								 <p>Course Fee: BDT 12,000</p>
-							 <p>(Refundable)</p>
+							 
 								</div>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '2';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
@@ -126,7 +126,7 @@
 								<div class="course_fee">
 								<h3>Duration: 15 Days (30Hrs)</h3>
 								 <p>Course Fee: BDT 12,000</p>
-								<p>(Refundable)</p> 
+								 
 								</div>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '3';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
