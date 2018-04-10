@@ -31,7 +31,7 @@
       self::init();
       if (self::get("login") == false) {
        self::destroy();
-       header("Location:index.php");
+       header("Location:login.php");
       }
      }
 
@@ -44,7 +44,7 @@
 
      public static function destroy(){
       session_destroy();
-      echo "<script>window.location = 'index.php'</script>";
+      echo "<script>window.location = 'login.php'</script>";
      }
     }
     ?>
