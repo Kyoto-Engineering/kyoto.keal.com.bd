@@ -22,5 +22,17 @@ class Module
 		return $result;
 	}
 
+	public function classSchedule($courseId){
+		$query = "SELECT * FROM tbl_schedule WHERE course = '$courseId'";
+		$result = $this->db->select($query);
+		return $result;
+	}
+
+	public function recentUpdates(){
+		$query = "SELECT * FROM tbl_notice ORDER BY id DESC";
+		$result = $this->db->select($query);
+		return $result;		
+	}
+
 }
 ?>

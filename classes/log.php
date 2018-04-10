@@ -88,6 +88,7 @@ public function usersignin($data){
 				Session::set("login", true);
 				Session::set("userId",   $value['id']);
 				Session::set("userName", $value['studentName']);
+				Session::set("courseId",   $value['courseId']);
 				
 				header("Location:index.php");
 			}else{

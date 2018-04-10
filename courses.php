@@ -1,4 +1,10 @@
 <?php include "inc/header.php";?>
+<?php 
+	$login = Session::get("login");
+	if ($login == false) {
+		echo "<script>window.location = 'index.php'</script>";
+	}
+?>
 								<section id="inner-headline">
 	<section id="content">
 	<div class="container">
@@ -37,18 +43,30 @@
 							<div class="col-md-4">
 								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span>Beginner Level (Basic php fundamentals)</span></h3>
+									<h3><span>Complete Web Design</span></h3>
 								</div>
 								<p><ul style="text-decoration: none; list-style: none;">
 								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-								<li> Turn PC AC local server</li>
-								<li> PHP Documentation</li>
-								<li>PHP MyAdmin</li>
-								<li>PHP Variables</li>
-								<li>Print Data</li>
-								<li>Types of data </li>
-								<li>Strings, Operator, Constants</li>
-								<li>PHP Statements</li>
+								<li> HTML5 introduction, Markup, layout, Tag </li>
+								<li> HTML5 Image, Link, Style, Color </li>
+								<li> Formatting, List, Block, Table, Comments</li>
+								<li> CSS3 introduction, Color, Background, height-width</li>
+								<li> CSS3 Border, Margin, Padding</li>
+								<li> Text, Align, Dropdown, Forms</li>
+								<li> Id, Class, iframe, Responsive</li>
+								<li> Header nav, toolbar </li>
+								<li> Bootstrap introduction, Grid, Table</li>
+								<li> Image, navbar, Dropdown, button</li>
+								<li> Input group, Breadcrumbs, Pagination</li>
+								<li> Jumpbotron, thumbnails, Responsive with bootstrap</li>
+								<li> JavaScript, functions, variable scope</li>
+								<li> Data Types, Operator, Scope, String, Date</li>
+								<li> Array, Condition, Loop</li>
+								<li> JavaScript effects, like dropdown menus, tabs</li>
+								<li> Image carousel </li>
+								<li> Object, Function </li>	
+								
+
 								
 								</ol>
 								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
@@ -56,9 +74,9 @@
 							 <p>(Refundable)</p></li>  -->
 								</ul></p>
 								<div class="course_fee">
-									<h3>Duration: 12 Day (24Hrs)</h3>
-								 <p>Course Fee: BDT 4,000</p>
-							 <p>(Refundable)</p>
+									<h3>Duration: 3 month</h3>
+								 <p>Course Fee: BDT 7,000</p>
+							 
 								</div>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>

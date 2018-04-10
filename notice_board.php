@@ -1,37 +1,47 @@
 <?php include "inc/header.php";?>
-
+<?php include "classes/moduleclass.php";?>
+<?php 
+  $login = Session::get("login");
+  if ($login == false) {
+    echo "<script>window.location = 'index.php'</script>";
+  }
+?>
+<?php 
+    $mod = new Module();
+?>
 <div class="container">
+<marquee behavior="scroll" direction="left">Special Offer comming soon...</marquee>
+
 	<div class="row">
 
 		<div class="col-md-8">
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">sL</th>
+      <th scope="col">Topic</th>
+      <th scope="col">Day</th>
+      <th scope="col">class Time</th>
+      <th scope="col">Venue</th>
     </tr>
   </thead>
   <tbody>
+  <?php 
+    $schedule = $mod->classSchedule($courseId);
+    if ($schedule) {
+      $i = 0;
+      while($data = $schedule->fetch_assoc()){
+        $i++;
+        ?>
+      
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $i;?></th>
+      <td><?php echo $data['topic'];?></td>
+      <td><?php echo $data['day'];?></td>
+      <td><?php echo $data['ctime'];?></td>
+      <td><?php echo $data['venue'];?></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  <?php  } } ?>
   </tbody>
 </table>
 
@@ -40,12 +50,15 @@
 
 		<div class="col-md-4" style="text-align: center;">
 		<h2>Recent Updates</h2>
-		 <p>text place</p>
-		 <p>text place</p>
-		 <p>text place</p>
-		 <p>text place</p>
-		 <p>text place</p>
-		 <p>text place</p>
+      <?php 
+    $news = $mod->recentUpdates();
+    if ($news) {
+      $i = 0;
+      while($value = $news->fetch_assoc()){
+        $i++;
+        ?>
+		 <p><?php echo $fm->textShorten($value['notice'],20)?></p>
+		<?php } } ?>
 			
 		</div>
 
