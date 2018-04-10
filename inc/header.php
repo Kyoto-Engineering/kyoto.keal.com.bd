@@ -51,7 +51,7 @@ margin-top: -26px;" /></a>
                     <li><a href="dashboard.php">Home</a></li>
 						
 						 
-                        <li><a href="training_info.php">Training Info</a></li>
+                        <!-- <li><a href="training_info.php">Training Info</a></li> -->
                         <!-- <li><a href="pricing.html">Pricing</a></li> -->
                         <li><a href="contact.php">Contact</a></li>
 
@@ -62,7 +62,7 @@ margin-top: -26px;" /></a>
                              $log = Session::get("login");
                             if($log == "true"){?>
                             <li><a href="">Notice Board</a></li> 
-                            <li><a href="">Other Courses</a></li> 
+                            <li><a href="courses.php">Other Courses</a></li> 
                             <li><a href="">Result</a></li> 
                                  <li><a href="?action=logout">Sign Out</a></li> 
                             <?php } else { ?>
