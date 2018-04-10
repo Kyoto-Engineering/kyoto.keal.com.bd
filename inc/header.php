@@ -51,9 +51,9 @@ margin-top: -26px;" /></a>
                     <li><a href="dashboard.php">Home</a></li>
 						
 						 
-                        <li><a href="training_info.php">Training Info</a></li>
+                        <!-- <li><a href="training_info.php">Training Info</a></li> -->
                         <!-- <li><a href="pricing.html">Pricing</a></li> -->
-                        <li><a href="contact.php">Contact</a></li>
+                        <!-- <li><a href="contact.php">Contact</a></li> -->
 
                          <?php
                              if (isset($_GET['action']) && $_GET['action'] == "logout") {
