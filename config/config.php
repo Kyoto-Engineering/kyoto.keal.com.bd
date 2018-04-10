@@ -2,5 +2,5 @@
 	    define("DB_HOST", "localhost");
 	    define("DB_USER", "root"); #needs change on host
 	    define("DB_PASS", ""); 
-	    define("DB_NAME", "student_reg");
+	    define("DB_NAME", "keal_training");
     ?>

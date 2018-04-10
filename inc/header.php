@@ -1,3 +1,7 @@
+<?php 
+     include 'lib/Session.php';
+     Session::init();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,7 @@
 <meta name="description" content="" />
 <!-- css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.html" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
@@ -20,6 +25,11 @@
     <![endif]-->
 
 </head>
+<?php 
+
+$uId = Session::get('userId');
+
+?>
 <body>
 <div id="wrapper" class="home-page">
 	<!-- start header -->
@@ -35,15 +45,30 @@
                     <a class="navbar-brand" href="index.php"><img src="img/kLogol.png" alt="logo" style="height: auto;
 width: 225px;
 margin-top: -26px;" /></a>
-                </div>
+                </div>  
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.php">Home</a></li> 
-						<li><a href="#">About Us</a></li>
-						 <li><a href="training_info.php">Training Info</a></li>
-                        <!--<li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li> -->
+                    <li><a href="dashboard.php">Home</a></li>
+						
+						 
+                        <li><a href="training_info.php">Training Info</a></li>
+                        <!-- <li><a href="pricing.html">Pricing</a></li> -->
                         <li><a href="contact.php">Contact</a></li>
+
+                         <?php
+                             if (isset($_GET['action']) && $_GET['action'] == "logout") {
+                                     Session::destroy();                               
+                                     }
+                             $log = Session::get("login");
+                            if($log == "true"){?>
+                            <li><a href="">Notice Board</a></li> 
+                            <li><a href="">Other Courses</a></li> 
+                            <li><a href="">Result</a></li> 
+                                 <li><a href="?action=logout">Sign Out</a></li> 
+                            <?php } else { ?>
+                                <li><a href="login.php">Sign In</a></li> 
+                                <?php } ?>
+                         
                     </ul>
                 </div>
             </div>

@@ -1,4 +1,57 @@
-<?php include "inc/header.php";?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kyoto Training</title>
+ <link rel="shortcut icon" href="img/icon2.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.html" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="js/owl-carousel/owl.carousel.html" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper" class="home-page">
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.php"><img src="img/kLogol.png" alt="logo" style="height: auto;
+width: 225px;
+margin-top: -26px;" /></a>
+                </div>  
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                    <li><a href="index.php">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                         <li><a href="training_info.php">Training Info</a></li>
+                       <!--  <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li> -->
+                        <li><a href="contact.php">Contact</a></li>
+                          
+                        <li><a href="login.php">Sign In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
 
 	<section id="inner-headline">
 	<div class="container">
@@ -33,9 +86,14 @@
 				<div class="navbar-collapse collapse" style="background-color:#A5D6A7"; >
 						<ul class="nav navbar-nav navbar-right">
 								
-								 <ul class="nav navbar-nav">
-                    <li class="active"><a href="training_info.php"><B style="color:#2E7D32;font-size: 20px;">IT Training</B></a></li> 
-						<li><a href="automation_info.php"><B style="color:#2E7D32;font-size: 20px;">Automation Training</B></a></li>
+				<ul class="nav navbar-nav">
+                    <li class="active">
+	                    <a href="training_info.php">
+	                    <b style="color:#2E7D32;font-size: 20px;">IT Training</b></a>
+                    </li> 
+						<li><a href="automation_info.php">
+						<b style="color:#2E7D32;font-size: 20px;">Automation Training</b>
+						</a></li>
 </ul>
 									  </div>
 									<h3>We are awesome <span class="color">TEAM</span></h3>
@@ -78,70 +136,81 @@
 							<div class="col-md-4">
 								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span>Beginner Level<br/>Learning Outcomes</span></h3>
+									<h3><span>Beginner Level (Basic php fundamentals)</span></h3>
 								</div>
 								<p><ul style="text-decoration: none; list-style: none;">
-								<li>1. Basic concept of Industrial Automation in global and Bangladesh context</li>
-								<li>2. Working principles and Applications of Industrial Automation components in Industries.</li>
-								<li>3. Basic construction of a PLC.</li>
-								<li>4. Types of Industrial Automation components.</li>
-								<li>5. Integration of Industrial Automation components with a PLC</li>
-								<li>6. Applications of PLC based automatic systems </li>
-								<li>7. Selection guide for appropriate automation parts </li>
-								<li>8. Dangers of using inappropriate Industrial Automation components </li>
-								<li><h3>Duration: 1 Day (8Hrs)</h3></li>
+								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+								<li> Turn PC AC local server</li>
+								<li> PHP Documentation</li>
+								<li>PHP MyAdmin</li>
+								<li>PHP Variables</li>
+								<li>Print Data</li>
+								<li>Types of data </li>
+								<li>Strings, Operator, Constants</li>
+								<li>PHP Statements</li>
+								
+								</ol>
+								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
 								 <p>Course Fee: BDT 2,000</p>
-							 <p>(Refundable)</p></li> 
+							 <p>(Refundable)</p></li>  -->
 								</ul></p>
+								<div class="course_fee">
+									<h3>Duration: 12 Day (24Hrs)</h3>
+								 <p>Course Fee: BDT 4,000</p>
+							 <p>(Refundable)</p>
+								</div>
 								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="	Register.php" target="_blank"><button type="button" class="btn btn-success">Register</button></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
 								
 							</div>
 							<div class="col-md-4">
 								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span>Elementary Level<br/>Learning Outcomes</span></h3>
+									<h3><span>Elementary Level (Array functions & OOP Basics)</span></h3>
 								</div>
 								<p><ul style="text-decoration: none; list-style: none;">
-								<li>1. Industrial Automation products</li>
-								<li>2. Applications of Industrial Automation parts in Industries.</li>
-								<li>3. Applications of PLC.</li>
-								<li>4. Develop a PLC program for an automatic control system of a medium degree of complexity.</li>
-								<li>5. Select the right hardware for a given application</li>
-								<li>6. Basic programing of PLC. </li>
-								<li>7. Basic application of established engineering methods to complex engineering methods to complex engineering problem solving </li>
-								
-								<li><h3>Duration: 2 Days (16Hrs)</h3>
-							 <p>Course Fee: BDT 2,000</p>
-							 <p>(Refundable)</p></li> 
-								
-								</ul></p>
-								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php" target="_blank"><button type="button" class="btn btn-success">Register</button></a>
-							</div>
-							<div class="col-md-4">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>Intermediate Level<br/>Learning Outcomes</span></h3>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<li>1. Knowledge on Industrial Autoomation products</li>
-								<li>2. Applications of Industrial Automation parts in Industries</li>
-								<li>3. Integration of Automation parts PLC.</li>
-								<li>4. Developping a PLC programe for an automatic controll system of a heigher degree of complexity</li>
-								<li>5. Application of PlC</li>
-								<li>6. Right Hardware for Right Application</li>
-								<li>7. Program for PLC</li>
-								<li>8. Real Life Application of established engineering methods related to <!-- industrial automation --></li>
-								
-								<li><h3>Duration: 2 Days (16Hrs)</h3>
-								 <p>Course Fee: BDT 10,000</p>
-								<p>(Refundable)</p></li> 
-								
-								</ul></p>
+								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+								<li>PHP Array Functions</li>
+								<li>PHP Calendar Functions</li>
+								<li>PHP Mail Functions</li>
+								<li>OOP Basic Discussion</li>
+								<li>Class Property method/Magic Methods</li>
+								<li>Polymorphism</li>
 
+								</ol>
+								</ul></p>
+								<div class="course_fee">
+									<h3>Duration: 12 Day (24Hrs)</h3>
+								 <p>Course Fee: BDT 4,000</p>
+							 <p>(Refundable)</p>
+								</div>
 								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php" target="_blank"><button type="button" class="btn btn-success">Register</button></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '2';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
+							</div>
+							<div class="col-md-4">
+								<!-- Heading and para -->
+								<div class="block-heading-two">
+									<h3><span>Intermediate Level<br/>(MySQL & A COMPLETE PROJECT on WEB)</span></h3>
+								</div>
+								<p><ul style="text-decoration: none; list-style: none;">
+								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+								<li> Concept of system Design</li>
+								<li>Working with database MySQL</li>
+								<li>MySQL queries</li>
+								<li>Work with CRUD</li>
+								<li>Working with Forms</li>
+								
+								</ol>
+								
+								
+								</ul></p>
+								<div class="course_fee">
+								<h3>Duration: 15 Days (30Hrs)</h3>
+								 <p>Course Fee: BDT 6,000</p>
+								<p>(Refundable)</p> 
+								</div>
+								<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '3';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
 							</div>
 						</div> 
 						
@@ -170,13 +239,13 @@
 						
 							<div class="col-md-4">
 								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>Advanced Level<br/>Learning Outcomes</span></h3>
+								<!-- <div class="block-heading-two">
+									<h3><span>Advanced Level<br/> A COMPLETE PROJECT on WEB</span></h3>
 								</div>
 								<p><ul style="text-decoration: none; list-style: none;">
-								<li>1. Application PLC in Bangladesh context</li>
-								<li>2. Programing of PLC & Integration with Automation Components</li>
-								<li>3. Simulation On Software.</li>
+								<li>Front End Work with Bootstrap</li>
+								<li>Concepts of Html5 & CSS3</li>
+								<li>Basic template Design with Bootstrap</li>
 								<li>4. Right Hardware for Right Application.</li>
 								<li>5. Effective Implementation skill required for automation, controll and monitoring of Industrial Process.</li>
 								<li>6.Implementation of Industrial process including descrete manufactureing, control of sequences, batch processing, and process controll</li>
@@ -186,7 +255,7 @@
 								<li><h3>Duration: 3 Days (24Hrs)</h3>
 								<p>Course Fee: BDT 25,000</p><p>(Refundable)</p></li>
 								
-								</ul></p>
+								</ul></p> -->
 
 								
 							</div>

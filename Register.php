@@ -2,11 +2,18 @@
 
 <?php
       $user = new SignUp(); 
-      
+?>
+<?php
+    if (!isset($_GET['level']) || $_GET['level'] == NULL ) {
+        //echo "<script>window.location = 'training_info.php'</script>";
+      }else{
+        $level = $_GET['level'];
+      }
+
 ?>
 <?php
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
         $studentName = $_POST['studentName'];
         $email = $_POST['email'];
         
@@ -14,7 +21,7 @@
         $dob = $_POST['dob'];
         $gender = $_POST['gender'];
         $courseId = $_POST['courseId'];
-        $userlog = $user->userLogin($studentName, $email,$phone,$dob,$gender,$courseId);
+        $userlog = $user->userLogin($studentName, $email,$phone,$dob,$gender,$courseId, $level);
     }
 
 ?>  
@@ -52,7 +59,9 @@
             }
             ?></h3>
 	    <form method="post" action="">
-	     
+	     <?php 
+       echo $level;
+       ?>
           <div class="form-group">
               <label for="studentName" class="cols-sm-2 control-label">Your Name</label>
               <div class="cols-sm-10">
@@ -105,6 +114,19 @@
    
   </select>
 </div>
+
+<div class="form-group">
+  <label for="sel1">Select Training Level:</label>
+  <select class="form-control" id="sel1" name="level">
+      
+     <option value="1" >Beginner Level</option>
+     <option value="2" >Elementary Level </option>
+     <option value="3" >Intermediate Level</option>
+    
+   
+  </select>
+</div>
+
                <div class="form-group">
               <label for="password" class="cols-sm-2 control-label">Gender</label>
               <div class="cols-sm-10">
@@ -115,8 +137,11 @@
               </div>
             </div>
 
-		      <button type="submit" name="login" class="btn btn-successess">Register</button>
+		      
 
+          <a href="details.php?level=<?php echo $level;?>">
+          <input type="submit" name="submit" value="Show">
+          </a>
 		    
 	
           
