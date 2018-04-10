@@ -100,7 +100,7 @@
 								</ul></p>
 								<div class="course_fee">
 									<h3>Duration: 12 Day (24Hrs)</h3>
-								 <p>Course Fee: BDT 4,000</p>
+								 <p>Course Fee: BDT 12,000</p>
 							 <p>(Refundable)</p>
 								</div>
 								<br>
@@ -125,7 +125,7 @@
 								</ul></p>
 								<div class="course_fee">
 								<h3>Duration: 15 Days (30Hrs)</h3>
-								 <p>Course Fee: BDT 6,000</p>
+								 <p>Course Fee: BDT 12,000</p>
 								<p>(Refundable)</p> 
 								</div>
 								<br>
