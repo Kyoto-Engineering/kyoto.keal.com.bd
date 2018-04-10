@@ -29,7 +29,7 @@ $getdata = $mod->getSinglestudent($uId);
     </div>
 
     <div class="row">
-    <h3>Your Preffered Course</h3>
+    <h3>Your Preffered Course Details</h3>
     <?php 
     if($data['level']=="1"){?>
              <div class="col-md-6">
@@ -184,8 +184,8 @@ $getdata = $mod->getSinglestudent($uId);
         <a href="http://www.bdskills.com/" style="text-decoration: none; color: #656565;">
         <span class="icons c3"><img src="img/bdskill.png" alt="img" style="margin-top: -30px;
 height: 154px;" /></span> <div class="box-area">
-        <h3 class="text-center">LICT BD-skills</h3>
-         <p><h5 class="text-center">Enroll Yourself in BD Skills</h5> We registered ourselves in LICT BD skills. You Also can enroll yourself for get job update in IT field.</p></div>
+        <h3 class="text-center">BD-skills</h3>
+         <p><h5 class="text-center">Enroll Yourself in BD Skills</h5> We registered ourselves in BD skills. You Also can enroll yourself for get job update in IT field.</p></div>
          </a>
         </div>
 <!--        <div class="col-md-3 text-center"> 

@@ -1,6 +1,10 @@
 <?php 
      include 'lib/Session.php';
      Session::init();
+     include 'helpers/Format.php';
+?>
+<?php 
+$fm = new Format();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +32,7 @@
 <?php 
 
 $uId = Session::get('userId');
+$courseId = Session::get('courseId');
 
 ?>
 <body>
@@ -61,7 +66,7 @@ margin-top: -26px;" /></a>
                                      }
                              $log = Session::get("login");
                             if($log == "true"){?>
-                            <li><a href="">Notice Board</a></li> 
+                            <li><a href="notice_board.php">Notice Board</a></li> 
                             <li><a href="courses.php">Other Courses</a></li> 
                             <li><a href="">Result</a></li> 
                                  <li><a href="?action=logout">Sign Out</a></li> 
