@@ -76,14 +76,12 @@
                         <!-- second-level-items -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>View Panel<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="signup_list.php">Sign Up List</a>
                             </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
+                           
                             <li>
                                 <a href="#">Third Level <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
