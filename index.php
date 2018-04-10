@@ -33,22 +33,23 @@ $getdata = $mod->getSinglestudent($uId);
     <?php 
     if($data['level']=="1"){?>
              <div class="col-md-6">
-                                <p><ul style="text-decoration: none; list-style: none;">
+                                <p>1) Basic php fundamentals<ul style="text-decoration: none; list-style: none;">
                                 <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-                                <li>PHP Array Functions</li>
-                                <li>PHP Calendar Functions</li>
-                                <li>PHP Mail Functions</li>
-                                <li>OOP Basic Discussion</li>
-                                <li>Class Property method/Magic Methods</li>
-                                <li>Polymorphism</li>
-                                <li>Inheritance</li>
-                                <li>Abstraction</li>
-                                <li>Encapsulation</li>
-                                <li>Access Modifier</li>
-                                <li>Design pattern</li>
-                                <li> Database connect with OOP way</li>
+                                <li>Turn pc ac local server</li>
+                                <li>php documentation</li>
+                                <li>php myadmin</li>
+                                <li>Php variables</li>
+                                <li>Print data</li>
+                                <li>Types of data</li>
+                                <li>Strings, operator, constants</li>
+                                <li>php statements</li>
+                                <li>Loops, function, condition</li>
+                                <li>Form validation</li>
+                                <li>Required</li>
+                                <li>Methods</li>
                                 </ol>
-                                </ul></p>
+                                </ul>
+                                <span style="color:red; font-weight: bold;">Class Test</span></p>
         </div> 
    <?php } elseif($data['level']=="2"){?>
              <div class="col-md-6">

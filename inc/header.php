@@ -53,7 +53,7 @@ margin-top: -26px;" /></a>
                 </div>  
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                    <li><a href="dashboard.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
 						
 						 
                         <!-- <li><a href="training_info.php">Training Info</a></li> -->

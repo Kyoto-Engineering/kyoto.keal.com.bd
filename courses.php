@@ -43,7 +43,7 @@
 							<div class="col-md-4">
 								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span>Beginner Level (Basic php fundamentals)</span></h3>
+									<h3><span>Complete Web Design</span></h3>
 								</div>
 								<p><ul style="text-decoration: none; list-style: none;">
 								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
