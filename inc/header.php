@@ -62,7 +62,7 @@ margin-top: -26px;" /></a>
                              $log = Session::get("login");
                             if($log == "true"){?>
                             <li><a href="">Notice Board</a></li> 
-                            <li><a href="">Other Courses</a></li> 
+                            <li><a href="courses.php">Other Courses</a></li> 
                             <li><a href="">Result</a></li> 
                                  <li><a href="?action=logout">Sign Out</a></li> 
                             <?php } else { ?>
