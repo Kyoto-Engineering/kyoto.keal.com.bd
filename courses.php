@@ -79,7 +79,7 @@
 							 
 								</div>
 								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Enroll Here</button></a>
 								
 							</div>
 							<div class="col-md-4">
@@ -104,7 +104,7 @@
 							 <p>(Refundable)</p>
 								</div>
 								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '2';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '2';?>" target="_blank"><button type="button" class="btn btn-success">Enroll Here</button></a>
 							</div>
 							<div class="col-md-4">
 								<!-- Heading and para -->
@@ -129,7 +129,7 @@
 								<p>(Refundable)</p> 
 								</div>
 								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '3';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo '3';?>" target="_blank"><button type="button" class="btn btn-success">Enroll Here</button></a>
 							</div>
 						</div> 
 						

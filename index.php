@@ -33,7 +33,7 @@ $getdata = $mod->getSinglestudent($uId);
     <?php 
     if($data['level']=="1"){?>
              <div class="col-md-6">
-                                <p>1) Basic php fundamentals<ul style="text-decoration: none; list-style: none;">
+                                <p> <span style="color:black; font-weight: bold;">1) Basic php fundamentals</span><ul style="text-decoration: none; list-style: none;">
                                 <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
                                 <li>Turn pc ac local server</li>
                                 <li>php documentation</li>
@@ -47,6 +47,24 @@ $getdata = $mod->getSinglestudent($uId);
                                 <li>Form validation</li>
                                 <li>Required</li>
                                 <li>Methods</li>
+                                </ol>
+                                </ul>
+                                <span style="color:red; font-weight: bold;">Class Test</span></p>
+
+                                <p> <span style="color:black; font-weight: bold;">2) Describe about array functions</span><ul style="text-decoration: none; list-style: none;">
+                                <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+                                
+                                </ol>
+                                </ul>
+                                <span style="color:red; font-weight: bold;">Class Test</span></p>
+                                <p> <span style="color:black; font-weight: bold;">3) OOP Basics</span><ul style="text-decoration: none; list-style: none;">
+                                <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+                                <li>oop Basic discussion</li>
+                                <li>class Property method/magic methods</li>
+                                <li>Polymorphism/Inheritance/abstract/Encapsulation</li>
+                                <li>Access Modifier</li>
+                                <li>Design pattern</li>
+                                <li>Database connect with oop  way</li>
                                 </ol>
                                 </ul>
                                 <span style="color:red; font-weight: bold;">Class Test</span></p>
