@@ -6,42 +6,6 @@
 <?php 
     $login = Session::get("login");
     if ($login == "true") {?>
-
-    <?php } else{ ?>
-    <section id="banner">
-     
-    <!-- Slider -->
-        <div id="main-slider" class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="img/slides/3.jpg" alt="" />
-                <div class="flex-caption container">
-                    <h3>Success Oriented</h3> 
-                    <p>The most important part of education is proper training...</p> 
-                    <a href="#" class="btn btn-theme">Read More</a>
-                </div>
-              </li>
-              <li>
-                <img src="img/slides/1.jpg" alt="" />
-                <div class="flex-caption container">
-                    <h3>Success Oriented</h3> 
-                    <p>The most important part of education is proper training...</p> 
-                    <a href="#" class="btn btn-theme">Read More</a>
-                </div>
-              </li>
-              <li>
-                <img src="img/slides/2.jpg" alt="" />
-                <div class="flex-caption container">
-                    <h3>Education First</h3> 
-                    <p>Teaching brings out innate powers, <br/> and proper training braces the intellect.</p> 
-                    <a href="#" class="btn btn-theme">Read More</a>
-                </div>
-              </li>
-            </ul>
-        </div>
-    <!-- end slider -->
- 
-    </section>
 <section class="">
 <div class="container">
     <div class="row">
@@ -65,6 +29,7 @@ $getdata = $mod->getSinglestudent($uId);
     </div>
 
     <div class="row">
+    <h3>Your Preffered Course</h3>
     <?php 
     if($data['level']=="1"){?>
              <div class="col-md-6">
@@ -142,6 +107,42 @@ $getdata = $mod->getSinglestudent($uId);
     <?php } } ?>
 </div>
 </section>
+    <?php } else{ ?>
+    <section id="banner">
+     
+    <!-- Slider -->
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="img/slides/3.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Success Oriented</h3> 
+                    <p>The most important part of education is proper training...</p> 
+                    <a href="#" class="btn btn-theme">Read More</a>
+                </div>
+              </li>
+              <li>
+                <img src="img/slides/1.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Success Oriented</h3> 
+                    <p>The most important part of education is proper training...</p> 
+                    <a href="#" class="btn btn-theme">Read More</a>
+                </div>
+              </li>
+              <li>
+                <img src="img/slides/2.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Education First</h3> 
+                    <p>Teaching brings out innate powers, <br/> and proper training braces the intellect.</p> 
+                    <a href="#" class="btn btn-theme">Read More</a>
+                </div>
+              </li>
+            </ul>
+        </div>
+    <!-- end slider -->
+ 
+    </section>
+
 
     <section class="callaction">
     <div class="container">
@@ -161,10 +162,15 @@ $getdata = $mod->getSinglestudent($uId);
     <div class="container">
             <div class="row">
         <div class="skill-home"> <div class="skill-home-solid clearfix"> 
-        <div class="col-md-4 text-center">
-        <span class="icons c1"><i class="fa fa-trophy"></i></span> <div class="box-area">
+       <div class="col-md-4 text-center">
+         <a href="training_info.php" style="text-decoration: none; color: #656565;">
+        <span class="icons c1">
+        <i class="fa fa-trophy"></i></span>
+
+         <div class="box-area">
         <h3 class="text-center">IT Training</h3>
          <p><h5 class="text-center">Trained Up Yourself As an IT Professional.</h5> We provide best training that helps you to build up yourself as a professional IT person.</p></div>
+         </a>
         </div>
         <div class="col-md-4 text-center">
         <a href="https://recruitment.keal.com.bd" style="text-decoration: none; color: #656565;">
