@@ -7,9 +7,18 @@
         <!--  page-wrapper -->
           
 
+<?php include "../classes/adminview.php"; ?>
+
+<?php
+    $ad = new Adminview();
+    if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
+
+        $adroutine = $ad->adroutine($_POST);
+
+    }
 
 
-
+?>
 
 
 
@@ -22,33 +31,41 @@
            
                                     <br>
                                     <h1>Input Groups</h1>
-                                    <form class="col-md-8" >
+                                    <h3><?php
+                                    if(isset($adroutine)){
+                                        echo $adroutine;
+                                    }
+
+                                    ?></h3>
+                                    <form class="col-md-8" action="" method="post" >
                                         <div class="form-group input-group">
-                                            <label>Topic</label>
-                                                <input type="text" class="form-control"  placeholder="Enter Topic name" >
+                                         
+                                                <textarea name="topic" class="form-control" id="" cols="30" rows="5" placeholder="Enter Topic name"></textarea>
+
+                                                
                                         </div>
                                         <div class="form-group input-group">
                                             <label>Day</label>
-                                                <input type="text" class="form-control"  placeholder="Enter Day" >
+                                                <input type="text" class="form-control" name="day" placeholder="Enter Day" >
                                         </div>
 
 
 
                                         <div class="form-group input-group">
                                             <label>Time</label>
-                                            <input type="text" class="form-control" placeholder="Enter Class Time">
+                                            <input type="time" class="form-control" name="ctime" placeholder="Enter Class Time">
                                         </div>
                                         <div class="form-group input-group">
                                             <label>Venue</label>
-                                            <input type="text" class="form-control" placeholder="Enter venue name">
+                                            <input type="text" class="form-control" name="venue" placeholder="Enter venue name">
                                            
                                         </div>
                                         <div class="form-group input-group">
                                         <label>Course</label>
-                                        <input type="text" class="form-control" placeholder="Enter Course name">
+                                        <input type="text" class="form-control" name="course" placeholder="Enter Course name">
                                          </label>   
                                         </div>
-                                        <button class="submit" name="submit" id="submit"><h4>Submit</h4></button>
+                                        <button type="submit" class="submit" name="submit" id="submit"><h4>Submit</h4></button>
                                     </form>
                                 
                           
