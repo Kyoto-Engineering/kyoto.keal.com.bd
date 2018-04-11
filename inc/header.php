@@ -22,7 +22,7 @@ $fm = new Format();
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="js/owl-carousel/owl.carousel.html" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" />
- 
+
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -67,7 +67,7 @@ margin-top: -26px;" /></a>
                              $log = Session::get("login");
                             if($log == "true"){?>
                             <li><a href="notice_board.php">Notice Board</a></li> 
-                            <li><a href="courses.php">Other Courses</a></li> 
+                            <li><a href="courses.php">Courses</a></li> 
                             <li><a href="">Result</a></li> 
                                  <li><a href="?action=logout">Sign Out</a></li> 
                             <?php } else { ?>
