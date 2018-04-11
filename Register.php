@@ -21,8 +21,10 @@
         $dob = $_POST['dob'];
         $gender = $_POST['gender'];
         $level = $_POST['level'];
+        $edulevel = $_POST['edulevel'];
+        $subject = $_POST['subject'];
         // $courseId = $_POST['courseId'];
-        $userlog = $user->userLogin($studentName, $email,$phone,$dob,$gender,$level);
+        $userlog = $user->userLogin($studentName, $email,$phone,$dob,$gender,$level,$edulevel,$subject);
     }
 
 ?>  
@@ -53,13 +55,13 @@
     width: 498px; margin-bottom:40px;">
     
     
-      	<h1 style="text-align: center;">Sign up</h1>
+        <h1 style="text-align: center;">Sign up</h1>
           <h3><?php 
             if (isset($userlog)) {
               echo $userlog;
             }
             ?></h3>
-	    <form method="post" action="">
+      <form method="post" action="">
 
           <div class="form-group">
               <label for="studentName" class="cols-sm-2 control-label">Your Name</label>
@@ -99,7 +101,7 @@
             
               </div>
             </div>
-	     
+       
 <!-- <div class="form-group">
   <label for="sel1">Select Training On:</label>
   <select class="form-control" id="sel1" name="courseId"> -->
@@ -126,6 +128,30 @@
   </select>
 </div>
 
+<div class="form-group">
+              <label for="phone" class="cols-sm-2 control-label">Education Level</label>
+             <select class="form-control" id="sel1" name="edulevel">
+      
+     <option value="1" > Graduate</option>
+     <option value="2" >Undergraduate</option>
+     <option value="3" >HSC</option>
+     <option value="3" >SSC</option>
+    
+   
+  </select>
+              </div>
+            
+
+ <div class="form-group">
+              <label for="phone" class="cols-sm-2 control-label">Subject</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  
+                  <input type="text" class="form-control" name="subject" id="subject"  placeholder="Enter Your Subject "/>
+                </div>
+              </div>
+            </div>
+
                <div class="form-group">
               <label for="password" class="cols-sm-2 control-label">Gender</label>
               <div class="cols-sm-10">
@@ -136,17 +162,17 @@
               </div>
             </div>
 
-		      
+          
 
           
           <input type="submit" name="submit" value="Sign Up">
        
-		    
-	
+        
+  
           
             
-	   
-	      
+     
+        
 
       </form>
     </section>

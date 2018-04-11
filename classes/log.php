@@ -17,7 +17,7 @@ class SignUp
 
 
 
-public function userLogin($studentName, $email,$phone, $dob ,$gender, $level){
+public function userLogin($studentName, $email,$phone, $dob ,$gender, $level,$edulevel,$subject){
 	
 		$studentName     = mysqli_real_escape_string($this->db->link,$studentName);
 		$email     		 = mysqli_real_escape_string($this->db->link,$email);
@@ -25,9 +25,11 @@ public function userLogin($studentName, $email,$phone, $dob ,$gender, $level){
 		$dob      		 = mysqli_real_escape_string($this->db->link,$dob);
 		$gender    	  	 = mysqli_real_escape_string($this->db->link,$gender);
 		$level    	  	 = mysqli_real_escape_string($this->db->link,$level);
+		$edulevel    	  	 = mysqli_real_escape_string($this->db->link,$edulevel);
+		$subject    	  	 = mysqli_real_escape_string($this->db->link,$subject);
 		// $courseId      	 = mysqli_real_escape_string($this->db->link,$courseId);
 
-		if ($studentName == "" || $email == "" || $phone == "" || $phone == "" || $dob == "" || $gender == "" || $level =="") {
+		if ($studentName == "" || $email == "" || $phone == "" || $phone == "" || $dob == "" || $gender == "" || $level =="" || $edulevel =="" || $subject =="") {
 			
 			$msg = "<span style='color:#fff'>Field Must Not Be Empty!!</span>";
 			return $msg;
@@ -45,7 +47,7 @@ public function userLogin($studentName, $email,$phone, $dob ,$gender, $level){
 			
 					
 				
-						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, level) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$level')";
+						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, level, edulevel, subject ) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$level' ,'edulevel', 'subject')";
 	    	 			$inserted_row = $this->db->insert($query);
 	    	 			//<!--Email generator-->
 						if($inserted_row){
