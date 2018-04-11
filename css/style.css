@@ -394,6 +394,16 @@ margin: 0 auto;
 width: 100%;
 color: #fff;
 }
+
+.enrollwrap{
+	    margin: 0 auto;
+        margin-top: 0px;
+    width: 35%;
+    border: 1px solid #34955b;
+    padding: 20px 15px;
+    margin-top: 20px;
+
+}
 .testi-icon-area .quote {
 padding: 15px 0 0 0;
 margin: 0 0 0 0;

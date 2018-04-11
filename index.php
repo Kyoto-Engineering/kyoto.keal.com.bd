@@ -23,12 +23,7 @@ $getdata = $mod->getSinglestudent($uId);
             <p style="font-family: 'Montserrat', sans-serif;">Phone:&nbsp;<?php echo $data['phone']?></p>
             <p style="font-family: 'Montserrat', sans-serif;"><p style="font-family: 'Montserrat', sans-serif;">Date Of Birth:&nbsp;<?php echo $data['dob']?></p>
             <p style="font-family: 'Montserrat', sans-serif;">Gender:&nbsp;<?php echo $data['gender']?></p>
-            <p style="font-family: 'Montserrat', sans-serif;">Select Course:&nbsp;<?php  
-            if($data['courseId'] == "0"){
-                echo "No Course Select";
-            }
 
-                ?></p>
         </div>
     
     </div>
