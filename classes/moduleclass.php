@@ -17,7 +17,7 @@ class Module
 	}
 
 	public function getSinglestudent($uId){
-		$query = "SELECT p.*, c.name FROM tbl_stud_reg as p , tbl_course as c WHERE p.courseId = c.id AND p.id = '$uId'";
+		$query = "SELECT * FROM tbl_stud_reg  WHERE id = '$uId'";
 		$result = $this->db->select($query);
 		return $result;
 	}

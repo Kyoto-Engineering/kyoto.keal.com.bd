@@ -49,7 +49,11 @@
 							Login
 						</button>
 					</div>
+					<div class="signupsec">
+					<span><p>Not a member Yet!! Click <a href="Register.php"><button type="button" class="login101-form-btn">Sign Up</button></a></p></span>
+					</div>
 				</form>
+
 			</div>
 		</div>
 	</div>

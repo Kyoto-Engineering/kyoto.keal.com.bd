@@ -4,11 +4,11 @@
       $user = new SignUp(); 
 ?>
 <?php
-    if (!isset($_GET['level']) || $_GET['level'] == NULL ) {
-        //echo "<script>window.location = 'training_info.php'</script>";
-      }else{
-        $level = $_GET['level'];
-      }
+    // if (!isset($_GET['level']) || $_GET['level'] == NULL ) {
+    //     //echo "<script>window.location = 'training_info.php'</script>";
+    //   }else{
+    //     $level = $_GET['level'];
+    //   }
 
 ?>
 <?php
@@ -20,8 +20,9 @@
         $phone = $_POST['phone'];
         $dob = $_POST['dob'];
         $gender = $_POST['gender'];
-        $courseId = $_POST['courseId'];
-        $userlog = $user->userLogin($studentName, $email,$phone,$dob,$gender,$courseId, $level);
+        $level = $_POST['level'];
+        // $courseId = $_POST['courseId'];
+        $userlog = $user->userLogin($studentName, $email,$phone,$dob,$gender,$level);
     }
 
 ?>  
@@ -59,9 +60,7 @@
             }
             ?></h3>
 	    <form method="post" action="">
-	     <?php 
-       echo $level;
-       ?>
+
           <div class="form-group">
               <label for="studentName" class="cols-sm-2 control-label">Your Name</label>
               <div class="cols-sm-10">
@@ -101,19 +100,19 @@
               </div>
             </div>
 	     
-<div class="form-group">
+<!-- <div class="form-group">
   <label for="sel1">Select Training On:</label>
-  <select class="form-control" id="sel1" name="courseId">
+  <select class="form-control" id="sel1" name="courseId"> -->
               <?php
-                $getsp =  $user->getCourse();
-                  if ($getsp) {
-                  while ($data = $getsp->fetch_assoc()) {
+                // $getsp =  $user->getCourse();
+                //   if ($getsp) {
+                //   while ($data = $getsp->fetch_assoc()) {
                      ?>
-     <option value="<?php echo $data['id'];?>" ><?php echo $data['name']; ?> </option>
-      <?php } } ?>   
+     <option value="<?php //echo $data['id'];?>" ><?php //echo $data['name']; ?> </option>
+      <?php //} } ?>   
    
-  </select>
-</div>
+  <!-- </select>
+</div> -->
 
 <div class="form-group">
   <label for="sel1">Select Training Level:</label>
@@ -139,9 +138,9 @@
 
 		      
 
-          <a href="details.php?level=<?php echo $level;?>">
-          <input type="submit" name="submit" value="Show">
-          </a>
+          
+          <input type="submit" name="submit" value="Sign Up">
+       
 		    
 	
           

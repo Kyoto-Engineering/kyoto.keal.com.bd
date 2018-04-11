@@ -71,7 +71,7 @@ margin-top: -26px;" /></a>
                             <li><a href="">Result</a></li> 
                                  <li><a href="?action=logout">Sign Out</a></li> 
                             <?php } else { ?>
-                                <li><a href="login.php">Sign In</a></li> 
+                                <li><a href="login.php">Sign In or Sign Up</a></li> 
                                 <?php } ?>
                          
                     </ul>

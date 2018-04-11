@@ -17,16 +17,17 @@ class SignUp
 
 
 
-public function userLogin($studentName, $email,$phone, $dob ,$gender, $courseId, $level){
+public function userLogin($studentName, $email,$phone, $dob ,$gender, $level){
 	
 		$studentName     = mysqli_real_escape_string($this->db->link,$studentName);
 		$email     		 = mysqli_real_escape_string($this->db->link,$email);
 		$phone    		 = mysqli_real_escape_string($this->db->link,$phone);
 		$dob      		 = mysqli_real_escape_string($this->db->link,$dob);
 		$gender    	  	 = mysqli_real_escape_string($this->db->link,$gender);
-		$courseId      	 = mysqli_real_escape_string($this->db->link,$courseId);
+		$level    	  	 = mysqli_real_escape_string($this->db->link,$level);
+		// $courseId      	 = mysqli_real_escape_string($this->db->link,$courseId);
 
-		if ($studentName == "" || $email == "" || $phone == "" || $phone == "" || $dob == "" || $gender == "" || $courseId =="") {
+		if ($studentName == "" || $email == "" || $phone == "" || $phone == "" || $dob == "" || $gender == "" || $level =="") {
 			
 			$msg = "<span style='color:#fff'>Field Must Not Be Empty!!</span>";
 			return $msg;
@@ -44,16 +45,58 @@ public function userLogin($studentName, $email,$phone, $dob ,$gender, $courseId,
 			
 					
 				
-						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, courseId, level) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$courseId', '$level')";
+						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, level) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$level')";
 	    	 			$inserted_row = $this->db->insert($query);
 	    	 			//<!--Email generator-->
-	    	 			if($inserted_row){?>
-	    	 			<script>
-	    	 				window.location = 'view.php?level=<?php echo $level;?>'
-	    	 			</script>
-	    	 			<?php } else{
+						if($inserted_row){
 
-	    	 			}
+							?>
+                                 <script>
+                                alert('Congratulation!! Your Registration on Training has been Successfully completed!');
+                                window.location.href='login.php?success';
+                                </script>
+                            <?php
+
+
+							$headers = 'From: '.$email."\r\n".
+							 
+							'Reply-To: '.$email."\r\n" .
+							 
+							'X-Mailer: PHP/' . phpversion();
+
+							$email_to = "recruitment@keal.com.bd";
+							$email_subject= "Account Verification";
+							$email_message= "
+This person has been registered and sent for email verification:
+Name : $studentName,
+Email : $email";
+							
+							
+
+
+							$headers1 = 'From: '.$email_to."\r\n".
+							 
+							'Reply-To: '.$email_to."\r\n" .
+							 
+							'X-Mailer: PHP/' . phpversion();
+
+							$email_subject1= "Account Verification";
+		  $email_message1= "
+Dear $studentName,
+
+Welcome Aboard!!
+ 
+Thank you for signing up in our recruitment program.
+ 
+
+ 
+Good Luck!!";
+
+	                    mail("<$email_to>","$email_subject","$email_message","$headers");
+
+							mail("<$email>","$email_subject1","$email_message1","$headers1");
+
+						}
 			}
 
 

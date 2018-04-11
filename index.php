@@ -23,7 +23,12 @@ $getdata = $mod->getSinglestudent($uId);
             <p style="font-family: 'Montserrat', sans-serif;">Phone:&nbsp;<?php echo $data['phone']?></p>
             <p style="font-family: 'Montserrat', sans-serif;"><p style="font-family: 'Montserrat', sans-serif;">Date Of Birth:&nbsp;<?php echo $data['dob']?></p>
             <p style="font-family: 'Montserrat', sans-serif;">Gender:&nbsp;<?php echo $data['gender']?></p>
-            <p style="font-family: 'Montserrat', sans-serif;">Select Course:&nbsp;<?php echo $data['name']?></p>
+            <p style="font-family: 'Montserrat', sans-serif;">Select Course:&nbsp;<?php  
+            if($data['courseId'] == "0"){
+                echo "No Course Select";
+            }
+
+                ?></p>
         </div>
     
     </div>
@@ -31,7 +36,7 @@ $getdata = $mod->getSinglestudent($uId);
     <div class="row">
     <h3>Your Preffered Course Details</h3>
     <?php 
-    if($data['level']=="1"){?>
+    if($data['courseId']=="1"){?>
              <div class="col-md-6">
                                 <p> <span style="color:black; font-weight: bold;">1) Basic php fundamentals</span><ul style="text-decoration: none; list-style: none;">
                                 <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
@@ -69,7 +74,7 @@ $getdata = $mod->getSinglestudent($uId);
                                 </ul>
                                 <span style="color:red; font-weight: bold;">Class Test</span></p>
         </div> 
-   <?php } elseif($data['level']=="2"){?>
+   <?php } elseif($data['courseId']=="2"){?>
              <div class="col-md-6">
  <p><ul style="text-decoration: none; list-style: none;">
                                 <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
@@ -84,7 +89,7 @@ $getdata = $mod->getSinglestudent($uId);
                                 </ul></p>
                                 </ul></p>
         </div> 
-   <?php }elseif($data['level']=="3"){?>
+   <?php }elseif($data['courseId']=="3"){?>
                  <div class="col-md-6">
                                 <p><ul style="text-decoration: none; list-style: none;">
                                 <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
@@ -100,7 +105,7 @@ $getdata = $mod->getSinglestudent($uId);
                                 </ul></p>
         </div> 
    <?php }else{
-    echo "No Level Selected to Show";
+    echo "No course Selected to Show";
    }
     ?>
   
