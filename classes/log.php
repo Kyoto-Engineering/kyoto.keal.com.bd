@@ -47,7 +47,7 @@ public function userLogin($studentName, $email,$phone, $dob ,$gender, $level,$ed
 			
 					
 				
-						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, level, edulevel, subject ) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$level' ,'edulevel', 'subject')";
+						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, level, edulevel, subject ) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$level' ,'$edulevel', '$subject')";
 	    	 			$inserted_row = $this->db->insert($query);
 	    	 			//<!--Email generator-->
 						if($inserted_row){

@@ -214,6 +214,78 @@ margin-top: -26px;" /></a>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '3';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
 							</div>
+
+
+						</div> 
+
+						<div class="row">
+							
+								
+							<div class="col-md-4">
+								<!-- Heading and para -->
+								<div class="block-heading-two">
+									<h3><span>IT for NON-IT Training</span></h3>
+								</div>
+								<p><ul style="text-decoration: none; list-style: none;">
+								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+								<li>MS WORD</li>
+								<li>MS PowerPoint</li>
+								<li>MS Excel</li>
+								<li>Software installation</li>
+								<li>E-marketing</li>
+								<li>Photo editing(basic concept)</li>
+								<li>Secured smart phone & computer using</li>
+								
+
+								
+								</ol>
+								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
+								 <p>Course Fee: BDT 2,000</p>
+							 <p>(Refundable)</p></li>  -->
+								</ul></p>
+								<div class="course_fee">
+									<h3>Duration: 2 months</h3>
+								 <p>Course Fee: BDT 8,000</p>
+							
+								</div>
+								<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
+								
+							</div>
+							<div class="col-md-4">
+								<!-- Heading and para -->
+								<div class="block-heading-two">
+									<h3><span>Graphics Design</span></h3>
+								</div>
+								<p><ul style="text-decoration: none; list-style: none;">
+								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+								<li>Introduction of Graphic Design.</li>
+								<li>Graphics design tools (brush tools, gradient tools, lasso tools, selection tools, text tools etc.)</li>
+
+								<li>Object, layer groups with Photoshop</li>
+								<li>Various effect </li>
+								<li>Banner design </li>
+								<li>Logo design</li>
+								
+					
+								
+
+								
+								</ol>
+								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
+								 <p>Course Fee: BDT 2,000</p>
+							 <p>(Refundable)</p></li>  -->
+								</ul></p>
+								<div class="course_fee">
+									<h3>Duration: 3 months</h3>
+								 <p>Course Fee: BDT 10,000</p>
+							
+								</div>
+								<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
+								
+							</div>
+							
 						</div> 
 						
 						 						
