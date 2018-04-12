@@ -31,7 +31,7 @@
            
                 <!--end page header -->
            
-                                    <br>
+                                    <br/>
                                     <h1>Input Groups</h1>
                                     <h3><?php
                                     if(isset($adnotice)){
@@ -39,28 +39,63 @@
                                     }
 
                                     ?></h3>
-                                    <form class="col-md-8" action="" method="post" >
-                                    <form class="col-md-8" >
-                                        <div class="form-group input-group">
-                                            <label>Notice</label>
-                                                <textarea name="notice" class="form-control"  id="" cols="30" rows="5" placeholder="Enter Notice"></textarea>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <label>Date</label>
-                                                <input type="date" class="form-control" name="pdate" placeholder="Posted Date" >
-                                        </div>
 
 
 
-                                        <div class="form-group input-group">
-                                            <label>Posted by</label>
-                                            <input type="text" name="postedby"class="form-control" placeholder="Enter Posted by">
-                                        </div>
-                                        <button type="submit" class="submit" name="submit" id="submit"><h4>Submit</h4></button>
-                                        
-                                    </form>
+
+
+
+
+
+
+
+                                    <div class="row">
+                    
+                       
+                            <form action="" method="post" class="col-lg-8">
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">Notice</label>
+                                    <div class="col-md-9">
+                                        <textarea name="notice" class="form-control" id="" cols="30" rows="5" placeholder="Enter Notice"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">Date</label>
+                                    <div class="col-md-9">
+                                     <input type="date" name="pdate" class="form-control" placeholder="Enter posted date">
+                                    </div>
+                                </div>
                                 
-                          
+
+                                <div class="form-group row">
+                                    <label  class="col-md-3 col-form-label">Posted by</label>
+                                    <div class="col-md-9">
+                                        <input type="text" name="postedby" class="form-control" placeholder="Enter Posted by">
+                                    </div>
+                                </div>
+                                
+
+                                
+                                <div class="form-group row">
+                                             <div class="col-md-3"></div>
+                                             <div class="col-md-9">
+                                            <button type="submit" class="submit" name="submit" id="submit"><h4>Submit</h4></button>
+                                            </div>
+                                        </div>
+                            </form>
+                       
+                        
+                                  
+                                    
+                                        
+                                        
+
+
+
+                                        
+                                       
+                                
+                          </div>
                        
                   
                      <!-- End Form Elements -->

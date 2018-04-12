@@ -265,11 +265,6 @@ margin-top: -26px;" /></a>
 								<li>Object, layer groups with Photoshop</li>
 								<li>Various effect </li>
 								<li>Banner design </li>
-								<li>Logo design</li>
-								
-					
-								
-
 								
 								</ol>
 								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
@@ -277,9 +272,8 @@ margin-top: -26px;" /></a>
 							 <p>(Refundable)</p></li>  -->
 								</ul></p>
 								<div class="course_fee">
-									<h3>Duration: 3 months</h3>
-								 <p>Course Fee: BDT 10,000</p>
-							
+								<h3>Duration: 3 months</h3>
+								<p>Course Fee: BDT 10,000</p>
 								</div>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
@@ -312,26 +306,6 @@ margin-top: -26px;" /></a>
 							
 						
 							<div class="col-md-4">
-								<!-- Heading and para -->
-								<!-- <div class="block-heading-two">
-									<h3><span>Advanced Level<br/> A COMPLETE PROJECT on WEB</span></h3>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<li>Front End Work with Bootstrap</li>
-								<li>Concepts of Html5 & CSS3</li>
-								<li>Basic template Design with Bootstrap</li>
-								<li>4. Right Hardware for Right Application.</li>
-								<li>5. Effective Implementation skill required for automation, controll and monitoring of Industrial Process.</li>
-								<li>6.Implementation of Industrial process including descrete manufactureing, control of sequences, batch processing, and process controll</li>
-								<li>7. Good Design, Drafting & Mapping Practices </li>
-								<li>7. Installation & commissioning PLC </li>
-								
-								<li><h3>Duration: 3 Days (24Hrs)</h3>
-								<p>Course Fee: BDT 25,000</p><p>(Refundable)</p></li>
-								
-								</ul></p> -->
-
-								
 							</div>
 							<div class="col-md-4">
 								<!-- Heading and para -->
