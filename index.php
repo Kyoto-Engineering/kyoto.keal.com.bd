@@ -166,28 +166,29 @@ $getdata = $mod->getSinglestudent($uId);
         <div id="main-slider" class="flexslider">
             <ul class="slides">
               <li>
-                <img src="img/slides/3.jpg" alt="" />
-                <div class="flex-caption container">
+                <img src="img/slides/44.jpg" alt="" />
+                <!-- <div class="flex-caption container">
                     <h3>Success Oriented</h3> 
                     <p>The most important part of education is proper training...</p> 
                     <a href="#" class="btn btn-theme">Read More</a>
-                </div>
+                </div> -->
               </li>
               <li>
-                <img src="img/slides/1.jpg" alt="" />
-                <div class="flex-caption container">
+                <img src="img/slides/11.jpg" alt="" />
+                <!-- <div class="flex-caption container">
                     <h3>Success Oriented</h3> 
                     <p>The most important part of education is proper training...</p> 
                     <a href="#" class="btn btn-theme">Read More</a>
-                </div>
+                </div> -->
               </li>
               <li>
                 <img src="img/slides/2.jpg" alt="" />
-                <div class="flex-caption container">
+                <!-- <div class="flex-caption container">
                     <h3>Education First</h3> 
                     <p>Teaching brings out innate powers, <br/> and proper training braces the intellect.</p> 
                     <a href="#" class="btn btn-theme">Read More</a>
-                </div>
+                </div> -->
+
               </li>
             </ul>
         </div>
@@ -195,7 +196,38 @@ $getdata = $mod->getSinglestudent($uId);
  
     </section>
 
-
+<section class="" style="margin-top: 3%;padding: 15px 10px;/*! margin-bottom: 3%; */">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="background-color: #204b0a;">
+                 <marquee style="padding: 15px;margin: 0 auto;"><span style="font-size: 20px; font-weight: bold; color:#fff;">Do You Know!!  We'r giving 60% subsidy on Training Course For 1st Batch!!</span></marquee>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="col-md-12" style="background-color: #0b9add; border-radius: 7px 7px 0px 0px;">
+                    <h5 style="color: #fff;padding: 1px 40px;margin-bottom: 10px;">Our Training Courses</h5>
+                </div>
+                <div class="col-md-12" style="border: 1px solid #0b9add; ">
+                    <ul style="list-style-type: none; padding: 16px 40px;">
+                    <li style="font-size: 15px; color:#000;"><img class="arrow" src="img/arrow.png" height="auto" width="2%">&nbsp;&nbsp;Web Designing</li>
+                    <li style="font-size: 15px; color:#000;"><img class="arrow" src="img/arrow.png">&nbsp;&nbsp;Software Design & Development with oop php & mysqli</li>
+                    <li style="font-size: 15px; color:#000;"><img class="arrow" src="img/arrow.png">&nbsp;&nbsp;asp .net & sql server</li>
+                    <li style="font-size: 15px; color:#000;"><img class="arrow" src="img/arrow.png">&nbsp;&nbsp;Graphics Design</li>
+                    <li style="font-size: 15px; color:#000;"><img class="arrow" src="img/arrow.png">&nbsp;&nbsp;IT For Non IT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 flashing" style="border-radius: 7px 7px 0px 0px; color: #fff; margin: 0 auto; text-align: center; padding: 24px 15px;">
+                <h3 style="color: #fff;">Admission <br> On Training Courses are Opening<br>Hurry Up!! </h3>
+            </div>
+        </div>
+    </div>
+</section>
     <section class="callaction">
     <div class="container">
         <div class="row">

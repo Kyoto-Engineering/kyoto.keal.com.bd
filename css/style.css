@@ -295,8 +295,8 @@ display: inline-block;
 	position:relative;
 	margin:0;
 	padding:0;
-	background: url('../img/border-bg.jpg') top left repeat-x;
-	margin-top: 3px;
+	/*background: url('../img/border-bg.jpg') top left repeat-x;*/
+	margin-top: -12px;
 	padding-top: 12px;
 }
 
@@ -460,8 +460,8 @@ font-style: italic;
 } 
 section.callaction {
 	background:#fff;
-	padding:50px 0 0 0;
-	background: url('../img/border-bg.jpg') top left repeat-x;
+	padding:26px 0 0 0;
+	/*background: url('../img/border-bg.jpg') top left repeat-x;*/
 }
 
 /* Clients
@@ -625,6 +625,7 @@ ul.breadcrumb li a:hover {
 	text-decoration:none;
 }
 img{width: 100%;}
+.arrow{width: 3%;}
 .post3 img {
 margin-bottom: 20px;
 max-width: 100%;
