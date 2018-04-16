@@ -40,7 +40,7 @@
                                 <a href="insert_topic.php">Insert Topic</a>
                             </li>
                             <li>
-                                <a href="insert_course.php">Insert courses</a>
+                                <a href="insert_coursecontent.php">Insert courses</a>
                             </li>
                             <li>
                                 <a href="insert_routine.php">Insert Routine</a>
