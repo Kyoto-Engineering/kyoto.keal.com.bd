@@ -37,6 +37,12 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Insert Panel<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
+                                <a href="insert_topic.php">Insert Topic</a>
+                            </li>
+                            <li>
+                                <a href="insert_coursecontent.php">Insert courses</a>
+                            </li>
+                            <li>
                                 <a href="insert_routine.php">Insert Routine</a>
                             </li>
                              <li>

@@ -101,6 +101,160 @@ public function adnotice($data){
 			    	}
             }
 
+            public function courseInsert($data, $file){
+		$name  = $this->fm->validation($data['name']);
+		$price    = $this->fm->validation($data['price']);
+		$quote = $this->fm->validation($data['quote']);
+		$status = $this->fm->validation($data['status']);
+		
+		$name	 =mysqli_real_escape_string($this->db->link , $name);
+		$price   		 = mysqli_real_escape_string($this->db->link, $price );
+		$quote   = mysqli_real_escape_string($this->db->link, $quote);
+		$status  = mysqli_real_escape_string($this->db->link, $status);
+		
+// 		if($picName == "" || $body == "" || $quatetion == ""){
+//  			$errmsg = "<span style='color:red'>Field Must Not Be Empty !!</span>";
+// 		    return $errmsg;
+// 		}
+
+		$permited  = array('jpg', 'jpeg', 'png', 'gif');
+		 $file_name = $file['image']['name'];
+		 $file_size = $file['image']['size'];
+		 $file_temp = $file['image']['tmp_name'];
+
+		      $div            = explode('.', $file_name);
+		      $file_ext       = strtolower(end($div));
+		      $unique_image   = substr(md5(time()), 0, 10).'.'.$file_ext;
+		      $image = "uploads/".$unique_image;
+
+
+		    if ($image == "") {
+		    	 
+		    	 $errmsg = "<span style='color:red'>Browse Your Picture First And Submit</span>";
+		    	 return $errmsg;
+
+		    	}elseif (in_array($file_ext, $permited) === false) {
+
+		     	echo "<span style='color:red'>You can upload only:-".implode(', ', $permited)."</span>";
+
+    			} else {
+			    	 move_uploaded_file($file_temp, $image);
+			    	 $query = "INSERT INTO tbl_course(name, price, quote, image, status) VALUES('$name','$price', '$quote' ,'$image' , '$status')";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green;'>Image Upload complete</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 	$msg = "<span style='color:red;'>Image Upload Not complete</span>";
+			    	 	return $msg;
+			    	 }
+			    	}
+	}
+
+
+
+	public function coursecontentInsert($data, $file){
+		$courseName  = $this->fm->validation($data['courseName']);
+		$lId    = $this->fm->validation($data['lId']);
+		$quote = $this->fm->validation($data['quote']);
+		// $t1Id = $this->fm->validation($data['topic']);
+		// $t2Id = $this->fm->validation($data['topic']);
+		// $t3Id = $this->fm->validation($data['topic']);
+		// $t4Id = $this->fm->validation($data['topic']);
+		// $t5Id = $this->fm->validation($data['topic']);
+		
+		
+		$courseName	 =mysqli_real_escape_string($this->db->link , $courseName);
+		$lId   		 = mysqli_real_escape_string($this->db->link, $lId );
+		$quote   = mysqli_real_escape_string($this->db->link, $quote);
+		// $t1Id   = mysqli_real_escape_string($this->db->link, $t1Id);
+		// $t2Id   = mysqli_real_escape_string($this->db->link, $t2Id);
+		// $t3Id   = mysqli_real_escape_string($this->db->link, $t3Id);
+		// $t4Id   = mysqli_real_escape_string($this->db->link, $t4Id);
+		// $t5Id   = mysqli_real_escape_string($this->db->link, $t5Id);
+		
+		
+// 		if($picName == "" || $body == "" || $quatetion == ""){
+//  			$errmsg = "<span style='color:red'>Field Must Not Be Empty !!</span>";
+// 		    return $errmsg;
+// 		}
+
+		$permited  = array('jpg', 'jpeg', 'png', 'gif');
+		 $file_name = $file['image']['name'];
+		 $file_size = $file['image']['size'];
+		 $file_temp = $file['image']['tmp_name'];
+
+		      $div            = explode('.', $file_name);
+		      $file_ext       = strtolower(end($div));
+		      $unique_image   = substr(md5(time()), 0, 10).'.'.$file_ext;
+		      $image = "uploads/".$unique_image;
+
+
+		    if ($image == "") {
+		    	 
+		    	 $errmsg = "<span style='color:red'>Browse Your Picture First And Submit</span>";
+		    	 return $errmsg;
+
+		    	}elseif (in_array($file_ext, $permited) === false) {
+
+		     	echo "<span style='color:red'>You can upload only:-".implode(', ', $permited)."</span>";
+
+    			} else {
+			    	 move_uploaded_file($file_temp, $image);
+			    	 $query = "INSERT INTO tbl_courseName(courseName, lId, quote, image) VALUES('$courseName','$lId', '$quote' ,'$image')";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green;'>Image Upload complete</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 	$msg = "<span style='color:red;'>Image Upload Not complete</span>";
+			    	 	return $msg;
+			    	 }
+			    	}
+	}
+
+	public function InsertTopic($data){
+		$topicName  = $this->fm->validation($data['topicName']);
+		
+		
+		$topicName	 =mysqli_real_escape_string($this->db->link , $topicName);
+		
+
+		
+
+		    if ($topicName == "") {
+		    	 
+		    	 $errmsg = "<span style='color:red'>Browse Your Picture First And Submit</span>";
+		    	 return $errmsg;
+
+		    	} else {
+			    	 
+			    	 $query = "INSERT INTO tbl_topic(topicName) VALUES('$topicName')";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green;'>Topic Upload Inserted</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 	$msg = "<span style='color:red;'>Topic Not Inserted</span>";
+			    	 	return $msg;
+			    	 }
+			    	}
+	}
+
+	public function getTopic(){
+		$query = "SELECT * FROM tbl_topic ORDER BY id DESC";
+		$result = $this->db->select($query);
+		return $result;
+	}
+
+	public function getLevel(){
+		$query = "SELECT * FROM tbl_level ORDER BY id DESC";
+		$result = $this->db->select($query);
+		return $result;
+	}
 }//main
 
 

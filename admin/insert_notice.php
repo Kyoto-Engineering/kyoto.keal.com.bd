@@ -49,7 +49,7 @@
 
 
 
-                                    <div class="row">
+                                    
                     
                        
                             <form action="" method="post" class="col-lg-8">
@@ -108,4 +108,4 @@
     <!-- end wrapper -->
 
     <!-- Core Scripts - Include with every page -->
-<? php include "inc/footer.php" ; ?>
+       <?php include "inc/footer.php" ; ?>
