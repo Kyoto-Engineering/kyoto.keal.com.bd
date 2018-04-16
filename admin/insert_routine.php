@@ -38,38 +38,60 @@
 
                                     ?></h3>
                                     <form class="col-md-8" action="" method="post" >
-                                        <div class="form-group input-group">
-                                         
+                                        <div class="form-group row">
+                                         <label class="col-md-3 col-form-label">Topic</label>
+                                         <div class="col-md-9">
                                                 <textarea name="topic" class="form-control" id="" cols="30" rows="5" placeholder="Enter Topic name"></textarea>
+                                                </div>
+                                                </div>
 
-                                                
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <label>Day</label>
+                                        <div class="form-group row">
+                                           <label class="col-md-3 col-form-label">Day</label>
+                                            <div class="col-md-9">
                                                 <input type="text" class="form-control" name="day" placeholder="Enter Day" >
                                         </div>
-
-
-
-                                        <div class="form-group input-group">
-                                            <label>Time</label>
-                                            <input type="time" class="form-control" name="ctime" placeholder="Enter Class Time">
                                         </div>
-                                        <div class="form-group input-group">
-                                            <label>Venue</label>
+
+                                    
+
+
+
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Time</label>
+                                            <div class="col-md-9">
+                                            <input type="time" class="form-control" name="ctime" placeholder="Enter Class Time">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Venue</label>
+                                            <div class="col-md-9">
                                             <input type="text" class="form-control" name="venue" placeholder="Enter venue name">
+                                            </div>
                                            
                                         </div>
-                                        <div class="form-group input-group">
-                                        <label>Course</label>
-                                        <input type="text" class="form-control" name="course" placeholder="Enter Course name">
-                                         </label>   
+
+
+
+
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Course</label>
+                                            <div class="col-md-9">
+                                            <input type="text" class="form-control" name="course" placeholder="Enter Course name">
+                                            </div>
+                                           
                                         </div>
-                                        <button type="submit" class="submit" name="submit" id="submit"><h4>Submit</h4></button>
+                                        <div class="form-group row">
+                                             <div class="col-md-3"></div>
+                                             <div class="col-md-9">
+                                            <button type="submit" class="submit" name="submit" id="submit"><h4>Submit</h4></button>
+                                            </div>
+                                        </div>
+                                        
                                     </form>
                                 
                           
-                       
+                       </div>
                   
                      <!-- End Form Elements -->
                
