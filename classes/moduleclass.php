@@ -102,5 +102,11 @@ Good Luck!!";
 		}
 	}
 
+	public function getCourses(){
+		$query = "SELECT * FROM tbl_coursename ORDER BY id DESC";
+		$result = $this->db->select($query);
+		return $result;
+	}
+
 }
 ?>
