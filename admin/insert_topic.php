@@ -22,7 +22,7 @@
                 <!--end page header -->
            
                                     <br>
-                                    <h1>Insert Course</h1>
+                                    <h1>Insert Topic</h1>
                                     <?php
                                     if (isset($addtopic)) {
                                     	echo $addtopic;

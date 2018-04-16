@@ -32,7 +32,7 @@
                 <!--end page header -->
            
                                     <br/>
-                                    <h1>Input Groups</h1>
+                                    <h1>Input Notice</h1>
                                     <h3><?php
                                     if(isset($adnotice)){
                                         echo $adnotice;
