@@ -24,7 +24,13 @@ a:active {
 .clear {
 	clear:both;
 }
-
+.p-0 {
+    padding: 0 !important;
+}
+.no-gutters {
+    margin-right: -10%;
+    margin-left: 10%;
+}
 h1,h2, h3, h4, h5, h6 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight:700;
@@ -335,7 +341,7 @@ margin-bottom:50px;
 }
 .c1{
 border: #ed5441 1px solid;
-background: rgb(36, 134, 102);
+background: rgb(231, 236, 234);
 }
 .c2{
 border: #24c4db 1px solid;
@@ -348,6 +354,16 @@ background: rgb(36, 134, 102);
 .c4{
 border: #609cec 1px solid;
 background: #F54E81;
+}
+
+.button{
+
+    text-align: center;
+    background: rgb(36, 134, 102);
+    color: #fff;
+    width: 50%;
+    border-radius: 36px;
+    height: 64px;
 }
 .skill-home .icons {
 padding: 30px 0 0 0;
@@ -459,7 +475,7 @@ line-height: 30px;
 font-style: italic;
 } 
 section.callaction {
-	background:#fff;
+	background:#eee;
 	padding:26px 0 0 0;
 	/*background: url('../img/border-bg.jpg') top left repeat-x;*/
 }
@@ -495,10 +511,21 @@ section.callaction {
 
 /* Content
 ==================================== */
+.course{
 
+}
+#secondclass {
+    text-align: center;
+    padding: 107px 30px;
+}
+#content{
+position: relative;
+background: #fff;
+padding: 0px 0 0px 0;
+}
 #content {
 	position:relative;
-	background:#fff;
+	background:#eee;
 	padding:50px 0 0px 0;
 }
 
@@ -1477,6 +1504,7 @@ a.scrollup i:hover {
 
 .aligncenter {
 	text-align:center;
+	color: rgb(36, 134, 102);
 }
  
 img.pull-left, .align-left{

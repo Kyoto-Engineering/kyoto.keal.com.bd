@@ -166,28 +166,28 @@ $getdata = $mod->getSinglestudent($uId);
         <div id="main-slider" class="flexslider">
             <ul class="slides">
               <li>
-                <img src="img/slides/44.jpg" alt="" />
-                <!-- <div class="flex-caption container">
+                <img src="img/slides/1.jpg" alt="" />
+                 <div class="flex-caption container">
                     <h3>Success Oriented</h3> 
                     <p>The most important part of education is proper training...</p> 
                     <a href="#" class="btn btn-theme">Read More</a>
-                </div> -->
-              </li>
-              <li>
-                <img src="img/slides/11.jpg" alt="" />
-                <!-- <div class="flex-caption container">
-                    <h3>Success Oriented</h3> 
-                    <p>The most important part of education is proper training...</p> 
-                    <a href="#" class="btn btn-theme">Read More</a>
-                </div> -->
+                </div> 
               </li>
               <li>
                 <img src="img/slides/2.jpg" alt="" />
-                <!-- <div class="flex-caption container">
+                 <div class="flex-caption container">
+                    <h3>Success Oriented</h3> 
+                    <p>The most important part of education is proper training...</p> 
+                    <a href="#" class="btn btn-theme">Read More</a>
+                </div>
+              </li>
+              <li>
+                <img src="img/slides/3.jpg" alt="" />
+               <div class="flex-caption container">
                     <h3>Education First</h3> 
                     <p>Teaching brings out innate powers, <br/> and proper training braces the intellect.</p> 
                     <a href="#" class="btn btn-theme">Read More</a>
-                </div> -->
+                </div> 
 
               </li>
             </ul>
@@ -195,17 +195,121 @@ $getdata = $mod->getSinglestudent($uId);
     <!-- end slider -->
  
     </section>
-
-<section class="" style="margin-top: 3%;padding: 15px 10px;/*! margin-bottom: 3%; */">
+<section class="course" style="background-color: #eee;/*! padding: 10px; */">
+    <section class="callaction">
     <div class="container">
         <div class="row">
-            <div class="col-md-12" style="background-color: #204b0a;">
-                 <marquee style="padding: 15px;margin: 0 auto;"><span style="font-size: 20px; font-weight: bold; color:#fff;">Do You Know!!  We'r giving 60% subsidy on Training Course For 1st Batch!!</span></marquee>
+            <div class="col-lg-12">
+                <div class="aligncenter"><h1 class="aligncenter">Choose Your Preferable Course</h1></div>
+  <!--               <h2 class="text-center"><span style="color:rgb(99, 174, 222)"><i>INSTITUTE OF  </span><span style="color:rgb(233, 39, 39)">   PROFESSIONALS  IT </i></span>&nbsp; TRAININGS</h2> -->
             </div>
         </div>
     </div>
+    </section>
+    <section id="contentone">
+    
+    
+    <div class="container">
+            <div class="row">
+        <div class="skill-home"> <div class="skill-home-solid clearfix"> 
+       <div class="col-md-4 text-center">
+         <a href="training_info.php" style="text-decoration: none; color: #656565;">
+        <span class="icons c1">
+        <!-- <i class="fa fa-trophy"></i> -->
+            <img src="img/bdskill.png" alt="no image"/>
+        </span>
+
+<!--          <div class="box-area">
+        <h3 class="text-center"></h3>
+         <p><h5 class="text-center">Trained Up Yourself As an IT Professional.</h5> We provide best training that helps you to build up yourself as a professional IT person.</p></div> -->
+         </a>
+        </div>
+        <div class="col-md-4 text-center">
+        <a href="https://recruitment.keal.com.bd" style="text-decoration: none; color: #656565;">
+        <span class="icons c2">
+       <!--  <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+<!-- <i class="fa fa-picture-o"></i> -->
+    <img src="img/bdskill.png" alt="no image"/>
+</span> 
+        <!-- <div class="box-area">
+        <h3 class="text-center">Internship Opportunity</h3>
+         <p><h5 class="text-center">Start Your Career With IT</h5> Only we are offering Internship in IT field after you've successfully completed your IT training.</p></div> -->
+         </a> 
+        </div>
+        <div class="col-md-4 text-center">
+        <a href="https://recruitment.keal.com.bd" style="text-decoration: none; color: #656565;">
+        <span class="icons c2">
+        <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+        <img src="img/bdskill.png" alt="no image"/>
+<!-- <i class="fa fa-picture-o"></i> --></span> 
+        <!-- <div class="box-area">
+        <h3 class="text-center">Internship Opportunity</h3>
+         <p><h5 class="text-center">Start Your Career With IT</h5> Only we are offering Internship in IT field after you've successfully completed your IT training.</p></div> -->
+         </a> 
+        </div>
+<!--        <div class="col-md-3 text-center"> 
+        <span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
+        <h3>User Experience</h3>
+         <p></p>
+        </div></div> -->
+        </div></div>
+        </div> 
+     
+
+    </div>
+        <div class="container">
+            <div class="row">
+        <div class="skill-home"> <div class="skill-home-solid clearfix"> 
+       <div class="col-md-4 text-center">
+         <a href="training_info.php" style="text-decoration: none; color: #656565;">
+        <span class="icons c1">
+        <!-- <i class="fa fa-trophy"></i> -->
+            <img src="img/bdskill.png" alt="no image"/>
+        </span>
+
+<!--          <div class="box-area">
+        <h3 class="text-center"></h3>
+         <p><h5 class="text-center">Trained Up Yourself As an IT Professional.</h5> We provide best training that helps you to build up yourself as a professional IT person.</p></div> -->
+         </a>
+        </div>
+        <div class="col-md-4 text-center">
+        <a href="https://recruitment.keal.com.bd" style="text-decoration: none; color: #656565;">
+        <span class="icons c2">
+       <!--  <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+<!-- <i class="fa fa-picture-o"></i> -->
+    <img src="img/bdskill.png" alt="no image"/>
+</span> 
+        <!-- <div class="box-area">
+        <h3 class="text-center">Internship Opportunity</h3>
+         <p><h5 class="text-center">Start Your Career With IT</h5> Only we are offering Internship in IT field after you've successfully completed your IT training.</p></div> -->
+         </a> 
+        </div>
+        <div class="col-md-4 text-center">
+        <a href="https://recruitment.keal.com.bd" style="text-decoration: none; color: #656565;">
+        <span class="icons c2">
+        <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+        <img src="img/bdskill.png" alt="no image"/>
+<!-- <i class="fa fa-picture-o"></i> --></span> 
+        <!-- <div class="box-area">
+        <h3 class="text-center">Internship Opportunity</h3>
+         <p><h5 class="text-center">Start Your Career With IT</h5> Only we are offering Internship in IT field after you've successfully completed your IT training.</p></div> -->
+         </a> 
+        </div>
+<!--        <div class="col-md-3 text-center"> 
+        <span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
+        <h3>User Experience</h3>
+         <p></p>
+        </div></div> -->
+        </div></div>
+        </div> 
+     
+
+    </div>
+    </section>
+
+
 </section>
-<section>
+<!-- <section>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -227,8 +331,21 @@ $getdata = $mod->getSinglestudent($uId);
             </div>
         </div>
     </div>
+</section> -->
+
+<section id="secondclass">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            <a href="training_info.php">
+                <button class="button btn btn-lg btn-warning"> Find All Courses</button>
+            </a>
+            </div>
+        </div>
+    </div>
+
 </section>
-    <section class="callaction">
+<!--     <section class="callaction">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -237,7 +354,7 @@ $getdata = $mod->getSinglestudent($uId);
             </div>
         </div>
     </div>
-    </section>
+    </section> -->
     
    
     <section id="content">

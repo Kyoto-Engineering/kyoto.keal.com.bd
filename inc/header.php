@@ -83,7 +83,7 @@ margin-top: -26px;" /></a>
                     <li><a href="index.php">Home</a></li>
 						
 						 
-                        <!-- <li><a href="training_info.php">Training Info</a></li> -->
+                        <li><a href="training_info.php">Training Info</a></li> 
                         <!-- <li><a href="pricing.html">Pricing</a></li> -->
                         <!-- <li><a href="contact.php">Contact</a></li> -->
 
