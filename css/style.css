@@ -345,7 +345,8 @@ background: rgb(231, 236, 234);
 }
 .c2{
 border: #24c4db 1px solid;
-background: rgb(36, 134, 102);
+/*background: rgb(36, 134, 102);*/
+background: #fff;
 }
 .c3{
 border: #D81265 1px solid;
@@ -1034,8 +1035,6 @@ background-color: #3f3b3b;
 opacity: 0.7;
 
 }
-
-
 /* --- button --- */
 .btn{text-align: center;
 background: rgb(36, 134, 102);
