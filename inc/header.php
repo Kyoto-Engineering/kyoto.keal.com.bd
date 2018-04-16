@@ -64,8 +64,8 @@ $courseId = Session::get('courseId');
 ?>
 <body>
 <div id="wrapper" class="home-page">
-    <!-- start header -->
-    <header>
+  <!-- start header -->
+  <header>
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -81,13 +81,9 @@ margin-top: -26px;" /></a>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
-                        <?php
-                        $log = Session::get("login");
-                        if($log != "true"){?>
-                        
+            
+             
                         <li><a href="training_info.php">Training Info</a></li> 
-                        
-                    <?php    } ?>
                         <!-- <li><a href="pricing.html">Pricing</a></li> -->
                         <!-- <li><a href="contact.php">Contact</a></li> -->
 
@@ -109,5 +105,5 @@ margin-top: -26px;" /></a>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- end header -->
+  </header>
+  <!-- end header -->
