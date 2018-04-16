@@ -27,7 +27,34 @@ $fm = new Format();
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+        <style>
+  @-webkit-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #ff0000; }
+  }
+  @-moz-keyframes argh-my-eyes {
+    0%   { background-color: #ff0000; }
+    49% { background-color: #ff0000; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #ff0000; }
+  }
+  @keyframes argh-my-eyes {
+    0%   { background-color: #ff0000; }
+    49% { background-color: #ff0000; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #ff0000; }
+  }
+  .flashing {
+  -webkit-animation: argh-my-eyes 0.5s infinite;
+  -moz-animation:    argh-my-eyes 0.5s infinite;
+  animation:         argh-my-eyes 0.5s infinite;
+}
+</style>
 </head>
 <?php 
 
@@ -37,8 +64,8 @@ $courseId = Session::get('courseId');
 ?>
 <body>
 <div id="wrapper" class="home-page">
-	<!-- start header -->
-	<header>
+    <!-- start header -->
+    <header>
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -54,9 +81,13 @@ margin-top: -26px;" /></a>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
-						
-						 
-                        <!-- <li><a href="training_info.php">Training Info</a></li> -->
+                        <?php
+                        $log = Session::get("login");
+                        if($log != "true"){?>
+                        
+                        <li><a href="training_info.php">Training Info</a></li> 
+                        
+                    <?php    } ?>
                         <!-- <li><a href="pricing.html">Pricing</a></li> -->
                         <!-- <li><a href="contact.php">Contact</a></li> -->
 
@@ -78,5 +109,5 @@ margin-top: -26px;" /></a>
                 </div>
             </div>
         </div>
-	</header>
-	<!-- end header -->
+    </header>
+    <!-- end header -->

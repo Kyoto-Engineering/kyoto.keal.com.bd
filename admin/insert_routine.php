@@ -103,4 +103,4 @@
     <!-- end wrapper -->
 
     <!-- Core Scripts - Include with every page -->
-<? php include "inc/footer.php" ; ?>
+<?php include "inc/footer.php" ; ?>

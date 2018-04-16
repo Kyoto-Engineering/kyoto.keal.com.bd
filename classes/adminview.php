@@ -101,6 +101,56 @@ public function adnotice($data){
 			    	}
             }
 
+            public function courseInsert($data, $file){
+		$name  = $this->fm->validation($data['name']);
+		$price    = $this->fm->validation($data['price']);
+		$quote = $this->fm->validation($data['quote']);
+		$status = $this->fm->validation($data['status']);
+		
+		$name	 =mysqli_real_escape_string($this->db->link , $name);
+		$price   		 = mysqli_real_escape_string($this->db->link, $price );
+		$quote   = mysqli_real_escape_string($this->db->link, $quote);
+		$status  = mysqli_real_escape_string($this->db->link, $status);
+		
+// 		if($picName == "" || $body == "" || $quatetion == ""){
+//  			$errmsg = "<span style='color:red'>Field Must Not Be Empty !!</span>";
+// 		    return $errmsg;
+// 		}
+
+		$permited  = array('jpg', 'jpeg', 'png', 'gif');
+		 $file_name = $file['image']['name'];
+		 $file_size = $file['image']['size'];
+		 $file_temp = $file['image']['tmp_name'];
+
+		      $div            = explode('.', $file_name);
+		      $file_ext       = strtolower(end($div));
+		      $unique_image   = substr(md5(time()), 0, 10).'.'.$file_ext;
+		      $image = "uploads/".$unique_image;
+
+
+		    if ($image == "") {
+		    	 
+		    	 $errmsg = "<span style='color:red'>Browse Your Picture First And Submit</span>";
+		    	 return $errmsg;
+
+		    	}elseif (in_array($file_ext, $permited) === false) {
+
+		     	echo "<span style='color:red'>You can upload only:-".implode(', ', $permited)."</span>";
+
+    			} else {
+			    	 move_uploaded_file($file_temp, $image);
+			    	 $query = "INSERT INTO tbl_course(name, price, quote, image, status) VALUES('$name','$price', '$quote' ,'$image' , '$status')";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green;'>Image Upload complete</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 	$msg = "<span style='color:red;'>Image Upload Not complete</span>";
+			    	 	return $msg;
+			    	 }
+			    	}
+	}
 }//main
 
 
