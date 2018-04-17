@@ -220,7 +220,9 @@ $getdata = $mod->getSinglestudent($uId);
          <div class="col-md-4 text-center">
                 <a href="program.php?id=<?php echo $value['id'] ; ?>" style="text-decoration: none; color: #656565;">
                 <span class="icons c2"><img src="admin/<?php echo $value['image']?>" alt="no image"/></span>
-
+        <div class="box-area">
+        <h3 class="text-center"><?php echo $value['courseName']?></h3>
+         <!-- <p><h5 class="text-center">Trained Up Yourself As an IT Professional.</h5> We provide best training that helps you to build up yourself as a professional IT person.</p> --></div>
          </a>
         </div>
        <?php }
