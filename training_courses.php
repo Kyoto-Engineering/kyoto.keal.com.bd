@@ -44,7 +44,6 @@ margin-top: -26px;" /></a>
                        <!--  <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="pricing.html">Pricing</a></li> -->
                         <li><a href="contact.php">Contact</a></li>
-                          
                         <li><a href="login.php">Sign In</a></li>
                     </ul>
                 </div>
@@ -54,71 +53,28 @@ margin-top: -26px;" /></a>
     <!-- end header -->
 
 	<section id="inner-headline">
-	<div class="container">
+	
 		<div class="row">
 			<div class="col-lg-12">
-				
 				<img src="img/pic2.jpg" alt="no image" style="background-attachment: fixed; background-size: cover;">
 			</div>
-		</div>
+		
 	</div>
 	</section>
+	
 	<section id="inner-headline">
-	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="pageTitle">TRAINING ON<br/>INFORMATION TECHNOLOGY</h2>
-				<!-- <img src="img/pic2.jpg" alt="no image" style="background-attachment: fixed; background-size: cover;"> -->
-			</div>
-		</div>
-	</div>
-	</section>
-
-	<section id="content">
-	<div class="container">
-					
-					<div class="about">
-					
-						<div class="row"> 
-							<div class="col-md-12">
-								<div class="about-logo">
-
-				<div class="navbar-collapse collapse" style="background-color:#A5D6A7"; >
-						<ul class="nav navbar-nav navbar-right">
-								
-				<ul class="nav navbar-nav">
-                    <li class="active">
-	                    <a href="training_info.php">
-	                    <b style="color:#2E7D32;font-size: 20px;">IT Training</b></a>
-                    </li> 
-						<li><a href="automation_info.php">
-						<b style="color:#2E7D32;font-size: 20px;">Automation Training</b>
-						</a></li>
-</ul>
-									  </div>
-									<h3>We are awesome <span class="color">TEAM</span></h3>
-									<p>As a part of our <b>Corporate Social Responsibility</b> we have organized a training program on <em>"Industrial Automation".</em> This endeavor will transfer valuable knowledge of Industrial Automation among the youngstars of our country</p>
-                                    	<p>This Training is ideal for engineers or engineering students especially in the fields of EEE/IPE. This is also suitable for working professionals who are the end users of industrial automation.</p>
-								</div>
-								<!-- <a href="#" class="btn btn-color">Read more</a>   -->
-							</div>
-						</div>
-						
-						<hr>
-						<br>
-						
-						<div class="row">
-							
-								<section id="inner-headline">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class="pageTitle">Certificate On...</h2>
+			<!-- <img src=""/> -->
+				<h2 class="pageTitle">Program name...</h2>
 				
-			</div>
+		
 		</div>
 	</div>
 	</section>
+	
+<div class="container">
+	<!-- </section> -->
 							<div class="col-md-4">
 								<!-- Heading and para -->
 								<div class="block-heading-two">
@@ -204,69 +160,7 @@ margin-top: -26px;" /></a>
 
 						</div> 
 
-						<div class="row">
-							
-								
-							<div class="col-md-4">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>IT for NON-IT Training</span></h3>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-								<li>MS WORD</li>
-								<li>MS PowerPoint</li>
-								<li>MS Excel</li>
-								<li>Software installation</li>
-								<li>E-marketing</li>
-								<li>Photo editing(basic concept)</li>
-								<li>Secured smart phone & computer using</li>
-								
-
-								
-								</ol>
-								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
-								 <p>Course Fee: BDT 2,000</p>
-							 <p>(Refundable)</p></li>  -->
-								</ul></p>
-								<div class="course_fee">
-									<h3>Duration: 2 months</h3>
-								 <p>Course Fee: BDT 8,000</p>
-							
-								</div>
-								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
-								
-							</div>
-							<div class="col-md-4">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>Graphics Design</span></h3>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-								<li>Introduction of Graphic Design.</li>
-								<li>Graphics design tools (brush tools, gradient tools, lasso tools, selection tools, text tools etc.)</li>
-
-								<li>Object, layer groups with Photoshop</li>
-								<li>Various effect </li>
-								<li>Banner design </li>
-								
-								</ol>
-								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
-								 <p>Course Fee: BDT 2,000</p>
-							 <p>(Refundable)</p></li>  -->
-								</ul></p>
-								<div class="course_fee">
-								<h3>Duration: 3 months</h3>
-								<p>Course Fee: BDT 10,000</p>
-								</div>
-								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
-								
-							</div>
-							
-						</div> 
+						
 						
 						 						
 						 
