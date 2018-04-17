@@ -62,7 +62,6 @@ margin-top: -26px;" /></a>
 	</div>
 	</section>
 	
-	
 	<section id="inner-headline">
 		<div class="row">
 			<div class="col-lg-12">
@@ -75,6 +74,7 @@ margin-top: -26px;" /></a>
 	</section>
 	
 <div class="container">
+	<!-- </section> -->
 							<div class="col-md-4">
 								<!-- Heading and para -->
 								<div class="block-heading-two">
