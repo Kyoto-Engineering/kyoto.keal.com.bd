@@ -218,7 +218,7 @@ $getdata = $mod->getSinglestudent($uId);
         while($value = $course->fetch_assoc()){?>
 
          <div class="col-md-4 text-center">
-                <a href="training_info.php" style="text-decoration: none; color: #656565;">
+                <a href="program.php?id=<?php echo $value['id'] ; ?>" style="text-decoration: none; color: #656565;">
                 <span class="icons c2"><img src="admin/<?php echo $value['image']?>" alt="no image"/></span>
 
          </a>
