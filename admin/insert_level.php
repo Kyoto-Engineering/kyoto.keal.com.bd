@@ -14,7 +14,7 @@
 	 $add = new Adminview();
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-		$addtopic = $add->InsertTopic($_POST);
+		$addlevel = $add->levelInsert($_POST);
 	}
 ?>
 <div id="page-wrapper">
@@ -22,10 +22,10 @@
                 <!--end page header -->
            
                                     <br>
-                                    <h1>Insert Topic</h1>
+                                    <h1>Insert Course</h1>
                                     <?php
-                                    if (isset($addtopic)) {
-                                    	echo $addtopic;
+                                    if (isset($addlevel)) {
+                                    	echo $addlevel;
                                     }
                                     ?>
                                     <h3></h3>
@@ -33,23 +33,20 @@
                                         
 
                                         <div class="form-group row">
-                                           <label class="col-md-3 col-form-label">Topic Name</label>
+                                           <label class="col-md-3 col-form-label">Level Name</label>
                                             <div class="col-md-9">
-                                                <textarea class="form-control" name="topicName" placeholder="Enter Topic Name" ></textarea> 
+                                                <input type="text" class="form-control" name="levelName" placeholder="Enter Level Name" >
                                         </div>
                                         </div>
 
-                                     <div class="form-group row">
+                                        <div class="form-group row">
                                              <div class="col-md-3"></div>
                                              <div class="col-md-9">
                                             <button type="submit" class="submit" name="submit" id="submit"><h4>Submit</h4></button>
                                             </div>
                                         </div>
 
-
-
-                                       
-                                        
+                        
                                     </form>
                                 
                           

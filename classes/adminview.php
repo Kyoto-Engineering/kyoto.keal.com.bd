@@ -226,7 +226,7 @@ public function adnotice($data){
 
 		    if ($topicName == "") {
 		    	 
-		    	 $errmsg = "<span style='color:red'>Browse Your Picture First And Submit</span>";
+		    	 $errmsg = "<span style='color:red'>Field Must Not be Empty</span>";
 		    	 return $errmsg;
 
 		    	} else {
@@ -255,6 +255,38 @@ public function adnotice($data){
 		$result = $this->db->select($query);
 		return $result;
 	}
+
+	public function levelInsert($data){
+		$levelName  = $this->fm->validation($data['levelName']);
+		
+		
+		$levelName	 =mysqli_real_escape_string($this->db->link , $levelName);
+		
+
+		
+
+		    if ($levelName == "") {
+		    	 
+		    	 $errmsg = "<span style='color:red'>Field Must Not be Empty</span>";
+		    	 return $errmsg;
+
+		    	} else {
+			    	 
+			    	 $query = "INSERT INTO tbl_level(levelName) VALUES('$levelName')";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green;'>Level Inserted</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 	$msg = "<span style='color:red;'>Level Not Inserted</span>";
+			    	 	return $msg;
+			    	 }
+			    	}
+	}
+
+
+	
 }//main
 
 

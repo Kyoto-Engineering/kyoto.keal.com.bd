@@ -108,5 +108,17 @@ Good Luck!!";
 		return $result;
 	}
 
+public function getCourseDetail($id){
+		$query = "SELECT p.*, c.courseName, l.levelName, t.topicName
+				FROM tbl_detail as p, tbl_courseName as c, tbl_level as l, tbl_topic as t  WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.t_Id = t.id  AND p.c_Id='$id'";
+		$result = $this->db->select($query);
+		return $result;
+	}
+
+	public function getCourseprice($id){
+		$query = "SELECT * FROM tbl_price WHERE cId = '$id'";
+		$result = $this->db->select($query);
+		return $result;
+	}
 }
 ?>

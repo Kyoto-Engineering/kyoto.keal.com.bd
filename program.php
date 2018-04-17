@@ -1,3 +1,15 @@
+<?php include "classes/moduleclass.php"; ?>
+
+ <?php
+               if(!isset($_GET['id']) || $_GET['id']==NUll){
+                echo "<script>window.location = 'index.php';</script>";
+              }else{
+                $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['id']);
+              }
+              ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,89 +87,57 @@ margin-top: -26px;" /></a>
 	</section>
 	
 <div class="container">
+
+
+							 <?php 
+              $mod = new Module();
+              $getcourse = $mod->getCourseDetail($id);
+              if ($getcourse) {
+              while ($data = $getcourse->fetch_assoc()) {
+
+          ?>
 							<div class="col-md-4">
+
 								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span>Complete Web Design</span></h3>
+									<h3><span><?php echo $data['courseName'] ; ?></span></h3>
+									<p>Course For <span><?php echo $data['levelName'] ; ?></span></p>
 								</div>
+
+                  
+
 								<p><ul style="text-decoration: none; list-style: none;">
 								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-								<li> HTML5 introduction, Markup, layout, Tag </li>
-								<li> HTML5 Image, Link, Style, Color </li>
-								<li> Formatting, List, Block, Table, Comments</li>
-								<li> CSS3 introduction, Color, Background, height-width</li>
-								<li> CSS3 Border, Margin, Padding</li>
-								<li> Text, Align, Dropdown, Forms</li>
-								<li> Id, Class, iframe, Responsive</li>
-								<li> Hover, Font, iconic font, use google map</li>
+								
+								<li> <?php echo $data['topicName'] ; ?> </li>
+								
 								
 								</ol>
 								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
 								 <p>Course Fee: BDT 2,000</p>
 							 <p>(Refundable)</p></li>  -->
 								</ul></p>
-								<div class="course_fee">
-									<h3>Duration: 3 month</h3>
-								 <p>Course Fee: BDT 7,000</p>
 							
-								</div>
+								<div class="course_fee">
+									
+		<?php 
+              $mod = new Module();
+              $getprice = $mod->getCourseprice($id);
+              if ($getprice) {
+              while ($value = $getprice->fetch_assoc()) {
+
+         ?>
+								 <h3>Course Fee:<br/>BDT:- <?php echo $value['price']?>Tk/-</h3>
+									<h3> Duration : Total <?php echo $value['duration']?> Hours</h3>
+					<?php } } ?>	
+							</div>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
 								
 							</div>
-							<div class="col-md-4">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>System Development with PHP and MySQL</span></h3>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-								<li>Basic php fundamentals</li>
-								<li>Describe about array functions</li>
-								<li>OOP Basics</li>
-								<li>Concept of system Design</li>
-								<li>Working with database MySQL</li>
-								<li>MySQL queries</li>
-								<li>Work with CRUD</li>
 
-
-								</ol>
-								</ul></p>
-								<div class="course_fee">
-									<h3>Duration: 4 months</h3>
-								 <p>Course Fee: BDT 12,000</p>
-							 
-								</div>
-								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '2';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
-							</div>
-							<div class="col-md-4">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>System development with Dot net and MySQL</span></h3>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-								<li>Introduction to Programming</li>
-								<li>List and collection(array, array list,stack,queue)</li>
-								<li>Conditions and loop(for loop, for each, while each, do while each, conditional logic)</li>
-								<li>Object oriented programming(Class, inheritance, polymorphism, encapsulation)</li>
-								
-								
-								</ol>
-								
-								
-								</ul></p>
-								<div class="course_fee">
-								<h3>Duration:4 months</h3>
-								 <p>Course Fee: BDT 12,000</p>
-								
-								</div>
-								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '3';?>" target="_blank"><button type="button" class="btn btn-success">Go For Details</button></a>
-							</div>
-
-
+							<?php  } } ?>	
+							
 						</div> 
 
 						

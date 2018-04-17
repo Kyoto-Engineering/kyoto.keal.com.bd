@@ -43,6 +43,9 @@
                                 <a href="insert_coursecontent.php">Insert courses</a>
                             </li>
                             <li>
+                                <a href="insert_level.php">Insert Level</a>
+                            </li>
+                            <li>
                                 <a href="insert_routine.php">Insert Routine</a>
                             </li>
                              <li>
