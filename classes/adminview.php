@@ -156,7 +156,7 @@ public function adnotice($data){
 
 	public function coursecontentInsert($data, $file){
 		$courseName  = $this->fm->validation($data['courseName']);
-		$lId    = $this->fm->validation($data['lId']);
+		
 		$quote = $this->fm->validation($data['quote']);
 		// $t1Id = $this->fm->validation($data['topic']);
 		// $t2Id = $this->fm->validation($data['topic']);
@@ -166,7 +166,7 @@ public function adnotice($data){
 		
 		
 		$courseName	 =mysqli_real_escape_string($this->db->link , $courseName);
-		$lId   		 = mysqli_real_escape_string($this->db->link, $lId );
+		
 		$quote   = mysqli_real_escape_string($this->db->link, $quote);
 		// $t1Id   = mysqli_real_escape_string($this->db->link, $t1Id);
 		// $t2Id   = mysqli_real_escape_string($this->db->link, $t2Id);
@@ -191,7 +191,7 @@ public function adnotice($data){
 		      $image = "uploads/".$unique_image;
 
 
-		    if ($image == "") {
+		    if ($courseName == "" || $image == "" || $quote == "") {
 		    	 
 		    	 $errmsg = "<span style='color:red'>Browse Your Picture First And Submit</span>";
 		    	 return $errmsg;
@@ -202,14 +202,14 @@ public function adnotice($data){
 
     			} else {
 			    	 move_uploaded_file($file_temp, $image);
-			    	 $query = "INSERT INTO tbl_courseName(courseName, lId, quote, image) VALUES('$courseName','$lId', '$quote' ,'$image')";
+			    	 $query = "INSERT INTO tbl_courseName(courseName, quote, image) VALUES('$courseName', '$quote' ,'$image')";
 			    	 $result = $this->db->insert($query);
 
 			    	 if ($result) {
-			    	 	$msg = "<span style='color:green;'>Image Upload complete</span>";
+			    	 	$msg = "<span style='color:green;'>Course Upload complete</span>";
 			    	 	return $msg;
 			    	 }else{
-			    	 	$msg = "<span style='color:red;'>Image Upload Not complete</span>";
+			    	 	$msg = "<span style='color:red;'>Course Upload Not complete</span>";
 			    	 	return $msg;
 			    	 }
 			    	}
