@@ -43,21 +43,6 @@
 
 
 
-                                        <div class="form-group row">
-                                            <label class="col-md-3 col-form-label">Level</label>
-                                            <div class="col-md-9">
-                                            <select class="form-control" name="lId">
-                                            
-                                            <option>Select Level</option>
-                                             <?php 
-                                                $level = $add->getLevel();
-                                                if ($level) {
-                                                   while ($value = $level->fetch_assoc()) {?>
-                                             <option value="<?php echo $value['id'] ?>" ><?php echo $value['levelName'] ?></option> 
-                                             <?php } } ?>
-                                             </select>
-                                            </div>
-                                            </div>
 
                                         
 
@@ -76,29 +61,7 @@
                                     </div>
                                     </div>
 
-                                    <div class="form-group row">
-                                            <label class="col-md-3 col-form-label">Add Topic</label>
-                                            <div class="col-md-9">
-                                            <?php 
-                                                $topic = $add->getTopic();
-                                                if ($topic) {
-                                                   while ($value = $topic->fetch_assoc()) {?>
-                                                      
-                                               <input type="checkbox" name="topic" value="<?php echo $value['id'] ?>"> <?php echo $value['topicName'] ?><br>
-                                            <?php }
-                                                }
-                                            ?>
-
-                                            </div>
-                                                   
-                                     </div>
-
-
-
-
-
-                                       
-								     
+                                  
                                         <div class="form-group row">
                                              <div class="col-md-3"></div>
                                              <div class="col-md-9">
