@@ -284,17 +284,25 @@ $getdata = $mod->getSinglestudent($uId);
     <div class="container">
             
     <div class="row">
-        <div class="skill-home"> <div class="skill-home-solid clearfix"> 
+        <div class="skill-home">
+         <div class="skill-home-solid clearfix"> 
+<?php 
+    $level = $mod->getlevel();
+    if ($level) {
+        while($data = $level->fetch_assoc()){?>
 
        <div class="col-md-4 text-center">
-         <a href="training_info.php" style="text-decoration: none; color: #656565;">
+         <a href="subprogram.php?id=<?php echo $data['id'] ; ?>" style="text-decoration: none; color: #656565;">
         <span class="icons c1">
-            <img src="img/bdskill.png" alt="no image"/>
+            <img src="admin/<?php echo $data['image']?>" alt="no image"/>
         </span>
-
+        <div class="box-area">
+        <h3 class="text-center"><?php echo $data['levelName']?></h3>
+         <!-- <p><h5 class="text-center">Trained Up Yourself As an IT Professional.</h5> We provide best training that helps you to build up yourself as a professional IT person.</p> --></div>
          </a>
         </div>
-        <div class="col-md-4 text-center">
+<?php } } ?>
+<!--         <div class="col-md-4 text-center">
         <a href="https://recruitment.keal.com.bd" style="text-decoration: none; color: #656565;">
         <span class="icons c2">
 
@@ -310,7 +318,7 @@ $getdata = $mod->getSinglestudent($uId);
         <img src="img/bdskill.png" alt="no image"/>
 
          </a> 
-        </div>
+        </div> -->
 
         </div></div>
         </div> 

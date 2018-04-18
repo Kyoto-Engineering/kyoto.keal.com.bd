@@ -120,5 +120,18 @@ public function getCourseDetail($id){
 		$result = $this->db->select($query);
 		return $result;
 	}
+
+	public function getlevel(){
+		$query = "SELECT * FROM tbl_level";
+		$result = $this->db->select($query);
+		return $result;		
+	}
+
+	public function getprogramDetail($id){
+		$query = "SELECT p.*, c.courseName, l.levelName, t.topicName
+				FROM tbl_detail as p, tbl_courseName as c, tbl_level as l, tbl_topic as t  WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.t_Id = t.id  AND p.l_Id='$id'";
+		$result = $this->db->select($query);
+		return $result;		
+	}
 }
 ?>
