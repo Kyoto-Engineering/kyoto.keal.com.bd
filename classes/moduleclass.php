@@ -114,6 +114,11 @@ public function getCourseDetail($id){
 		$result = $this->db->select($query);
 		return $result;
 	}
+	public function getCourseDetailLimit($id){
+		$query = "SELECT * FROM tbl_coursename WHERE id='$id' LIMIT 1";
+		$result = $this->db->select($query);
+		return $result;
+	}
 
 	public function getCourseprice($id){
 		$query = "SELECT * FROM tbl_price WHERE cId = '$id'";

@@ -77,12 +77,21 @@ margin-top: -26px;" /></a>
 	
 	<section id="inner-headline">
 		<div class="row">
+
+							 <?php 
+              $mod = new Module();
+              $getcourse = $mod->getCourseDetailLimit($id);
+              if ($getcourse) {
+              while ($data = $getcourse->fetch_assoc()) {
+
+          ?>
 			<div class="col-lg-12">
 			<!-- <img src=""/> -->
-				<h2 class="pageTitle">Program name...</h2>
+				<h2 class="pageTitle"><?php echo $data['courseName'] ; ?></h2>
 				
 		
 		</div>
+		<?php } } ?>
 	</div>
 	</section>
 	
