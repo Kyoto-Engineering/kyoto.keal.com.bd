@@ -5,6 +5,12 @@
 <?php
      $add = new Adminview();
 ?>
+<?php
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+    $deleteCouse = $add->delcourse($id);
+    }
+?>
         <!-- navbar side -->
      
         <!-- end navbar side -->
@@ -43,7 +49,7 @@
       <td><?php echo $data['courseName']?></td>
       <td><a href="edit_coursecontent.php?id=<?php echo $data['id']?>">
           <span><img src="../img/img_386644.png" height="auto" width="15px"></span>
-        </a> ||<a href="#">
+        </a> ||<a onclick="return confirm('Are you Sure Want to Delete!')" href="?id=<?php echo $data['id'] ?>">
           <span><span><img src="../img/627249-delete3-512.png" height="auto" width="15px"></span></span>
         </a></td>
 

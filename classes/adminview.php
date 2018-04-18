@@ -191,7 +191,7 @@ public function adnotice($data){
 		      $image = "uploads/".$unique_image;
 
 
-		    if ($courseName == "" || $image == "" || $quote == "") {
+		    if ($courseName == "" || $image == "" ) {
 		    	 
 		    	 $errmsg = "<span style='color:red'>Browse Your Picture First And Submit</span>";
 		    	 return $errmsg;
@@ -221,13 +221,7 @@ public function adnotice($data){
 		
 		$topicName	 =mysqli_real_escape_string($this->db->link , $topicName);
 		
-				$Cquery = "SELECT * FROM tbl_topic";
-				$result = $this->db->select($Cquery);
-				if ($result) {
-					while ($data = $result->fetch_assoc()) {
-						$level = $data['topicName'];
-					}
-				}
+
 		
 
 		    if ($topicName == "") {
@@ -235,10 +229,7 @@ public function adnotice($data){
 		    	 $errmsg = "<span style='color:red'>Field Must Not be Empty</span>";
 		    	 return $errmsg;
 
-		    	}elseif($topicName == $level){
-		    	 $errmsg = "<span style='color:red'>Topic already Exists</span>";
-		    	 return $errmsg;
-		    	}else {
+		    	} else {
 			    	 
 			    	 $query = "INSERT INTO tbl_topic(topicName) VALUES('$topicName')";
 			    	 $result = $this->db->insert($query);
@@ -307,7 +298,117 @@ public function adnotice($data){
 			    	}
 	}
 
-	public function getcourseName(){
+	// public function getcourseName(){
+	// 	$query = "SELECT * FROM tbl_courseName";
+	// 	$result = $this->db->select($query);
+	// 	return $result;
+	// }
+
+	public function editcoursecontent($id){
+		    $query  = "SELECT * FROM  tbl_courseName WHERE id='$id'";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+
+
+	public function coursecontentUpdate($data, $file , $id){
+		$courseName  = $this->fm->validation($data['courseName']);
+		
+		$quote = $this->fm->validation($data['quote']);
+		// $t1Id = $this->fm->validation($data['topic']);
+		// $t2Id = $this->fm->validation($data['topic']);
+		// $t3Id = $this->fm->validation($data['topic']);
+		// $t4Id = $this->fm->validation($data['topic']);
+		// $t5Id = $this->fm->validation($data['topic']);
+		
+		
+		$courseName	 =mysqli_real_escape_string($this->db->link , $courseName);
+		
+		$quote   = mysqli_real_escape_string($this->db->link, $quote);
+		// $t1Id   = mysqli_real_escape_string($this->db->link, $t1Id);
+		// $t2Id   = mysqli_real_escape_string($this->db->link, $t2Id);
+		// $t3Id   = mysqli_real_escape_string($this->db->link, $t3Id);
+		// $t4Id   = mysqli_real_escape_string($this->db->link, $t4Id);
+		// $t5Id   = mysqli_real_escape_string($this->db->link, $t5Id);
+		
+		
+// 		if($picName == "" || $body == "" || $quatetion == ""){
+//  			$errmsg = "<span style='color:red'>Field Must Not Be Empty !!</span>";
+// 		    return $errmsg;
+// 		}
+
+		$permited  = array('jpg', 'jpeg', 'png', 'gif');
+		 $file_name = $file['image']['name'];
+		 $file_size = $file['image']['size'];
+		 $file_temp = $file['image']['tmp_name'];
+
+		      $div            = explode('.', $file_name);
+		      $file_ext       = strtolower(end($div));
+		      $unique_image   = substr(md5(time()), 0, 10).'.'.$file_ext;
+		      $image = "uploads/".$unique_image;
+
+
+		    if ($courseName == "" ) {
+		    	 
+		    	 $errmsg = "<span style='color:red'>Field Must Not be Empty</span>";
+		    	 return $errmsg;
+
+		    	}else{
+		    			if (!empty($file_name)) {
+			    		if ($file_size >1048567) {
+				    		 echo "<span>Image Size should be less then 1MB!</span>";
+
+	   			 		} elseif (in_array($file_ext, $permited) === false) {
+
+			     			echo "<span>You can upload only:-".implode(', ', $permited)."</span>";
+
+	    			} else{
+	    				 move_uploaded_file($file_temp, $image);
+	    				 $query = "UPDATE tbl_courseName
+	    				 	SET 
+	    				 	courseName= '$courseName',
+	    				 	quote 		= '$quote',
+	    				 	
+	    				 	image 		= '$image'
+	    				 	
+	    				 	WHERE id = '$id'";
+
+	    				 $update = $this->db->update($query);
+	    				 if ($update) {
+	    				 	$msg = "Course Updated!!";
+	    				 	return $msg;
+	    				 }else{
+	    				 	$msg = "Course Not Updated!!";
+	    				 	return $msg;
+	    				 }
+	    			}
+	    		} else{
+
+	    				$query = "UPDATE tbl_courseName
+	    				 	SET 
+	    				 	courseName= '$courseName',
+	    				 	quote 		= '$quote'
+	    				 	
+	    				 	WHERE id = '$id'";
+
+	    				 $update = $this->db->update($query);
+	    				 if ($update) {
+	    				 	$msg = "Course Updated!!";
+	    				 	return $msg;
+	    				 }else{
+	    				 	$msg = "Course Not Updated!!";
+	    				 	return $msg;
+	    				 }
+
+	    		}
+
+    	}
+	}
+
+
+
+		public function getcourseName(){
 		$query = "SELECT * FROM tbl_courseName";
 		$result = $this->db->select($query);
 		return $result;
@@ -340,6 +441,7 @@ public function adnotice($data){
 		$query = "DELETE FROM tbl_coursename WHERE id = '$id'";
 		$result = $this->db->delete($query);		
 	}
+
 	
 }//main
 
