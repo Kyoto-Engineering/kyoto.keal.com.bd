@@ -63,7 +63,9 @@
                             <li>
                                 <a href="signup_list.php">Sign Up List</a>
                             </li>
-                           
+                              <li>
+                                <a href="coursename.php">View Course Name</a>
+                            </li>                         
                             
                         </ul>
                         <!-- second-level-items -->

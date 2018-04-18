@@ -298,6 +298,11 @@ public function adnotice($data){
 			    	}
 	}
 
+	public function getcourseName(){
+		$query = "SELECT * FROM tbl_courseName";
+		$result = $this->db->select($query);
+		return $result;
+	}
 
 	
 }//main
