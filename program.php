@@ -63,7 +63,7 @@ margin-top: -26px;" /></a>
         </div>
     </header>
     <!-- end header -->
-
+    
 	<section id="inner-headline">
 	
 		<div class="row">
@@ -77,8 +77,7 @@ margin-top: -26px;" /></a>
 	
 	<section id="inner-headline">
 		<div class="row">
-
-							 <?php 
+		<?php 
               $mod = new Module();
               $getcourse = $mod->getCourseDetailLimit($id);
               if ($getcourse) {
