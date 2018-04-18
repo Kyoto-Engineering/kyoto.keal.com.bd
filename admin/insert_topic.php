@@ -35,7 +35,7 @@
                                         <div class="form-group row">
                                            <label class="col-md-3 col-form-label">Topic Name</label>
                                             <div class="col-md-9">
-                                                <textarea class="form-control" name="topicName" placeholder="Enter Topic Name" ></textarea> 
+                                                <input type="text" class="form-control" name="topicName" placeholder="Enter Topic Name" /> 
                                         </div>
                                         </div>
 
