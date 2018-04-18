@@ -256,12 +256,21 @@ public function adnotice($data){
 		return $result;
 	}
 
-	public function levelInsert($data){
+	public function levelInsert($data, $file){
 		$levelName  = $this->fm->validation($data['levelName']);
 		
 		
 		$levelName	 =mysqli_real_escape_string($this->db->link , $levelName);
 		
+        $permited  = array('jpg', 'jpeg', 'png', 'gif');
+		 $file_name = $file['image']['name'];
+		 $file_size = $file['image']['size'];
+		 $file_temp = $file['image']['tmp_name'];
+
+		      $div            = explode('.', $file_name);
+		      $file_ext       = strtolower(end($div));
+		      $unique_image   = substr(md5(time()), 0, 10).'.'.$file_ext;
+		      $image = "upload/".$unique_image;
 
 		
 
@@ -270,9 +279,13 @@ public function adnotice($data){
 		    	 $errmsg = "<span style='color:red'>Field Must Not be Empty</span>";
 		    	 return $errmsg;
 
-		    	} else {
-			    	 
-			    	 $query = "INSERT INTO tbl_level(levelName) VALUES('$levelName')";
+		    	}elseif (in_array($file_ext, $permited) === false) {
+
+		     	echo "<span style='color:red'>You can upload only:-".implode(', ', $permited)."</span>";
+
+    			} else {
+			    	 move_uploaded_file($file_temp, $image);
+			    	 $query = "INSERT INTO tbl_level(levelName,image) VALUES('$levelName', '$image')";
 			    	 $result = $this->db->insert($query);
 
 			    	 if ($result) {

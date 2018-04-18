@@ -14,7 +14,7 @@
 	 $add = new Adminview();
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-		$addlevel = $add->levelInsert($_POST);
+		$addlevel = $add->levelInsert($_POST, $_FILES);
 	}
 ?>
 <div id="page-wrapper">
@@ -38,6 +38,13 @@
                                                 <input type="text" class="form-control" name="levelName" placeholder="Enter Level Name" >
                                         </div>
                                         </div>
+
+                                        <div class="form-group row">
+                                    <label for="inputEmail3" class="col-md-3 col-form-label">Select Image:</label>
+                                    <div class="col-md-9">
+                                        <input type="file" name="image" class="form-control-file" id="">
+                                    </div>
+                                    </div>
 
                                         <div class="form-group row">
                                              <div class="col-md-3"></div>
