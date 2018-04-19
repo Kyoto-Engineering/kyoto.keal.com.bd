@@ -4,27 +4,41 @@
       $user = new SignUp(); 
 ?>
 <?php
-    // if (!isset($_GET['level']) || $_GET['level'] == NULL ) {
-    //     //echo "<script>window.location = 'training_info.php'</script>";
-    //   }else{
-    //     $level = $_GET['level'];
-    //   }
+     // if (!isset($_GET['level']) || $_GET['level'] == NULL ) {
+     //     echo "<script>window.location = 'training_info.php'</script>";
+     //  }else{
+     //     $level = $_GET['level'];
+     //   }
+?>
+<?php
+    if(isset($_GET['level']) && !empty($_GET['level']) AND isset($_GET['cId']) && !empty($_GET['cId'])){
+        $level = $_GET['level'];
+        $cId = $_GET['cId'];
+      }
 
 ?>
+<?php 
+  $dateTime = date_default_timezone_set('Asia/Dhaka');
+  $serverIP = $_SERVER["REMOTE_ADDR"];
+  $timestamp = time();
+  $date = date("Y-m-d");
+  $day = date("(D)");
+  $time = date("H:i:s",$timestamp);
+  $month = date('M');
+?> 
 <?php
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
         $studentName = $_POST['studentName'];
         $email = $_POST['email'];
-        
         $phone = $_POST['phone'];
         $dob = $_POST['dob'];
         $gender = $_POST['gender'];
-        $level = $_POST['level'];
+        // $level = $_POST['level'];
         $edulevel = $_POST['edulevel'];
         $subject = $_POST['subject'];
         // $courseId = $_POST['courseId'];
-        $userlog = $user->userLogin($studentName, $email,$phone,$dob,$gender,$level,$edulevel,$subject);
+        $userlog = $user->usersignup($studentName, $email,$phone,$dob,$gender,$edulevel,$subject,$cId,$level,$date,$time,$serverIP);
     }
 
 ?>  
@@ -53,14 +67,34 @@
       <div class="row main">
         <div class="main-login main-center" style="
     width: 498px; margin-bottom:40px;">
-    
-    
+
+   
         <h1 style="text-align: center;">Sign up</h1>
+              <?php 
+              
+              $getname = $user->getCoursename($cId);
+              if ($getname) {
+              while ($value = $getname->fetch_assoc()) {
+
+         ?>  
+         <h4>Your preferable Course Is :- <?php echo $value['courseName']?></h4>
+         <?php } } ?>
+
+         <?php 
+              
+              $getname = $user->getlevelname($level);
+              if ($getname) {
+              while ($value = $getname->fetch_assoc()) {
+
+         ?>      
+          <h4>Your selected Level is :- <?php echo $value['levelName']?></h4>
+          <?php } } ?>
           <h3><?php 
             if (isset($userlog)) {
               echo $userlog;
             }
             ?></h3>
+
       <form method="post" action="">
 
           <div class="form-group">
@@ -116,7 +150,7 @@
   <!-- </select>
 </div> -->
 
-<div class="form-group">
+<!-- <div class="form-group">
   <label for="sel1">Select Training Level:</label>
   <select class="form-control" id="sel1" name="level">
       
@@ -126,7 +160,7 @@
     
    
   </select>
-</div>
+</div> -->
 
 <div class="form-group">
               <label for="phone" class="cols-sm-2 control-label">Education Level</label>

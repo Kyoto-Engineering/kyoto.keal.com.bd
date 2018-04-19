@@ -614,7 +614,7 @@ position: relative;
 margin: 0;
 padding: 0;
 color: #D81265;
-background: #D5D5D5 url('../img/border-bg.jpg') top left repeat-x;  margin-top: 3px;  padding-top: 12px;
+/*background: #D5D5D5 url('../img/border-bg.jpg') top left repeat-x;  margin-top: 3px;  padding-top: 12px;*/
 border-bottom: 1px solid #CBCBCB;
 }
 

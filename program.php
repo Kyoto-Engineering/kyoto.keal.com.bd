@@ -97,12 +97,15 @@ margin-top: -26px;" /></a>
 <div class="container">
 
 
-							 <?php 
+		<?php 
               $mod = new Module();
               $getcourse = $mod->getCourseDetail($id);
               if ($getcourse) {
               while ($data = $getcourse->fetch_assoc()) {
 
+          ?>
+          <?php
+          	$lId = $data['l_Id'];
           ?>
 							<div class="col-md-4">
 
@@ -110,21 +113,27 @@ margin-top: -26px;" /></a>
 								<div class="block-heading-two">
 									<h3><span><?php echo $data['courseName'] ; ?></span></h3>
 									<p>Course For <span><?php echo $data['levelName'] ; ?></span></p>
+									
 								</div>
 
-                  
+            					<?php 
+									$gettopic = $mod->gettopicby($id, $lId);
+									if ($gettopic) {
+										while ($value = $gettopic->fetch_assoc()) {?>
 
-								<p><ul style="text-decoration: none; list-style: none;">
-								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
+								<p>  <?php echo $value['topicName'] ; ?></p>
+								<?php } } ?>
+
+								<!-- <p><ul style="text-decoration: none; list-style: none;"> -->
+
+								<!-- <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;"> -->
+
 								
-								<li> <?php echo $data['topicName'] ; ?> </li>
-								
-								
-								</ol>
+								<!-- </ol> -->
 								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
 								 <p>Course Fee: BDT 2,000</p>
 							 <p>(Refundable)</p></li>  -->
-								</ul></p>
+								<!-- </ul></p> -->
 							
 								<div class="course_fee">
 									
@@ -140,7 +149,7 @@ margin-top: -26px;" /></a>
 					<?php } } ?>	
 							</div>
 								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Go For Details</button></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Register.php?level=<?php echo urlencode($lId);?>;&amp;cId=<?php echo urlencode($id);?>"><button type="button" class="btn btn-success">Go For Details</button></a>
 								
 							</div>
 

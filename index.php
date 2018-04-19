@@ -30,131 +30,34 @@ $getdata = $mod->getSinglestudent($uId);
 
     <div class="row">
     <h3>Your Preffered Course Details</h3>
-    <?php 
-    if($data['courseId']=="1"){?>
-             <div class="col-md-6">
-                                <p> <span style="color:black; font-weight: bold;">1) Complete Web Design</span><ul style="text-decoration: none; list-style: none;">
+       <?php 
+         $getutopic = $mod->getcoursenameby($courseId);
+         if ($getutopic) {
+         while ($value = $getutopic->fetch_assoc()) {?>
+    <h4> Course Name :- <?php echo $value['courseName'] ; ?></h4>
+      <?php } } ?>  
+             <?php 
+         $getutopic = $mod->getlevelby($levelId);
+         if ($getutopic) {
+         while ($value = $getutopic->fetch_assoc()) {?>
+    <h4> Course Level :- <?php echo $value['levelName'] ; ?></h4>
+      <?php } } ?>   
+                      
+                                    
+                                <p> <span style="color:black; font-weight: bold;"></span>
+                                <ul style="text-decoration: none; list-style: none;">
                                 <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-                                
-                                <li> HTML5 introduction, Markup, layout, Tag </li>
-                                <li> HTML5 Image, Link, Style, Color </li>
-                                <li> Formatting, List, Block, Table, Comments</li>
-                                <li> CSS3 introduction, Color, Background, height-width</li>
-                                <li> CSS3 Border, Margin, Padding</li>
-                                <li> Text, Align, Dropdown, Forms</li>
-                                <li> Id, Class, iframe, Responsive</li>
-                                <li> Header nav, toolbar </li>
-                                <li> Bootstrap introduction, Grid, Table</li>
-                                <li> Image, navbar, Dropdown, button</li>
-                                <li> Input group, Breadcrumbs, Pagination</li>
-                                <li> Jumpbotron, thumbnails, Responsive with bootstrap</li>
-                                <li> JavaScript, functions, variable scope</li>
-                                <li> Data Types, Operator, Scope, String, Date</li>
-                                <li> Array, Condition, Loop</li>
-                                <li> JavaScript effects, like dropdown menus, tabs</li>
-                                <li> Image carousel </li>
-                                <li> Object, Function </li> 
-                                
-                                </ol>
-                                </ul>
-                                <span style="color:red; font-weight: bold;">Class Test in Every week</span></p>
-
-                                
-        </div> 
-   
-    <?php } elseif($data['courseId']=="2"){?>
-             <div class="col-md-6">
-                                <h2>System development with PHP and MySQL</h2>
-                                <p> <span style="color:black; font-weight: bold;">1) Basic php fundamentals</span><ul style="text-decoration: none; list-style: none;">
-                                <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-                                <li>Turn pc ac local server</li>
-                                <li>php documentation</li>
-                                <li>php myadmin</li>
-                                <li>Php variables</li>
-                                <li>Print data</li>
-                                <li>Types of data</li>
-                                <li>Strings, operator, constants</li>
-                                <li>php statements</li>
-                                <li>Loops, function, condition</li>
-                                <li>Form validation</li>
-                                <li>Required</li>
-                                <li>Methods</li>
-                                </ol>
-                                </ul>
-                                <span style="color:red; font-weight: bold;">Class Test</span></p>
-
-                                <p> <span style="color:black; font-weight: bold;">2) Describe about array functions</span><ul style="text-decoration: none; list-style: none;">
-                                <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-                                
-                                </ol>
-                                </ul>
-                                <span style="color:red; font-weight: bold;">Class Test</span></p>
-                                <p> <span style="color:black; font-weight: bold;">3) OOP Basics</span><ul style="text-decoration: none; list-style: none;">
-                                <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-                                <li>oop Basic discussion</li>
-                                <li>class Property method/magic methods</li>
-                                <li>Polymorphism/Inheritance/abstract/Encapsulation</li>
-                                <li>Access Modifier</li>
-                                <li>Design pattern</li>
-                                <li>Database connect with oop  way</li>
-                                </ol>
-                                </ul>
-                                <span style="color:red; font-weight: bold;">Class Test</span></p>
-        </div> 
-   
-   
-   
-   <?php } elseif($data['courseId']=="3"){?>
-                 <div class="col-md-6">
-                                <p> <span style="color:black; font-weight: bold;">System development with DOT NET and SQL </span><ul style="text-decoration: none; list-style: none;">
-                                <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-                                <li>Introduction to Programming</li>
-                                <li>List and collection(array, array list,stack,queue)</li>
-                                <li>Conditions and loop(for loop, for each, while each, do while each, conditional logic)</li>
-                                <li>Object oriented programming(Class, inheritance, polymorphism, encapsulation)</li>
-                                <li>Introduction to MS visual studio</li>
-                                <li>Introduction to windows application</li>
-                                <li>Introduction to MS SQL</li>
-                                <li>Advance SQL Programming(trigger, sql joining,)</li>
-                                <li>A simple windows application</li>
-                                <li>SQL DB backup SQL DB restore</li>
-                                <li>Advance windows Application(create, delete, insert, update table data)</li>
-                                <li>Introduction to HTML</li>
-                                <li>Introduction to css-3</li>
-                                <li>Introduction java script and J-Query</li>
-                                <li>Introduction to MVC</li>
-                                <li>More about MVC</li>
-                                <li>Project with asp.net and MVC</li>
-                                <li>Advance level web application</li>
-                                
-                                </ol>
-                                
-                                
+                                    <?php 
+                                    $getutopic = $mod->getusertopicby($courseId, $levelId);
+                                    if ($getutopic) {
+                                        while ($value = $getutopic->fetch_assoc()) {?>
+                                <li>  <?php echo $value['topicName'] ; ?></li>
+                                <?php } } ?>
+                                    </ol>
                                 </ul></p>
-        </div> 
-   <?php }else{
-    echo "No course Selected to Show";
-   }
-    ?>
+                                
   
-        <div class="col-md-6">
-                                  <!--           <p><ul style="text-decoration: none; list-style: none;">
-                                <ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-                                <li>PHP Array Functions</li>
-                                <li>PHP Calendar Functions</li>
-                                <li>PHP Mail Functions</li>
-                                <li>OOP Basic Discussion</li>
-                                <li>Class Property method/Magic Methods</li>
-                                <li>Polymorphism</li>
-                                <li>Inheritance</li>
-                                <li>Abstraction</li>
-                                <li>Encapsulation</li>
-                                <li>Access Modifier</li>
-                                <li>Design pattern</li>
-                                <li> Database connect with OOP way</li>
-                                </ol>
-                                </ul></p> -->
-        </div>
+
     </div>
     <?php } } ?>
 </div>

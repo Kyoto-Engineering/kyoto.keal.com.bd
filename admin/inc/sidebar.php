@@ -66,7 +66,9 @@
                               <li>
                                 <a href="coursename.php">View Course Name</a>
                             </li>                         
-                            
+                                <li>
+                                <a href="assign.php">Assign content</a>
+                            </li>                           
                         </ul>
                         <!-- second-level-items -->
                     </li>

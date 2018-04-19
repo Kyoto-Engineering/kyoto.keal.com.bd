@@ -60,6 +60,7 @@ $fm = new Format();
 
 $uId = Session::get('userId');
 $courseId = Session::get('courseId');
+$levelId  = Session::get('levelId');
 
 ?>
 <body>
@@ -82,8 +83,11 @@ margin-top: -26px;" /></a>
                     <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
             
-             
-                        <li><a href="training_info.php">Training Info</a></li> 
+             <?php 
+                $log = Session::get("login");
+                 if($log != "true"){?>
+                        <li><a href="training_info.php">Training Info</a></li>
+              <?php } ?> 
                         <!-- <li><a href="pricing.html">Pricing</a></li> -->
                         <!-- <li><a href="contact.php">Contact</a></li> -->
 

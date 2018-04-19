@@ -17,17 +17,32 @@ class SignUp
 
 
 
-public function userLogin($studentName, $email,$phone, $dob ,$gender, $level,$edulevel,$subject){
-	
+public function usersignup($studentName, $email,$phone,$dob,$gender,$edulevel,$subject,$cId,$level,$date,$time,$serverIP){
+		$studentName = $this->fm->validation($studentName);
+		$email = $this->fm->validation($email);
+		$phone = $this->fm->validation($phone);
+		$dob = $this->fm->validation($dob);
+		$gender = $this->fm->validation($gender);
+		$edulevel = $this->fm->validation($edulevel);
+		$subject = $this->fm->validation($subject);
+		$cId = $this->fm->validation($cId);
+		$level = $this->fm->validation($level);
+		$date = $this->fm->validation($date);
+		$time = $this->fm->validation($time);
+		$serverIP = $this->fm->validation($serverIP);
+
 		$studentName     = mysqli_real_escape_string($this->db->link,$studentName);
 		$email     		 = mysqli_real_escape_string($this->db->link,$email);
 		$phone    		 = mysqli_real_escape_string($this->db->link,$phone);
 		$dob      		 = mysqli_real_escape_string($this->db->link,$dob);
 		$gender    	  	 = mysqli_real_escape_string($this->db->link,$gender);
-		$level    	  	 = mysqli_real_escape_string($this->db->link,$level);
-		$edulevel    	  	 = mysqli_real_escape_string($this->db->link,$edulevel);
-		$subject    	  	 = mysqli_real_escape_string($this->db->link,$subject);
-		// $courseId      	 = mysqli_real_escape_string($this->db->link,$courseId);
+		$edulevel    	 = mysqli_real_escape_string($this->db->link,$edulevel);
+		$subject    	 = mysqli_real_escape_string($this->db->link,$subject);
+		$cId      	 	 = mysqli_real_escape_string($this->db->link,$cId);
+		$level      	 = mysqli_real_escape_string($this->db->link,$level);
+		$date      		 = mysqli_real_escape_string($this->db->link,$date);
+		$time      		 = mysqli_real_escape_string($this->db->link,$time);
+		$serverIP      	 = mysqli_real_escape_string($this->db->link,$serverIP);
 
 		if ($studentName == "" || $email == "" || $phone == "" || $phone == "" || $dob == "" || $gender == "" || $level =="" || $edulevel =="" || $subject =="") {
 			
@@ -47,7 +62,7 @@ public function userLogin($studentName, $email,$phone, $dob ,$gender, $level,$ed
 			
 					
 				
-						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, level, edulevel, subject ) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$level' ,'$edulevel', '$subject')";
+						$query = "INSERT INTO tbl_stud_reg(studentName, email, phone, dob, gender, edulevel, subject, courseId, levelId, sdate, stime, ip) VALUES('$studentName', '$email', '$phone', '$dob', '$gender', '$edulevel', '$subject', '$cId', '$level', '$date', '$time', '$serverIP')";
 	    	 			$inserted_row = $this->db->insert($query);
 	    	 			//<!--Email generator-->
 						if($inserted_row){
@@ -134,6 +149,7 @@ public function usersignin($data){
 				Session::set("userId",   $value['id']);
 				Session::set("userName", $value['studentName']);
 				Session::set("courseId",   $value['courseId']);
+				Session::set("levelId",   $value['levelId']);
 				
 				header("Location:index.php");
 			}else{
@@ -144,7 +160,17 @@ public function usersignin($data){
 
 }
 
+public function getCoursename($cId){
+		$query = "SELECT * FROM tbl_coursename WHERE id = '$cId'";
+		$result = $this->db->select($query);
+		return $result;	
+}
 
+public function getlevelname($level){
+		$query = "SELECT * FROM tbl_level WHERE id = '$level'";
+		$result = $this->db->select($query);
+		return $result;	
+}
 
 
 }//main
