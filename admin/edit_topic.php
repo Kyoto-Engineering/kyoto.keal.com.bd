@@ -7,43 +7,54 @@
         <!--  page-wrapper -->
           
 
-<?php include "../classes/adminview.php"; ?>
-
+<?php include "../classes/adminEdit.php"; ?>
+ <?php
+               if(!isset($_GET['id']) || $_GET['id']==NUll){
+                echo "<script>window.location = 'index.php';</script>";
+              }else{
+                $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['id']);
+              }
+              ?>
 
 <?php
-	 $add = new Adminview();
+
+
+	 $adedit = new Adminedit();
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-		$addtopic = $add->InsertTopic($_POST);
+		$updatetopic = $adedit->updateTopic($_POST, $id);
 	}
 ?>
-<?php
-    if (isset($_GET['delpro'])) {
-        $id = $_GET['delpro'];
-        $deletePro = $add->deltopic($id);
-    }
-?>
+
 <div id="page-wrapper">
            
                 <!--end page header -->
            
                                     <br>
-                                    <h1>Insert Topic</h1>
+                                    <h1>Update Topic</h1>
                                     <?php
-                                    if (isset($addtopic)) {
-                                    	echo $addtopic;
+                                    if (isset($updatetopic)) {
+                                    	echo $updatetopic;
                                     }
                                     ?>
                                     <h3></h3>
                     <div class="row">
                     <div class="col-md-6">
+
+                    <?php
+                $editTopic = $adedit->editTopic($id);
+                if($editTopic){
+                    while($data = $editTopic->fetch_assoc()){
+                        
+                  
+            ?>
                                     <form action="" method="post" enctype="multipart/form-data" >
                                         
 
                                         <div class="form-group row">
                                            <label class="col-md-3 col-form-label">Topic Name</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" name="topicName" placeholder="Enter Topic Name" /> 
+                                                <input type="text" class="form-control" name="topicName" value=<?php echo $data['topicName']  ?> /> 
                                         </div>
                                         </div>
 
@@ -59,41 +70,10 @@
                                        
                                         
                                     </form>
+                                    <?php } } ?>
                               </div>
-                              <div class="col-md-6">
-                              <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Course COntent</th>
-      <th scope="col">Action</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-  <?php
-  $content = $add->getContent();
-  if ($content) {
-    $i = 0;
-      while ($data = $content->fetch_assoc()) {
-        $i++;
-        ?>
-
-    <tr>
-      <th scope="row"><?php echo $i;?></th>
-      <td><?php echo $data['topicName']?></td>
-      <td><a href="edit_topic.php?id=<?php echo $data['id'] ; ?>">
-          <span><img src="../img/img_386644.png" height="auto" width="15px"></span>
-        </a> ||<a style="text-decoration: none;" onclick="return confirm('Are you Sure Want to Delete!')" 
-                    href="?delpro=<?php echo $data['id'];?>">
-          <span><span><img src="../img/627249-delete3-512.png" height="auto" width="15px"></span></span>
-        </a></td>
-
-    </tr>
-<?php } } ?>
-  </tbody>
-</table>
-                              </div>
+                           
+                
  
                           </div>      
                           

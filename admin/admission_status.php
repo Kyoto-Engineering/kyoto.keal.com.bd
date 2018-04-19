@@ -1,16 +1,11 @@
 <?php include 'inc/header.php'  ?>
         <!-- end navbar top -->
 <?php include 'inc/sidebar.php'  ?>
-<?php include "../classes/adminview.php"; ?>
+<?php include "../classes/adminEdit.php"; ?>
 <?php
-     $add = new Adminview();
+     $adedit = new Adminedit();
 ?>
-<?php
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-    $deleteCouse = $add->delcourse($id);
-    }
-?>
+
         <!-- navbar side -->
      
         <!-- end navbar side -->
@@ -19,7 +14,7 @@
             <div class="row">
                  <!--  page header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tables</h1>
+                    <h2 class="page-header">Course Admission Status</h2>
                 </div>
                  <!-- end  page header -->
             </div>
@@ -31,13 +26,14 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Course Name</th>
-      <th scope="col">Action</th>
+      <th scope="col">Level Name</th>
+      <th scope="col"> Admission Status</th>
       
     </tr>
   </thead>
   <tbody>
   <?php
-  $Course = $add->getcourseName();
+  $Course = $adedit->getcourseLevel();
   if ($Course) {
     $i = 0;
       while ($data = $Course->fetch_assoc()) {
@@ -47,11 +43,8 @@
     <tr>
       <th scope="row"><?php echo $i;?></th>
       <td><?php echo $data['courseName']?></td>
-      <td><a href="edit_coursecontent.php?id=<?php echo $data['id']?>">
-          <span><img src="../img/img_386644.png" height="auto" width="15px"></span>
-        </a> ||<a onclick="return confirm('Are you Sure Want to Delete!')" href="?id=<?php echo $data['id'] ?>">
-          <span><span><img src="../img/627249-delete3-512.png" height="auto" width="15px"></span></span>
-        </a></td>
+      <td><?php echo $data['levelName']?></td>
+      <td><a href="see_admission_status.php?id=<?php echo $data['id'] ; ?>"><button type="button" name="button">See Admission Status</button></a></td>
 
     </tr>
 <?php } } ?>
