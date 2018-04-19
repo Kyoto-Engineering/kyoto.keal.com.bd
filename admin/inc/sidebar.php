@@ -70,6 +70,18 @@
                         </ul>
                         <!-- second-level-items -->
                     </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Admission Status<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="admission_status.php">See Admission Status</a>
+                            </li>
+                                                    
+                            
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
                    
                 </ul>
                 <!-- end side-menu -->
