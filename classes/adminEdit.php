@@ -137,8 +137,8 @@ public function updateTopic($data , $id){
 	}
 
 	public function getcourseLevel(){
-		    $query  = "SELECT p.*, c.name, l.levelName
-				FROM tbl_detail as p, tbl_course as c, tbl_level as l
+		    $query  = "SELECT p.*, c.courseName, l.levelName
+				FROM tbl_detail as p, tbl_coursename as c, tbl_level as l
 				WHERE p.c_Id = c.id  AND p.l_id =l.id
 				ORDER BY p.id DESC";
 			$result = $this->db->select($query);
