@@ -57,7 +57,27 @@
 </div> 
 
 
+<div class="container">
+<div class="row">
+<div class="col-md-5">
+            <form action="" method="post">
+            <div class="form-group row">
+          
+            <label class="col-md-5 col-form-label">Content Name</label>
+                <select name="courseid" class="form-control">
+                    <option value="">Name:</option>
+                    <option value="">Name:</option>
+                    <option value="">Name:</option>
+                </select>
+            </div>
+          
 
+            </form>
+</div>
+
+
+  </div> 
+</div> 
 
 
 
