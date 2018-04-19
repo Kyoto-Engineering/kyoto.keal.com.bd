@@ -145,6 +145,15 @@ public function updateTopic($data , $id){
 			return $result;
 		}
 
+		public function getcourseLevelBy($id){
+		    $query  = "SELECT p.*, c.courseName, l.levelName
+				FROM tbl_detail as p, tbl_coursename as c, tbl_level as l
+				WHERE p.c_Id = c.id  AND p.l_id =l.id AND p.id = '$id'
+				ORDER BY p.id DESC" ;
+			$result = $this->db->select($query);
+			return $result;
+		}
+
 
 
 	
