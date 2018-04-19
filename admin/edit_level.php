@@ -7,8 +7,8 @@
         <!--  page-wrapper -->
           
 
-<?php include "../classes/adminview.php"; ?>
- <?php
+<?php include "../classes/adminEdit.php"; ?>
+<?php
                if(!isset($_GET['id']) || $_GET['id']==NUll){
                 echo "<script>window.location = 'index.php';</script>";
               }else{
@@ -17,77 +17,68 @@
               ?>
 
 <?php
-	 $add = new Adminview();
+   $adedit = new Adminedit();
 
-	if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-		$updatecourse = $add->coursecontentUpdate($_POST, $_FILES , $id);
-	}
+  if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
+    $updateLevel = $adedit->levelUpdate($_POST, $_FILES, $id);
+  }
 ?>
+
 <div id="page-wrapper">
            
                 <!--end page header -->
            
                                     <br>
-                                    <h1>Update Course</h1>
+                                    <h1>Update Level</h1>
                                     <?php
-                                    if (isset($updatecourse)) {
-                                    	echo $updatecourse;
+                                    if (isset($updateLevel)) {
+                                      echo $updateLevel;
                                     }
                                     ?>
                                     <h3></h3>
-             <?php
-                $editcourse = $add->editcoursecontent($id);
-                if($editcourse){
-                    while($data = $editcourse->fetch_assoc()){
+                            <div class="row">
+                                    <div class="col-md-6">
+                                       <?php
+                $editLevel = $adedit->editLevel($id);
+                if($editLevel){
+                    while($data = $editLevel->fetch_assoc()){
                         
                   
             ?>
-                                    <form class="col-md-8" action="" method="post" enctype="multipart/form-data" >
-                                         
-
-                                        <div class="form-group row">
-                                           <label class="col-md-3 col-form-label">Course Name</label>
-                                            <div class="col-md-9">
-                                                <input type="text" class="form-control" name="courseName" value ="<?php echo $data['courseName']?>"  >
-                                        </div>
-                                        </div>
-
-                                    
-
-
-
-
+                                    <form action="" method="post" enctype="multipart/form-data" >
                                         
 
                                         <div class="form-group row">
-                                            <label class="col-md-3 col-form-label">Quote</label>
+                                           <label class="col-md-3 col-form-label">Level Name</label>
                                             <div class="col-md-9">
-                                      <input type="text" class="form-control" name="quote"  value ="<?php echo $data['quote']?>">
-                                            </div>
-                                           
+                                                <input type="text" class="form-control" name="levelName" value=<?php echo $data['levelName'] ;?> >
+                                        </div>
                                         </div>
 
-                                         <div class="form-group row">
+                                        <div class="form-group row">
                                     <label for="inputEmail3" class="col-md-3 col-form-label">Select Image:</label>
                                     <div class="col-md-9">
-                                        <input type="file" name="image"  class="form-control-file" id="">
+                                        <input type="file" name="image" class="form-control-file" id="">
                                     </div>
                                     <div>
                                     <img src="<?php echo $data['image']?>" height="auto" width="30%">
                                     </div>
                                     </div>
 
-                                  
                                         <div class="form-group row">
                                              <div class="col-md-3"></div>
                                              <div class="col-md-9">
                                             <button type="submit" class="submit" name="submit" id="submit"><h4>Submit</h4></button>
                                             </div>
                                         </div>
-                                        
+
+                        
                                     </form>
+
                                     <?php } } ?>
                                 
                           
                        </div>
+      
+                    </div>
                   <?php include "inc/footer.php" ; ?>

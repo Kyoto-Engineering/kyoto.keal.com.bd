@@ -28,7 +28,7 @@
                 <!--end page header -->
            
                                     <br>
-                                    <h1>Insert Course</h1>
+                                    <h1>Insert Level</h1>
                                     <?php
                                     if (isset($addlevel)) {
                                     	echo $addlevel;
@@ -88,7 +88,7 @@
     <tr>
       <th scope="row"><?php echo $i;?></th>
       <td><?php echo $data['levelName']?></td>
-      <td><a href="#">
+      <td><a href="edit_level.php?id=<?php echo $data['id'] ; ?>"">
           <span><img src="../img/img_386644.png" height="auto" width="15px"></span>
         </a> ||<a style="text-decoration: none;" onclick="return confirm('Are you Sure Want to Delete!')" 
                     href="?delpro=<?php echo $data['id'];?>">
