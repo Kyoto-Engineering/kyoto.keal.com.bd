@@ -1,111 +1,53 @@
 <?php include "inc/header.php";?>
-<?php include "classes/moduleclass.php"; ?>
+<?php include "classes/moduleclass.php";?>
 <?php 
-	$login = Session::get("login");
-	if ($login == false) {
-		echo "<script>window.location = 'index.php'</script>";
-	}
+    $mod = new Module();
 ?>
-								<section id="inner-headline">
-	<section id="content">
-	<div class="container">
-					
-
-						
-						<hr>
-						<br>
-						
-						<div class="row">
-							<!-- <div class="col-md-4"> -->
-								<!-- Heading and para -->
-								<!-- <div class="block-heading-two">
-									<h3><span>Why Industrial Automation ?</span></h3>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<li>- Low operating cost</li>
-								<li>- High Productivity</li>
-								<li>- High Quality</li>
-								<li>- Flexibility</li>
-								<li>- Perfect Data accuracy</li>
-								<li>- High safty & Security</li>
-								
-								</ul></p>
-							</div> -->
-								<section id="inner-headline">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class="pageTitle">Certificate On...</h2>
-				<!-- <img src="img/pic2.jpg" alt="no image" style="background-attachment: fixed; background-size: cover;"> -->
-			</div>
-		</div>
-	</div>
-	</section>
 <?php 
-$mod = new Module();
-  $getutopic = $mod->getallcourse();
-    if ($getutopic) {
-    while ($value = $getutopic->fetch_assoc()) {?>
-    <?php 
-      $courses = $value['id'];
-      $level = $value['l_Id'];
-    ?>
-    <?php } } ?>
+    $login = Session::get("login");
+    if ($login != "true") {
+    	echo "<script>window.location = 'index.php'</script>";
+    	}?>
 
-    		<?php 
-				$getutopic = $mod->getallcourseby($courses);
-				if ($getutopic) {
-				while ($value = $getutopic->fetch_assoc()) {?>
-							<div class="col-md-4">
-								<!-- Heading and para -->
 
-								<div class="block-heading-two">
-									<h3><span><?php echo $value['courseName'] ; ?></span></h3>
-									<p>Course For <span><?php echo $value['levelName'] ; ?></span></p>
-								</div>
-								<p><ul style="text-decoration: none; list-style: none;">
-								<ol style="padding-left:15px;list-style-type:circle; font-size: 15px;">
-    		<?php 
-				$getutopic = $mod->getallcoursetopic($courses, $level);
-				if ($getutopic) {
-				while ($value = $getutopic->fetch_assoc()) {?>
+<section class="course" style="background-color: #eee;/*! padding: 10px; */">
+    <section class="callaction">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="aligncenter"><h1 class="aligncenter">Choose Your Course</h1></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="contentone">
+    
+    
+    <div class="container">
+    <div class="row">
+        <div class="skill-home">
+         <div class="skill-home-solid clearfix"> 
+<?php 
+    $course = $mod->getCourses();
+    if ($course) {
+        while($value = $course->fetch_assoc()){?>
 
-								<li> <?php echo $value['topicName'] ; ?> </li>
-			<?php } } ?>
-								</ol>
-								<!-- <li><h3>Duration: 1 Day (8Hrs)</h3></li>
-								 <p>Course Fee: BDT 2,000</p>
-							 <p>(Refundable)</p></li>  -->
-								</ul></p>
-								<div class="course_fee">
-									
-		<?php 
-              // $getprice = $mod->getallCourseprice($courses);
-              // if ($getprice) {
-              // while ($value = $getprice->fetch_assoc()) {
+         <div class="col-md-4 text-center">
+                <a href="coursedetails.php?id=<?php echo $value['id'] ; ?>" style="text-decoration: none; color: #656565;">
+                <span class="icons c2"><img src="admin/<?php echo $value['image']?>" alt="no image"/></span>
+        <div class="box-area">
+        <h3 class="text-center"><?php echo $value['courseName']?></h3>
+         <!-- <p><h5 class="text-center">Trained Up Yourself As an IT Professional.</h5> We provide best training that helps you to build up yourself as a professional IT person.</p> --></div>
+         </a>
+        </div>
+       <?php } } ?>
 
-         ?>
-								 <h3>Course Fee:<br/>BDT:- <?php// echo $value['price']?>Tk/-</h3>
-									<h3> Duration : Total <?php //echo $value['duration']?> Hours</h3>
-					<?php //} } ?>	
-							</div>
-								<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="enrollment.php?level=<?php echo '1';?>"><button type="button" class="btn btn-success">Enroll Here</button></a>
-								
-							</div>
-				 <?php } } ?>
+</div>
+</div>
+</div> 
+</div>
+</section>
 
-							
-						</div>
-						
-						 						
-						 
-						<br>
 
-					  
-						
-					</div>
-									
-				</div>
-	</section>
+</section>
 <?php include "inc/footer.php";?>
