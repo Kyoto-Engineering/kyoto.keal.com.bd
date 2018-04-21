@@ -99,7 +99,7 @@ margin-top: -26px;" /></a>
                             if($log == "true"){?>
                             <li><a href="notice_board.php">Notice Board</a></li> 
                             <li><a href="courses.php">Courses</a></li> 
-                            <li><a href="">Result</a></li> 
+                            <li><a href="#">Result</a></li> 
                                  <li><a href="?action=logout">Sign Out</a></li> 
                             <?php } else { ?>
                                 <li><a href="login.php">Sign In or Sign Up</a></li> 
