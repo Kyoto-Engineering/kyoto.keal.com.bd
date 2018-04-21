@@ -4,6 +4,7 @@
 <?php include "../classes/adminEdit.php"; ?>
 <?php
      $adedit = new Adminedit();
+   
 ?>
 
         <!-- navbar side -->
