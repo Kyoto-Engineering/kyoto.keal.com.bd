@@ -7,7 +7,7 @@
         <!--  page-wrapper -->
         <div id="page-wrapper">
         <br/>
-        <h1 >Assign Content</h1>
+        <h1 >Assign Level</h1>
         <br/>
 <div class="container">
 <div class="row">

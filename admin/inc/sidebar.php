@@ -45,6 +45,12 @@
                             <li>
                                 <a href="insert_level.php">Insert Level</a>
                             </li>
+                             <li>
+                                <a href="assign.php">Assign Level</a>
+                            </li>
+                            <li>
+                                <a href="Assign_content.php">Assign Course Content</a>
+                            </li>
                             <li>
                                 <a href="insert_routine.php">Insert Routine</a>
                             </li>
