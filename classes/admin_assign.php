@@ -76,40 +76,6 @@ class Adminassign
 }
 
 
-public function adminassigncontent($data){
-		$c_Id = $this->fm->validation($data['c_Id']);
-		$l_Id = $this->fm->validation($data['l_Id']);
-		$t_Id = $this->fm->validation($data['t_Id']);
-
-		$c_Id = mysqli_real_escape_string($this->db->link, $c_Id);
-		$l_Id = mysqli_real_escape_string($this->db->link, $l_Id);
-		$t_Id = mysqli_real_escape_string($this->db->link, $t_Id);
-
-
-
-		if (empty($c_Id) || empty($l_Id) || empty($t_Id)) {
-			$logmsg = "<span style='color:red'>Field Must Not be Empty!!</span>";
-			return $logmsg;
-		}
-		
-
-
-		    
-    			else{
-    				 
-			 		$query = "INSERT INTO  tbl_topiccontent(c_Id, l_Id,t_Id) VALUES('$c_Id', '$l_Id','$t_Id')";
-			    	 $result = $this->db->insert($query);
-
-			    	 if ($result) {
-			    	 	$msg = "<span style='color:green'>Adding course, level and topic Complete</span>";
-			    	 	return $msg;
-			    	 }else{
-			    	 $msg = "<span style='color:red'>Adding course, level and topic Not Complete</span>";
-			    	 	return $msg;
-			    	 }
-		}
-
-}
 
 
 	

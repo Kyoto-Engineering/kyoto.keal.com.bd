@@ -154,6 +154,90 @@ public function updateTopic($data , $id){
 			return $result;
 		}
 
+		public function admissionStatusopen($data, $id){
+		$status = $this->fm->validation($data['status']);
+		$status	 =mysqli_real_escape_string($this->db->link , $status);
+
+		 $query = "UPDATE tbl_detail SET status= '$status' WHERE id = '$id'";
+		 $update_stat = $this->db->update($query);
+		 if ($update_stat) {
+		 	$msg = "Admission Open";
+		 	return $msg; 
+		 }else{
+			$msg = "Admission not Open";
+		 	return $msg;	 	
+		 }
+	    
+	     }
+		
+		public function admissionStatusclosed($data, $id){
+		$status = $this->fm->validation($data['status']);
+		$status	 =mysqli_real_escape_string($this->db->link , $status);
+
+		 $query = "UPDATE tbl_detail SET status= '$status' WHERE id = '$id'";
+		 $update_stat = $this->db->update($query);
+		 if ($update_stat) {
+		 	$msg = "Admission Closed";
+		 	return $msg; 
+		 }else{
+			$msg = "Admission not Closed";
+		 	return $msg;	 	
+		 }
+		}
+
+		public function selectcoursename(){
+			$query  = "SELECT * FROM  tbl_coursename ORDER BY id DESC";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+		public function selectlevelname(){
+			$query  = "SELECT * FROM  tbl_level ORDER BY id DESC";
+			$result = $this->db->select($query);
+			return $result;
+		}
+		public function selectcourselevel(){
+			$query  = "SELECT p.*, c.courseName, l.levelName
+				FROM tbl_detail as p, tbl_coursename as c, tbl_level as l
+				WHERE p.c_Id = c.id  AND p.l_id =l.id
+				ORDER BY p.id DESC";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+		public function adminassigncontent($data,$lId, $cId){
+		
+		$tId = $this->fm->validation($data['t_Id']);
+
+	
+		$tId = mysqli_real_escape_string($this->db->link, $tId);
+
+
+
+		if (empty($tId)) {
+			$logmsg = "<span style='color:red'>Field Must Not be Empty!!</span>";
+			return $logmsg;
+		}
+		
+
+
+		    
+    			else{
+    				 
+			 		$query = "INSERT INTO  tbl_topiccontent(c_Id, l_Id, t_Id) VALUES('$cId', '$lId', '$tId')";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green'> Topic Complete</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 $msg = "<span style='color:red'>Topic Not Complete</span>";
+			    	 	return $msg;
+			    	 }
+		}
+
+}
+
 
 
 	

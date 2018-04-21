@@ -12,8 +12,16 @@
               ?>
 <?php
      $adedit = new Adminedit();
+      if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['open'])) {
+      $addstatus = $adedit->admissionStatusopen($_POST, $id);
+  }
 ?>
+<?php
 
+      if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['closed'])) {
+      $addedited = $adedit->admissionStatusclosed($_POST, $id);
+  }
+?>
         <!-- navbar side -->
      
         <!-- end navbar side -->
@@ -23,6 +31,16 @@
                  <!--  page header -->
                 <div class="col-lg-12">
                     <h2 class="page-header">Course Admission Status</h2>
+                    <?php
+                      if (isset($addstatus)) {
+                        echo $addstatus;
+                      }
+                    ?>
+                    <?php
+                      if (isset($addedited)) {
+                        echo $addedited;
+                      }
+                    ?>
                 </div>
                  <!-- end  page header -->
             </div>
@@ -34,9 +52,8 @@
                 $Course = $adedit->getcourseLevelBy($id);
                if ($Course) {
               
-                 while ($data = $Course->fetch_assoc()) {
-               
-        ?>      <tr>
+                 while ($data = $Course->fetch_assoc()) {?> 
+            <tr>
                <h4 style="margin:10px;">
                <td> Course Name: </td> 
                <td><?php echo $data['courseName'] ;?> </td></h4>
@@ -50,8 +67,19 @@
                 <tr>
                
                  <td>&nbsp;&nbsp;&nbsp;&nbsp;<label style="font-size: 20px;">Admission Status:</label></td>  
-                 <td><button type="button">Admission Going On</button></td>
-                 <td><button type="button">Admission Going On</button></td>
+                 <td>
+                 <form action="" method="post">
+                    <input type="hidden" name="status" value="1">
+                    <button type="submit" name="open" >Admission Going On</button>
+                 </form>
+                 </td>
+                 <td>
+                <form action="" method="post">
+                   <input type="hidden" name="status" value="0">
+                   <button type="submit" name="closed">Admission Closed</button>    
+                </form>
+                 </td>
+                
                     
                  </tr>
 
