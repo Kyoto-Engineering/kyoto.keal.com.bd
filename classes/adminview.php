@@ -28,6 +28,8 @@ public function getAllSignupList(){
 	return $result;
 
 }
+
+
 public function adroutine($data){
 		$topic = $this->fm->validation($data['topic']);
 		$day = $this->fm->validation($data['day']);
