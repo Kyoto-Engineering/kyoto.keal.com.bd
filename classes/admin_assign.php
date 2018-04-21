@@ -35,6 +35,11 @@ class Adminassign
 		return $result;
 
 	}
+	public function viewcontent(){
+		$query = "SELECT * FROM tbl_topic ORDER BY ID DESC";
+		$result = $this->db->select($query);
+		return $result;
+	}
 
 
 	public function adminassign($data){
@@ -69,6 +74,7 @@ class Adminassign
 		}
 
 }
+
 
 
 

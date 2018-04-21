@@ -21,7 +21,7 @@
         <!--  page-wrapper -->
         <div id="page-wrapper">
         <br/>
-        <h1 >Assign Content</h1>
+        <h1 >Assign Level</h1>
         <br/>
         <h3><?php
          if(isset($adminassign)){
