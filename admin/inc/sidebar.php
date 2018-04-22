@@ -52,6 +52,9 @@
                                 <a href="Assign_content.php">Assign Course Content</a>
                             </li>
                             <li>
+                                <a href="assign_price.php">Assign Price & Duration</a>
+                            </li>
+                            <li>
                                 <a href="insert_routine.php">Insert Routine</a>
                             </li>
                              <li>

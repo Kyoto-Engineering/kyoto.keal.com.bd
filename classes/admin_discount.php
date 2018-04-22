@@ -66,10 +66,10 @@ class Adminassign
 			    	 $result = $this->db->insert($query);
 
 			    	 if ($result) {
-			    	 	$msg = "<span style='color:green'>Adding Course, level and discount Complete</span>";
+			    	 	$msg = "<span style='color:green'>Adding Course, level and discount is completed</span>";
 			    	 	return $msg;
 			    	 }else{
-			    	 $msg = "<span style='color:red'>Adding Course, level and discount Not Complete</span>";
+			    	 $msg = "<span style='color:red'>Adding Course, level and discount is not Completed</span>";
 			    	 	return $msg;
 			    	 }
 		}

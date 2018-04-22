@@ -147,7 +147,7 @@
           </div>
 </form>
 </div>
-<div class="col-md-8">
+<div class="col-md-6">
 <table class="table">
   <thead>
     <tr>
