@@ -19,7 +19,7 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 
 
-        $insertdis = $insertdiscount->insertdiscount($_POST,$serverIP,$date,$time);
+        $insertdis = $insertdiscount->insertdiscount($_POST,$serverIP,$date,$time,$adminId);
     }
 
 
@@ -41,6 +41,8 @@
      }
      ?>
 <div class="container">
+<div class="row">
+<div class="col-md-4">
 <form action="" method="post">
 <div class="row">
 <div class="col-md-5">
@@ -144,6 +146,49 @@
          </div>
           </div>
 </form>
+</div>
+<div class="col-md-6">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Discount Percentage</th>
+      <th scope="col">Payable</th>
+      <th scope="col">subsidied price</th>
+    </tr>
+  </thead>
+  <tbody>
+           <?php
+                $getDis = $insertdiscount->getdiscount();
+                if($getDis){
+                    $i=0;
+                    $sum = 0;
+                    while($data = $getDis->fetch_assoc()){
+                        $i++;
+                        ?>
+    <tr>
+      <th scope="row"><?php echo $i;?></th>
+      <td><?php echo $data['courseName'];?></td>
+      <td><?php echo $data['price'];?></td>
+      <td><?php echo $data['discount'];?>%</td>
+      <td>BDT :- <?php
+            $ammount = $data['discount'];
+            $price = $data['price'];
+            $percent = $ammount/100;
+            $total = $price*$percent;
+            $newPrice = $price-$total;
+            echo $newPrice;
+
+      ?>Tk/-</td>
+      <td><?php echo $total;?></td>
+    </tr>
+<?php } } ?>
+  </tbody>
+</table>
+</div>
+</div>
 </div>
         <!-- end page-wrapper -->
 

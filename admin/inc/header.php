@@ -15,6 +15,9 @@
     <!-- Page-Level CSS -->
     <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
    </head>
+   <?php
+   $adminId = Session::get("adminId");
+   ?>
 <body>
     <!--  wrapper -->
     <div id="wrapper">
