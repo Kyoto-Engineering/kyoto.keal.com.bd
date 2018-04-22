@@ -6,7 +6,12 @@
      //    }else{
      //      $level = $_GET['level'];
      //   }
-
+?>
+<?php 
+  $login = Session::get("login");
+  if ($login == false) {
+    echo "<script>window.location = 'index.php'</script>";
+  }
 ?>
 <?php
     if(isset($_GET['level']) && !empty($_GET['level']) AND isset($_GET['cId']) && !empty($_GET['cId'])){

@@ -63,7 +63,7 @@ $getdata = $mod->getSinglestudent($uId);
 </div>
 </section>
     <?php } else{ ?>
-    <section id="banner">
+    <section id="banner" style="background-attachment: fixed;">
      
     <!-- Slider -->
         <div id="main-slider" class="flexslider">
@@ -73,7 +73,7 @@ $getdata = $mod->getSinglestudent($uId);
                  <div class="flex-caption container">
                     <h3>Success Oriented</h3> 
                     <p>The most important part of education is proper training...</p> 
-                    <a href="#" class="btn btn-theme">Read More</a>
+                   <a href="#" style="text-decoration: none;" class="btn btn-theme">Job Gurenteed</a>
                 </div> 
               </li>
               <li>
@@ -81,7 +81,7 @@ $getdata = $mod->getSinglestudent($uId);
                  <div class="flex-caption container">
                     <h3>Success Oriented</h3> 
                     <p>The most important part of education is proper training...</p> 
-                    <a href="#" class="btn btn-theme">Read More</a>
+                    <a href="#" style="text-decoration: none;" class="btn btn-theme">Job Gurenteed</a>
                 </div>
               </li>
               <li>
@@ -89,7 +89,7 @@ $getdata = $mod->getSinglestudent($uId);
                <div class="flex-caption container">
                     <h3>Education First</h3> 
                     <p>Teaching brings out innate powers, <br/> and proper training braces the intellect.</p> 
-                    <a href="#" class="btn btn-theme">Read More</a>
+                    <a href="#" style="text-decoration: none;" class="btn btn-theme">Job Gurenteed</a>
                 </div> 
 
               </li>
@@ -137,7 +137,21 @@ $getdata = $mod->getSinglestudent($uId);
 </div> 
 </div>
 </section>
+<section  style='background-image: url("img/child-2.jpg");background-attachment: fixed;background-size: cover;background-position: center;background-repeat: no-repeat;height: auto;width: 100%;'>
+<div class="thiredclass"></div>
+       <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 151px; margin-bottom: 150px;">
+            <center><a href="#" style="text-decoration: none;">
+                <h1  style="color:#eee; font-size: 50px;">  <span style="color: #0bf2a0;">ক্ষুদে <span style="color: #ecd635;;">প্রোগ্রামার </span>হতে  চাও ???</span> </h1>
+                <span><h2 style="color: #fff;"></h2> <h2 style="color: #fff;">প্রযুক্তিতে স্বয়ংসম্পূর্ণতা নিয়ে দেখিয়ে দেয়ার অঙ্গীকার।। <span style="color: #0bf2a0;"></span></h2></span>
+            </a></center>
 
+            </div>
+        </div>
+    </div>
+
+</section>
 
 </section>
 

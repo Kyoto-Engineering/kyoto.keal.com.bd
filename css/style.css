@@ -1041,11 +1041,13 @@ background: rgb(36, 134, 102);
 color: #fff;
 }
 .btn-theme {
-	color: #fff;
-	background:rgb(36, 134, 102);
-	border: 1px solid #fff;
-	padding: 12px 30px;
-	font-weight: bold;
+color: #fff;
+background: rgb(36, 134, 102);
+border: 1px solid #fff;
+padding: 12px 30px;
+font-weight: bold;
+text-decoration: none;
+pointer-events: none;
 }
 .btn-theme:hover {
 	color: rgba(216, 18, 101, 1);
