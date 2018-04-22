@@ -21,8 +21,8 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">CourseName</th>
-      <th scope="col"></th>
+      <th scope="col">Course Name</th>
+      <th scope="col">Level Name</th>
       
     </tr>
   </thead>
