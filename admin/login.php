@@ -1,12 +1,16 @@
-<?php include "../classes/adminlogin.php";?>
-<?php 
-    $admin = new Admin();
-    if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])){
-        $adminlog = $admin->adminlogin($_POST);
+<?php include '../classes/asignin.php';?>
+<?php
+    $hr = new Adminuserlogin();
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $email = $_POST['email'];
+        $pass = md5($_POST['pass']);
+        $login = $hr->HumanResource($email, $pass);
     }
 ?>
-
-<head>
+<!DOCTYPE>
+<html>
+<<head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
