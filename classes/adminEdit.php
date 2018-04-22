@@ -238,6 +238,45 @@ public function updateTopic($data , $id){
 
 }
 
+         public function assignPrice($data){
+		$cId = $this->fm->validation($data['cId']);
+		$lid = $this->fm->validation($data['lid']);
+		$price = $this->fm->validation($data['price']);
+		$duration = $this->fm->validation($data['duration']);
+
+		$c_Id = mysqli_real_escape_string($this->db->link, $cId);
+		$l_Id = mysqli_real_escape_string($this->db->link, $lid);
+		$price = mysqli_real_escape_string($this->db->link, $price);
+		$duration = mysqli_real_escape_string($this->db->link, $duration);
+
+
+
+		if (empty($c_Id) || empty($l_Id) || empty($price) || empty($duration)) {
+			$logmsg = "<span style='color:red'>Field Must Not be Empty!!</span>";
+			return $logmsg;
+		}
+		
+
+
+		    
+    			else{
+    				 
+			 		$query = "INSERT INTO  tbl_price(cId, lid, price , duration) VALUES('$cId', '$lid', '$price', '$duration')";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green'>Assign Price & Duration Complete</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 $msg = "<span style='color:red'>Assign Price & Duration Not Complete</span>";
+			    	 	return $msg;
+			    	 }
+		}
+
+}
+
+
+
 
 	
 }//main
