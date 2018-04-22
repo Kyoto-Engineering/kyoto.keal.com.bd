@@ -34,9 +34,10 @@ class Module
 		return $result;		
 	}
 
-	public function getEnrolled($level,$uId){
+	public function getEnrolled($level,$cId,$uId,$date,$time,$serverIP){
 		$level = mysqli_real_escape_string($this->db->link, $level);
 		$uId   = mysqli_real_escape_string($this->db->link, $uId); 
+		$cId   = mysqli_real_escape_string($this->db->link, $cId); 
 
 		$Mquery = "SELECT * FROM tbl_stud_reg WHERE id = '$uId'";
 		$select_data = $this->db->select($Mquery);
@@ -47,8 +48,8 @@ class Module
 				
 			}
 		}
-		$query = "UPDATE tbl_stud_reg SET courseId = '$level' WHERE id = '$uId'";
-		$update_data = $this->db->update($query);
+		$query = "INSERT INTO tbl_newenrolled(userId, cId, lId, edate, etime, ip) VALUES('$uId', '$cId', '$level', '$date', '$time', '$serverIP')";
+		$update_data = $this->db->insert($query);
 						if($update_data){
 
 							?>
@@ -133,8 +134,8 @@ public function getCourseDetail($id){
 	}
 
 	public function getprogramDetail($id){
-		$query = "SELECT p.*, c.courseName, l.levelName
-				FROM tbl_detail as p, tbl_courseName as c, tbl_level as l  WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.l_Id='$id'";
+		$query = "SELECT p.*, c.courseName, l.levelName, t.topicName 
+				FROM tbl_topiccontent as p, tbl_courseName as c, tbl_level as l, tbl_topic as t WHERE p.c_Id = c.id AND p.t_Id = t.id AND p.l_Id = l.id AND p.l_Id='$id'";
 		$result = $this->db->select($query);
 		return $result;		
 	}
@@ -185,6 +186,19 @@ public function getCourseDetail($id){
 
 	public function getallcoursetopic($courses, $level){
 		$query = "SELECT p.*, t.topicName FROM tbl_topiccontent as p, tbl_topic as t  WHERE p.t_Id = t.id  AND p.c_Id='$level' AND p.c_Id='$courses'";
+		$result = $this->db->select($query);
+		return $result;	
+	}
+
+	public function getCoursePriceDetail($cId, $level){
+		$query = "SELECT p.*, c.courseName 
+					FROM tbl_detail as p, tbl_courseName as c WHERE p.c_Id= c.id AND p.c_Id='$cId' AND p.l_Id = '$level'";
+		$result = $this->db->select($query);
+		return $result;	
+	}
+
+		public function getprices($cId){
+		$query = "SELECT * FROM tbl_price WHERE cId = '$cId'";
 		$result = $this->db->select($query);
 		return $result;	
 	}
