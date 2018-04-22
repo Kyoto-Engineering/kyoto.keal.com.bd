@@ -37,7 +37,7 @@ class Adminassign
 
 
 
-	public function insertdiscount($data,$serverIP,$date,$time){
+	public function insertdiscount($data,$serverIP,$date,$time,$adminId){
 		$c_Id = $this->fm->validation($data['c_Id']);
 		$l_Id = $this->fm->validation($data['l_Id']);
 		$discount = $this->fm->validation($data['discount']);
@@ -48,7 +48,7 @@ class Adminassign
 		$discount = mysqli_real_escape_string($this->db->link, $discount);
 		$edate = mysqli_real_escape_string($this->db->link, $edate);
 
-		$Squery = "SELECT * FROM tbl_price WHERE id = '$c_Id'";
+		$Squery = "SELECT * FROM tbl_price WHERE cId = '$c_Id' AND lid = '$l_Id'";
 		$result = $this->db->select($Squery);
 		if ($result) {
 			while($data = $result->fetch_assoc()){
@@ -62,7 +62,7 @@ class Adminassign
 			return $logmsg;
 		}else{
     				 
-			 		$query = "INSERT INTO   tbl_price_discount(cid, lid, discount, ddate,edate) VALUES('$c_Id', '$l_Id', '$discount','$date', '$edate')";
+			 		$query = "INSERT INTO   tbl_price_discount(cid, lid, price, discount, ddate,edate,adminid) VALUES('$c_Id', '$l_Id', '$price', '$discount','$date', '$edate','$adminId')";
 			    	 $result = $this->db->insert($query);
 
 			    	 if ($result) {
@@ -74,5 +74,11 @@ class Adminassign
 			    	 }
 		}
 
+}
+public function getdiscount(){
+		$query = "SELECT p.*, c.courseName, l.levelName
+				FROM tbl_price_discount as p, tbl_courseName as c, tbl_level as l WHERE p.cid = c.id AND p.lid = l.id";
+		$result = $this->db->select($query);
+		return $result;
 }
 }
