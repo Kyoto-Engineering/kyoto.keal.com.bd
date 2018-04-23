@@ -4,14 +4,20 @@
 <?php include '../classes/admin_assign.php' ?>
 <?php include '../classes/adminEdit.php' ?>
 
+<?php
+    if(isset($_GET['id']) && !empty($_GET['id']) ){
+        $id = $_GET['id'];
+        
+      }
 
+?>
 
 <?php
  $assign = new Adminassign();
     $adedit = new Adminedit();
     if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
 
-        $adminassign = $adedit->assignPrice($_POST);
+        $adminassign = $adedit->updatePrice($_POST, $id);
 
     }
 
@@ -30,13 +36,22 @@
        echo $adminassign;
             }
         ?></h3>
+<?php
+        
+        $price = $adedit->getpriceby($id);
+         if ($price) {
+        
+      while ($value = $price->fetch_assoc()) {
+        
 
+             ?>
 <div class="container">
 <form action="" method="post">
 <div class="row">
 <div class="col-md-6">
             
 
+ 
             
             <div class="form-group row">
           
@@ -58,7 +73,15 @@
              ?>
 
 
-                 <option value="<?php echo $data['id'] ?>"><?php echo $data['courseName'] ?>
+                 <option
+                   <?php 
+                                    if ($value['cId'] == $data['id']) {?>
+                                        selected = "selected";
+                                 <?php } ?>
+
+
+
+                  value="<?php echo $data['id'] ?>"><?php echo $data['courseName'] ?>
                    
                      </option>
                      <?php } } ?>
@@ -68,17 +91,7 @@
             
           
 
-          
-
-
-
-  
-
-
-
-
-
-
+        
 
 
            
@@ -102,7 +115,16 @@
         
 
              ?>
-                    <option value="<?php echo $data['id'] ?>"><?php echo $data['levelName'] ?></option> <?php } }  ?>
+                    <option
+                     <?php 
+                                    if ($value['lid'] == $data['id']) {?>
+                                        selected = "selected";
+                                 <?php } ?>
+
+
+
+
+                     value="<?php echo $data['id'] ?>"><?php echo $data['levelName'] ?></option> <?php } }  ?>
                     
                 </select>
             </div>
@@ -112,7 +134,7 @@
              <div class="form-group row">
                                             <label class="col-md-3 col-form-label">Price</label>
                                             <div class="col-md-9">
-                                      <input type="text" class="form-control" name="price"  >
+                                      <input type="text" class="form-control" name="price" value="<?php echo $value['price']; ?>"  >
                                             </div>
                                            
                                         </div>
@@ -120,7 +142,7 @@
              <div class="form-group row">
                                             <label class="col-md-3 col-form-label">Duration</label>
                                             <div class="col-md-9">
-                                      <input type="text" class="form-control" name="duration">
+                                      <input type="text" class="form-control" name="duration" value="<?php echo $value['duration']; ?>"  >
                                             </div>
                                            
                                         </div>
@@ -157,6 +179,8 @@
          </div>
          </form>
           </div>
+
+          <?php } } ?>
 
 
 

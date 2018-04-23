@@ -275,6 +275,119 @@ public function updateTopic($data , $id){
 
 }
 
+     public function viewassigncourselevel($id){
+		    $query  = "SELECT * FROM  tbl_detail WHERE id='$id'";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+		public function updateAssignLevel($data, $id){
+		$c_Id = $this->fm->validation($data['c_Id']);
+		$l_Id = $this->fm->validation($data['l_Id']);
+
+		$c_Id = mysqli_real_escape_string($this->db->link, $c_Id);
+		$l_Id = mysqli_real_escape_string($this->db->link, $l_Id);
+
+
+
+		if (empty($c_Id) || empty($l_Id)) {
+			$logmsg = "<span style='color:red'>Field Must Not be Empty!!</span>";
+			return $logmsg;
+		}
+		
+
+
+		    
+    			else{
+    				 
+			 		$query = "UPDATE tbl_detail
+
+			 		         SET  c_Id='$c_Id',
+			 		              l_Id='$l_Id'
+			 		           WHERE id='$id'";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green'>Updated course and level  Complete</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 $msg = "<span style='color:red'>Updated course and level Not Complete</span>";
+			    	 	return $msg;
+			    	 }
+		}
+
+}
+
+       public function delassignlevel($did){
+		$query = "DELETE FROM tbl_detail WHERE id = '$did'";
+		$result = $this->db->delete($query);		
+	}
+
+	  public function getPriceDuration(){
+			$query  = "SELECT p.*, c.courseName, l.levelName
+				FROM tbl_price as p, tbl_coursename as c, tbl_level as l
+				WHERE p.cId = c.id  AND p.lid =l.id
+				ORDER BY p.id DESC";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+		public function delpriceduration($did){
+		$query = "DELETE FROM tbl_price WHERE id = '$did'";
+		$result = $this->db->delete($query);		
+	}
+
+	 public function getpriceby($id){
+		    $query  = "SELECT * FROM  tbl_price WHERE id='$id'";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+
+
+	 public function updatePrice($data, $id){
+		$cId = $this->fm->validation($data['cId']);
+		$lid = $this->fm->validation($data['lid']);
+		$price = $this->fm->validation($data['price']);
+		$duration = $this->fm->validation($data['duration']);
+
+		$c_Id = mysqli_real_escape_string($this->db->link, $cId);
+		$l_Id = mysqli_real_escape_string($this->db->link, $lid);
+		$price = mysqli_real_escape_string($this->db->link, $price);
+		$duration = mysqli_real_escape_string($this->db->link, $duration);
+
+
+
+		if (empty($c_Id) || empty($l_Id) || empty($price) || empty($duration)) {
+			$logmsg = "<span style='color:red'>Field Must Not be Empty!!</span>";
+			return $logmsg;
+		}
+		
+
+
+		    
+    			else{
+    				 
+			 		$query = "UPDATE tbl_price
+			 		          SET cId ='$cId',
+			 		           lid ='$lid' ,
+			 		           price ='$price' ,
+			 		           duration = '$duration' WHERE id ='$id'";
+			    	 $result = $this->db->insert($query);
+
+			    	 if ($result) {
+			    	 	$msg = "<span style='color:green'>Assign Price & Duration Updated</span>";
+			    	 	return $msg;
+			    	 }else{
+			    	 $msg = "<span style='color:red'>Assign Price & Duration Not Not Updated</span>";
+			    	 	return $msg;
+			    	 }
+		}
+
+}
+
+
+
 
 
 
