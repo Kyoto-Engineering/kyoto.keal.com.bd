@@ -221,5 +221,10 @@ public function getCourseDetail($id){
 		$result = $this->db->select($query);
 		return $result;	
 	}
+	public function getyoungstar(){
+		$query = "SELECT * FROM tbl_level WHERE levelName = 'YOUNGSTAR'";
+		$result = $this->db->select($query);
+		return $result;		    
+	}
 }
 ?>

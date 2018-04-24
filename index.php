@@ -142,7 +142,12 @@ $getdata = $mod->getSinglestudent($uId);
        <div class="container">
         <div class="row">
             <div class="col-md-12" style="margin-top: 151px; margin-bottom: 150px;">
-            <center><a href="#" style="text-decoration: none;">
+           <?php 
+    $young = $mod->getyoungstar();
+    if ($young) {
+        while($value = $young->fetch_assoc()){?>
+            <center><a href="youngstar.php?id=<?php echo $value['id'];?>" style="text-decoration: none;">
+                <?php } } ?>
                 <h1  style="color:#eee; font-size: 50px;">  <span style="color: #fff;">ক্ষুদে <span style=#0bf2a0;;">প্রোগ্রামার </span>হতে  চাও ???</span> </h1>
                 <span><h2 style="color: #fff;"></h2> <h2 style="color: #fff;">প্রযুক্তিতে স্বয়ংসম্পূর্ণতা নিয়ে দেখিয়ে দেয়ার অঙ্গীকার।। <span style="color: #0bf2a0;"></span></h2></span>
             </a></center>
