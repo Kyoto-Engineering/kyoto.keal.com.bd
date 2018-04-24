@@ -74,7 +74,14 @@
                             </li>
                               <li>
                                 <a href="coursename.php">View Course Name</a>
-                            </li>                         
+                            </li>
+
+                             <li>
+                                <a href="view_assign_level.php">View Assign Level</a>
+                            </li>  
+                            <li>
+                                <a href="view_price.php">View Price & Duration</a>
+                            </li>                        
                                                           
                         </ul>
                         <!-- second-level-items -->
