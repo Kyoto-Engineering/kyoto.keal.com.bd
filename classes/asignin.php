@@ -2,8 +2,8 @@
 	  include_once ('../lib/Session.php');
      Session::checkLogin();
 
-	 include_once ('../lib/database.php');
-	 include_once ('../helpers/format.php');
+	 include_once ('../lib/Database.php');
+	 include_once ('../helpers/Format.php');
 
 
 ?>
@@ -40,8 +40,8 @@ class Adminuserlogin
 				$value = $result->fetch_assoc();
 				Session::set("login", true);
 				Session::set("adminId",   $value['id']);
-				Session::set("adminName", $value['nameame']);
-				// Session::set("adminUser", $value['adminUser']);
+				Session::set("adminName", $value['name']);
+			    Session::set("adminUser", $value['level']);
 				header("Location:index.php");
 			}else{
 				$logmsg = "Username Or Password Not Match!!";

@@ -1,0 +1,28 @@
+[11-Apr-2018 09:16:10 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:16:21 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:16:50 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:16:50 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 119
+[11-Apr-2018 09:16:50 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 120
+[11-Apr-2018 09:17:11 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:17:11 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 119
+[11-Apr-2018 09:17:11 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 120
+[11-Apr-2018 09:17:44 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:17:44 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 119
+[11-Apr-2018 09:17:44 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 120
+[11-Apr-2018 09:19:10 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:19:10 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 119
+[11-Apr-2018 09:19:10 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 120
+[11-Apr-2018 09:22:59 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:22:59 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 119
+[11-Apr-2018 09:22:59 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 120
+[11-Apr-2018 09:24:37 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:25:01 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[11-Apr-2018 09:25:01 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 119
+[11-Apr-2018 09:25:01 UTC] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/classes/log.php on line 120
+[11-Apr-2018 14:13:34 UTC] PHP Warning:  mysqli::mysqli(): (08004/1040): Too many connections in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[12-Apr-2018 11:27:36 UTC] PHP Warning:  mysqli::mysqli(): (08004/1040): Too many connections in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[15-Apr-2018 04:11:17 UTC] PHP Parse error:  syntax error, unexpected end of file in /home2/kealcom/kyoto.keal.com.bd/inc/header.php on line 112
+[15-Apr-2018 04:11:21 UTC] PHP Parse error:  syntax error, unexpected end of file in /home2/kealcom/kyoto.keal.com.bd/inc/header.php on line 112
+[19-Apr-2018 06:40:22 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[19-Apr-2018 06:40:23 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[19-Apr-2018 06:40:32 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24

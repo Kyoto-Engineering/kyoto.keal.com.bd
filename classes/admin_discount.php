@@ -77,7 +77,7 @@ class Adminassign
 }
 public function getdiscount(){
 		$query = "SELECT p.*, c.courseName, l.levelName
-				FROM tbl_price_discount as p, tbl_courseName as c, tbl_level as l WHERE p.cid = c.id AND p.lid = l.id";
+				FROM tbl_price_discount as p, tbl_coursename as c, tbl_level as l WHERE p.cid = c.id AND p.lid = l.id";
 		$result = $this->db->select($query);
 		return $result;
 }

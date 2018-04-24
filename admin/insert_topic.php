@@ -41,9 +41,9 @@
                                         
 
                                         <div class="form-group row">
-                                           <label class="col-md-3 col-form-label">Topic Name</label>
+                                           <label class="col-md-3 col-form-label">Topic Content</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" name="topicName" placeholder="Enter Topic Name" /> 
+                                                <input type="text" class="form-control" name="topicName" placeholder="Enter Topic Content" /> 
                                         </div>
                                         </div>
 
@@ -82,9 +82,11 @@
     <tr>
       <th scope="row"><?php echo $i;?></th>
       <td><?php echo $data['topicName']?></td>
-      <td><a href="edit_topic.php?id=<?php echo $data['id'] ; ?>">
+      <td>
+
+          <a href="edit_topic.php?id=<?php echo $data['id'] ; ?>">
           <span><img src="../img/img_386644.png" height="auto" width="15px"></span>
-        </a> ||<a style="text-decoration: none;" onclick="return confirm('Are you Sure Want to Delete!')" 
+        </a> || <a style="text-decoration: none;" onclick="return confirm('Are you Sure Want to Delete!')" 
                     href="?delpro=<?php echo $data['id'];?>">
           <span><span><img src="../img/627249-delete3-512.png" height="auto" width="15px"></span></span>
         </a></td>

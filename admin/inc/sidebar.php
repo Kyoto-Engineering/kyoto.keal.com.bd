@@ -49,7 +49,7 @@
                                 <a href="assign.php">Assign Level</a>
                             </li>
                             <li>
-                                <a href="Assign_content.php">Assign Course Content</a>
+                                <a href="assign_content.php">Assign Course Content</a>
                             </li>
                             <li>
                                 <a href="assign_price.php">Assign Price & Duration</a>

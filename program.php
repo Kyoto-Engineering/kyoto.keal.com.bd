@@ -1,24 +1,19 @@
 <?php include "inc/header.php";?>
 <?php include "classes/moduleclass.php"; ?>
 <?php 
-  $login = Session::get("login");
-  if ($login == false) {
-    echo "<script>window.location = 'index.php'</script>";
-  }
+  // $login = Session::get("login");
+  // if ($login == false) {
+  //   echo "<script>window.location = 'index.php'</script>";
+  // }
 ?>
  <?php
                if(!isset($_GET['id']) || $_GET['id']==NUll){
-                echo "<script>window.location = 'index.php';</script>";
+               // echo "<script>window.location = 'index.php';</script>";
               }else{
                 $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['id']);
               }
               ?>
-    <?php 
-  $login = Session::get("login");
-  if ($login == false) {
-    echo "<script>window.location = 'index.php'</script>";
-  }
-?>
+
 	<section id="inner-headline">
 	
 		<div class="row">
@@ -67,7 +62,7 @@
 								<!-- Heading and para -->
 								<div class="block-heading-two">
 									<h3><span><?php echo $data['courseName'] ; ?></span></h3>
-									<p>Course For <span><?php echo $data['levelName'] ; ?></span></p>
+									<p>Course For <span style="font-weight:bold;"><?php echo $data['levelName'] ; ?></span></p>
 									
 								</div>
 

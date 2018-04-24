@@ -1,0 +1,30 @@
+[22-Apr-2018 08:28:09 UTC] PHP Warning:  include_once(../lib/database.php): failed to open stream: No such file or directory in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 5
+[22-Apr-2018 08:28:09 UTC] PHP Warning:  include_once(): Failed opening '../lib/database.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 5
+[22-Apr-2018 08:28:09 UTC] PHP Warning:  include_once(../helpers/format.php): failed to open stream: No such file or directory in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 6
+[22-Apr-2018 08:28:09 UTC] PHP Warning:  include_once(): Failed opening '../helpers/format.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 6
+[22-Apr-2018 08:28:09 UTC] PHP Fatal error:  Class 'Database' not found in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 21
+[22-Apr-2018 08:31:32 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[22-Apr-2018 08:50:35 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[22-Apr-2018 08:52:16 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[22-Apr-2018 09:08:38 UTC] PHP Notice:  Undefined index: courseName in /home2/kealcom/kyoto.keal.com.bd/admin/signup_list.php on line 55
+[22-Apr-2018 09:08:38 UTC] PHP Notice:  Undefined index: level in /home2/kealcom/kyoto.keal.com.bd/admin/signup_list.php on line 59
+[22-Apr-2018 09:37:11 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[22-Apr-2018 09:54:46 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[22-Apr-2018 10:07:56 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[22-Apr-2018 10:14:29 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[22-Apr-2018 10:16:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /home2/kealcom/kyoto.keal.com.bd/admin/insert_topic.php on line 107
+[22-Apr-2018 10:33:05 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/kealcom/kyoto.keal.com.bd/lib/Session.php on line 46
+[23-Apr-2018 03:28:44 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[23-Apr-2018 06:13:10 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[23-Apr-2018 06:13:47 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[23-Apr-2018 06:55:43 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[23-Apr-2018 08:27:25 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[23-Apr-2018 08:34:49 UTC] PHP Notice:  Undefined variable: adminName in /home2/kealcom/kyoto.keal.com.bd/admin/inc/sidebar.php on line 13
+[23-Apr-2018 08:34:52 UTC] PHP Notice:  Undefined variable: adminName in /home2/kealcom/kyoto.keal.com.bd/admin/inc/sidebar.php on line 13
+[23-Apr-2018 08:35:03 UTC] PHP Notice:  Undefined variable: adminName in /home2/kealcom/kyoto.keal.com.bd/admin/inc/sidebar.php on line 13
+[23-Apr-2018 08:35:10 UTC] PHP Notice:  Undefined variable: adminName in /home2/kealcom/kyoto.keal.com.bd/admin/inc/sidebar.php on line 13
+[23-Apr-2018 08:35:19 UTC] PHP Notice:  Undefined index: nameame in /home2/kealcom/kyoto.keal.com.bd/classes/asignin.php on line 43
+[23-Apr-2018 08:35:20 UTC] PHP Notice:  Undefined variable: adminName in /home2/kealcom/kyoto.keal.com.bd/admin/inc/sidebar.php on line 13
+[23-Apr-2018 08:35:21 UTC] PHP Notice:  Undefined variable: adminName in /home2/kealcom/kyoto.keal.com.bd/admin/inc/sidebar.php on line 13
+[23-Apr-2018 08:35:26 UTC] PHP Notice:  Undefined variable: adminName in /home2/kealcom/kyoto.keal.com.bd/admin/inc/sidebar.php on line 13
+[23-Apr-2018 11:05:56 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/kealcom/kyoto.keal.com.bd/lib/Session.php on line 46
