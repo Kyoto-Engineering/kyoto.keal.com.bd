@@ -10,7 +10,7 @@
 ?>
 <!DOCTYPE>
 <html>
-<<head>
+<head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
@@ -24,7 +24,6 @@
 </head>
 
 <body class="body-Login-back">
-
     <div class="container">
        
         <div class="row">
@@ -43,7 +42,7 @@
                                     <input class="form-control" placeholder="Email" name="email" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Pass" name="pass" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="pass" type="password" value="">
                                 </div>
                                 <div class="checkbox">
                                     <label>

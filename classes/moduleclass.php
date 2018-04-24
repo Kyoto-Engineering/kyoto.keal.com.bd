@@ -111,12 +111,17 @@ Good Luck!!";
 
 public function getCourseDetail($id){
 		$query = "SELECT p.*, c.courseName, l.levelName
-				FROM tbl_detail as p, tbl_courseName as c, tbl_level as l WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.c_Id='$id'";
+				FROM tbl_detail as p, tbl_coursename as c, tbl_level as l WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.c_Id='$id'";
 		$result = $this->db->select($query);
 		return $result;
 	}
 	public function getCourseDetailLimit($id){
 		$query = "SELECT * FROM tbl_coursename WHERE id='$id' LIMIT 1";
+		$result = $this->db->select($query);
+		return $result;
+	}
+		public function getLevelDetailLimit($id){
+		$query = "SELECT * FROM tbl_level WHERE id='$id' LIMIT 1";
 		$result = $this->db->select($query);
 		return $result;
 	}
@@ -135,14 +140,14 @@ public function getCourseDetail($id){
 
 	public function getprogramDetail($id){
 		$query = "SELECT p.*, c.courseName, l.levelName, t.topicName 
-				FROM tbl_topiccontent as p, tbl_courseName as c, tbl_level as l, tbl_topic as t WHERE p.c_Id = c.id AND p.t_Id = t.id AND p.l_Id = l.id AND p.l_Id='$id'";
+				FROM tbl_topiccontent as p, tbl_coursename as c, tbl_level as l, tbl_topic as t WHERE p.c_Id = c.id AND p.t_Id = t.id AND p.l_Id = l.id AND p.l_Id='$id'";
 		$result = $this->db->select($query);
 		return $result;		
 	}
 
 	public function gettopicby($id, $lId){
 		$query = "SELECT p.t_Id, t.topicName 
-				FROM tbl_topiccontent as p, tbl_topic as t  WHERE p.t_Id = t.id  AND  p.c_Id='$id' AND p.l_Id='$lId' LIMIT 2";
+				FROM tbl_topiccontent as p, tbl_topic as t  WHERE p.t_Id = t.id  AND  p.c_Id='$id' AND p.l_Id='$lId' LIMIT 6";
 		$result = $this->db->select($query);
 		return $result;
 	}
@@ -153,7 +158,21 @@ public function getCourseDetail($id){
 		$result = $this->db->select($query);
 		return $result;	
 	}
+	// start
+	public function getprogram($id){
+		$query = "SELECT p.*, c.courseName, l.levelName 
+				FROM tbl_detail as p, tbl_coursename as c, tbl_level as l WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.l_Id='$id'";
+		$result = $this->db->select($query);
+		return $result;		
+	}
 
+	public function getleveltopicby($id, $cId){
+		$query = "SELECT p.t_Id, t.topicName 
+				FROM tbl_topiccontent as p, tbl_topic as t  WHERE p.t_Id = t.id  AND  p.c_Id='$cId' AND p.l_Id='$id' LIMIT 5";
+		$result = $this->db->select($query);
+		return $result;		
+	}
+// end
 	public function getcoursenameby($courseId){
 		$query = "SELECT * FROM tbl_coursename";
 		$result = $this->db->select($query);
@@ -173,7 +192,7 @@ public function getCourseDetail($id){
 
 	public function getallcourseby($courses){
 		$query = "SELECT p.*, c.courseName, l.levelName
-				FROM tbl_detail as p, tbl_courseName as c, tbl_level as l  WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.c_Id='$courses'";
+				FROM tbl_detail as p, tbl_coursename as c, tbl_level as l  WHERE p.c_Id = c.id AND p.l_Id = l.id AND p.c_Id='$courses'";
 		$result = $this->db->select($query);
 		return $result;
 	}
@@ -192,7 +211,7 @@ public function getCourseDetail($id){
 
 	public function getCoursePriceDetail($cId, $level){
 		$query = "SELECT p.*, c.courseName 
-					FROM tbl_detail as p, tbl_courseName as c WHERE p.c_Id= c.id AND p.c_Id='$cId' AND p.l_Id = '$level'";
+					FROM tbl_detail as p, tbl_coursename as c WHERE p.c_Id= c.id AND p.c_Id='$cId' AND p.l_Id = '$level'";
 		$result = $this->db->select($query);
 		return $result;	
 	}

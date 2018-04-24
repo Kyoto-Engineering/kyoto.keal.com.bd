@@ -20,10 +20,9 @@ class Adminview
 
 
 public function getAllSignupList(){
-	$query="SELECT p.*, c.name
-				FROM tbl_stud_reg as p, tbl_course as c
-				WHERE p.courseId = c.id 
-				ORDER BY p.id DESC" ;
+	$query="SELECT p.*, c.courseName
+				FROM tbl_stud_reg as p, tbl_coursename as c
+				WHERE p.courseId = c.id ORDER BY p.id DESC" ;
 	$result= $this->db->select($query);
 	return $result;
 
@@ -141,14 +140,14 @@ public function adnotice($data){
 
     			} else {
 			    	 move_uploaded_file($file_temp, $image);
-			    	 $query = "INSERT INTO tbl_course(name, price, quote, image, status) VALUES('$name','$price', '$quote' ,'$image' , '$status')";
+			    	 $query = "INSERT INTO tbl_coursename(courseName, quote, image) VALUES('$name', '$quote' ,'$image')";
 			    	 $result = $this->db->insert($query);
 
 			    	 if ($result) {
-			    	 	$msg = "<span style='color:green;'>Image Upload complete</span>";
+			    	 	$msg = "<span style='color:green;'>Course Name Inserted</span>";
 			    	 	return $msg;
 			    	 }else{
-			    	 	$msg = "<span style='color:red;'>Image Upload Not complete</span>";
+			    	 	$msg = "<span style='color:red;'>Course Name Not Inserted</span>";
 			    	 	return $msg;
 			    	 }
 			    	}
@@ -204,7 +203,7 @@ public function adnotice($data){
 
     			} else {
 			    	 move_uploaded_file($file_temp, $image);
-			    	 $query = "INSERT INTO tbl_courseName(courseName, quote, image) VALUES('$courseName', '$quote' ,'$image')";
+			    	 $query = "INSERT INTO tbl_coursename(courseName, quote, image) VALUES('$courseName', '$quote' ,'$image')";
 			    	 $result = $this->db->insert($query);
 
 			    	 if ($result) {
@@ -307,7 +306,7 @@ public function adnotice($data){
 	// }
 
 	public function editcoursecontent($id){
-		    $query  = "SELECT * FROM  tbl_courseName WHERE id='$id'";
+		    $query  = "SELECT * FROM  tbl_coursename WHERE id='$id'";
 			$result = $this->db->select($query);
 			return $result;
 		}
@@ -367,7 +366,7 @@ public function adnotice($data){
 
 	    			} else{
 	    				 move_uploaded_file($file_temp, $image);
-	    				 $query = "UPDATE tbl_courseName
+	    				 $query = "UPDATE tbl_coursename
 	    				 	SET 
 	    				 	courseName= '$courseName',
 	    				 	quote 		= '$quote',
@@ -387,7 +386,7 @@ public function adnotice($data){
 	    			}
 	    		} else{
 
-	    				$query = "UPDATE tbl_courseName
+	    				$query = "UPDATE tbl_coursename
 	    				 	SET 
 	    				 	courseName= '$courseName',
 	    				 	quote 		= '$quote'
@@ -411,7 +410,7 @@ public function adnotice($data){
 
 
 		public function getcourseName(){
-		$query = "SELECT * FROM tbl_courseName";
+		$query = "SELECT * FROM tbl_coursename";
 		$result = $this->db->select($query);
 		return $result;
 	}

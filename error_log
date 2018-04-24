@@ -1,0 +1,17 @@
+[22-Apr-2018 08:23:05 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 24
+[22-Apr-2018 08:23:05 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 33
+[22-Apr-2018 08:23:05 UTC] PHP Warning:  Database::select(): Couldn't fetch mysqli in /home2/kealcom/kyoto.keal.com.bd/lib/Database.php on line 34
+[22-Apr-2018 09:33:58 UTC] PHP Notice:  Undefined variable: id in /home2/kealcom/kyoto.keal.com.bd/program.php on line 37
+[22-Apr-2018 09:33:58 UTC] PHP Notice:  Undefined variable: id in /home2/kealcom/kyoto.keal.com.bd/program.php on line 57
+[23-Apr-2018 10:05:09 UTC] PHP Notice:  Undefined variable: id in /home2/kealcom/kyoto.keal.com.bd/program.php on line 32
+[23-Apr-2018 10:05:09 UTC] PHP Notice:  Undefined variable: id in /home2/kealcom/kyoto.keal.com.bd/program.php on line 52
+[23-Apr-2018 10:09:56 UTC] PHP Parse error:  syntax error, unexpected '<' in /home2/kealcom/kyoto.keal.com.bd/index.php on line 206
+[24-Apr-2018 05:31:25 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:31:25 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:31:25 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:31:25 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:32:05 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:32:05 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:32:05 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:32:05 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104
+[24-Apr-2018 05:33:14 UTC] PHP Notice:  Undefined variable: lId in /home2/kealcom/kyoto.keal.com.bd/subprogram.php on line 104

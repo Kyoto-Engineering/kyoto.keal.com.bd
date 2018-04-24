@@ -52,7 +52,7 @@
                                              
          
           
-                                            <td><?php echo $data['name'] ; ?></td>
+                                            <td><?php echo $data['courseName'] ; ?></td>
                                   
                                             <td><?php echo $data['dob'] ; ?></td>
                                             <td><?php echo $data['gender'] ; ?></td>
