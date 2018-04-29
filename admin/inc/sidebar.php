@@ -1,3 +1,13 @@
+<?php include "../classes/adminEdit.php"; ?>
+<?php
+ $adedit = new Adminedit();
+$getl = $adedit->getadminlevelby($adminId);
+if ($getl) {
+    while($data = $getl->fetch_assoc()){
+       $role = $data['level'];
+    }
+}
+?>
    <nav class="navbar-default navbar-static-side" role="navigation">
             <!-- sidebar-collapse -->
             <div class="sidebar-collapse">
@@ -33,9 +43,14 @@
                     <li class="selected">
                         <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
+<?php 
+if($role == "0"){?>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Insert Panel<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="insert_topic.php"><?php echo $role; ?></a>
+                            </li>
                             <li>
                                 <a href="insert_topic.php">Insert Topic</a>
                             </li>
@@ -46,7 +61,10 @@
                                 <a href="insert_level.php">Insert Level</a>
                             </li>
                              <li>
-                                <a href="assign.php">Assign Level</a>
+                                <a href="assign.php">Assign Program</a>
+                            </li>
+                            <li>
+                                <a href="assignby.php">Assign Program by Level</a>
                             </li>
                             <li>
                                 <a href="assign_content.php">Assign Course Content</a>
@@ -55,16 +73,20 @@
                                 <a href="assign_price.php">Assign Price & Duration</a>
                             </li>
                             <li>
-                                <a href="insert_routine.php">Insert Routine</a>
+                                <a href="create_batch.php">Create Batch</a>
                             </li>
                              <li>
-                                <a href="insert_notice.php">Insert Notice</a>
+                                <a href="create_location.php">Create Location</a>
+                            </li>
+                            <li>
+                                <a href="create_trainer.php">Create Trainer</a>
                             </li>
                             
                         </ul>
                         <!-- second-level-items -->
                     </li>
                     
+<?php } ?>
                     
                     <li>
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i>View Panel<span class="fa arrow"></span></a>
@@ -77,8 +99,11 @@
                             </li>
 
                              <li>
-                                <a href="view_assign_level.php">View Assign Level</a>
-                            </li>  
+                                <a href="view_assign_level.php">View Assign Program</a>
+                            </li> 
+                            <li>
+                                <a href="view_assign_levelby.php">View Assign Program by Level</a>
+                            </li>   
                             <li>
                                 <a href="view_price.php">View Price & Duration</a>
                             </li>                        
